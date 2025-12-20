@@ -3,7 +3,10 @@ import Link from 'next/link';
 export default function RefugiosPage() {
   return (
     <main>
-      <section id="huella-refugios" className="section-padding bg-tierra-50">
+      <section
+        id="huella-refugios"
+        className="section-padding bg-tierra-50 scroll-mt-24 md:scroll-mt-28"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Refugios</h2>

@@ -8,7 +8,7 @@ export default function Footer() {
               <div className="text-2xl font-bold tracking-tight">HUELLA</div>
               <p className="mt-4 text-sm text-gray-300">
                 Arquitectura y experiencias en la montana, pensadas para vivir
-                el territorio con diseno y calma.
+                el territorio con diseno y serenidad.
               </p>
             </div>
 

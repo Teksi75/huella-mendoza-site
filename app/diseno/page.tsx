@@ -3,7 +3,10 @@ import Link from 'next/link';
 export default function DisenoPage() {
   return (
     <main>
-      <section id="huella-diseno" className="section-padding bg-white">
+      <section
+        id="huella-diseno"
+        className="section-padding bg-white scroll-mt-24 md:scroll-mt-28"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Diseno</h2>
@@ -41,7 +44,7 @@ export default function DisenoPage() {
                 <p className="mt-3 text-sm text-gray-600">
                   Ideas a medida que nacen del sitio y tu vida.
                   <br />
-                  Criterio claro para decidir con calma.
+                  Criterio claro para decidir con confianza.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
