@@ -4,8 +4,8 @@ export default function DisenoPage() {
   return (
     <main>
       <section
-        id="huella-diseno"
-        className="section-padding bg-white scroll-mt-24 md:scroll-mt-28"
+        id="diseno"
+        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
@@ -33,7 +33,7 @@ export default function DisenoPage() {
                   Eleccion - Ajuste - Inicio de obra
                 </p>
                 <Link
-                  href="#huella-diseno"
+                  href="#diseno"
                   className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
                 >
                   Ver mas
@@ -53,7 +53,7 @@ export default function DisenoPage() {
                   Relevamiento - Propuesta - Ajustes finales
                 </p>
                 <Link
-                  href="#huella-diseno"
+                  href="#diseno"
                   className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
                 >
                   Ver mas
@@ -73,7 +73,7 @@ export default function DisenoPage() {
                   Diagnostico - Plan - Obra liviana
                 </p>
                 <Link
-                  href="#huella-diseno"
+                  href="#diseno"
                   className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
                 >
                   Ver mas

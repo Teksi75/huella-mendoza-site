@@ -11,7 +11,10 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
 
   return (
     <main>
-      <section className="section-padding bg-white">
+      <section
+        id="contacto"
+        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+      >
         <div className="container-custom">
           <h1>Contacto</h1>
           <p className="mt-4 max-w-3xl">

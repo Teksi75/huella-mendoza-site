@@ -4,8 +4,8 @@ export default function RefugiosPage() {
   return (
     <main>
       <section
-        id="huella-refugios"
-        className="section-padding bg-tierra-50 scroll-mt-24 md:scroll-mt-28"
+        id="refugios"
+        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="max-w-3xl">

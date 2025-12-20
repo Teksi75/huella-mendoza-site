@@ -76,7 +76,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section
+        id="huella-base"
+        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <div className="text-sm uppercase tracking-widest text-tierra-600">
@@ -118,7 +121,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="huella" className="section-padding bg-white">
+      <section
+        id="huella"
+        className="section-padding bg-white scroll-mt-28 md:scroll-mt-32"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <div className="text-sm uppercase tracking-widest text-tierra-600">
@@ -155,7 +161,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section
+        id="huella-diseno"
+        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Diseno</h2>
@@ -174,7 +183,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section
+        id="huella-refugios"
+        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+      >
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Refugios</h2>
@@ -217,7 +229,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="proyectos" className="section-padding bg-white">
+      <section
+        id="proyectos"
+        className="section-padding bg-white scroll-mt-28 md:scroll-mt-32"
+      >
         <div className="container-custom">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
@@ -249,7 +264,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-700 text-white">
+      <section
+        id="contacto"
+        className="section-padding bg-tierra-700 text-white scroll-mt-28 md:scroll-mt-32"
+      >
         <div className="container-custom">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>

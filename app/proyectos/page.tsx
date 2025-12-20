@@ -19,7 +19,10 @@ const proyectos = [
 export default function ProyectosPage() {
   return (
     <main>
-      <section className="section-padding bg-white">
+      <section
+        id="proyectos"
+        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+      >
         <div className="container-custom">
           <h1>Proyectos</h1>
           <p className="mt-4 max-w-3xl">
