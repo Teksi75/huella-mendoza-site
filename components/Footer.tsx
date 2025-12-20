@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
               <ul className="mt-4 space-y-2 text-sm text-gray-300">
                 <li>info@huella.com</li>
-                <li>+54 9 261 000 0000</li>
+                <li>+54 9 261 5010488</li>
                 <li>Potrerillos, Mendoza</li>
               </ul>
             </div>

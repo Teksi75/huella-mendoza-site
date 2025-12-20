@@ -87,11 +87,11 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
             </p>
             <a
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
-              href="https://wa.me/5492610000000"
+              href="https://wa.me/5492615010488"
               target="_blank"
               rel="noreferrer"
             >
-              +54 9 261 000 0000
+              +54 9 261 5010488
             </a>
           </div>
         </div>

@@ -23,9 +23,9 @@ export default function Navbar() {
   const menuItems = [
     { name: 'Inicio', href: '/' },
     { name: 'HUELLA', href: '/#huella' },
-    { name: 'HUELLA Base', href: '/base' },
-    { name: 'HUELLA Diseno', href: '/diseno' },
-    { name: 'HUELLA Refugios', href: '/refugios' },
+    { name: 'Base', href: '/base' },
+    { name: 'Diseno', href: '/diseno' },
+    { name: 'Refugios', href: '/refugios' },
     { name: 'Proyectos', href: '/proyectos' },
     { name: 'Contacto', href: '/contacto' },
   ];
