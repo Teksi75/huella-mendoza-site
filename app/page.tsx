@@ -1,48 +1,64 @@
-'use client';
-
-import { ArrowRight, Mountain, Home as HomeIcon, Compass } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
+  const uenCards = [
+    {
+      title: 'HUELLA Base',
+      copy: 'Modelos habitacionales eficientes, listos para cotizar y ejecutar.',
+      href: '/base',
+    },
+    {
+      title: 'HUELLA Diseno',
+      copy: 'Arquitectura a medida para terrenos unicos y decisiones claras.',
+      href: '/diseno',
+    },
+    {
+      title: 'HUELLA Refugios',
+      copy: 'Experiencias de montana con refugios pensados para descansar.',
+      href: '/refugios',
+    },
+  ];
+
+  const projectImages = [
+    '/images/proyectos/milzoe-01.jpeg',
+    '/images/proyectos/milzoe-02.jpeg',
+    '/images/proyectos/milzoe-03.jpeg',
+  ];
+
   return (
     <main>
-      {/* HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
             src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070"
-            alt="Montañas de Potrerillos"
+            alt="Montanas de Potrerillos"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Content */}
         <div className="relative z-20 text-center text-white px-6 max-w-5xl">
           <h1 className="mb-6 text-5xl md:text-7xl font-bold tracking-tight">
             HUELLA
           </h1>
           <p className="text-xl md:text-2xl mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-            Diseñamos espacios que dialogan con el territorio. <br />
-            Experiencias que se integran al paisaje de la montaña.
+            Disenamos espacios que dialogan con el territorio. <br />
+            Experiencias que se integran al paisaje de la montana.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/base" className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
               Soluciones habitacionales
               <ArrowRight size={20} />
             </Link>
             <Link href="/refugios" className="btn-secondary text-lg px-8 py-4 flex items-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
-              Experiencia turística
+              Experiencia turistica
               <ArrowRight size={20} />
             </Link>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
           <div className="animate-bounce">
             <svg
@@ -60,7 +76,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Más secciones vendrán después, pero con esto ya ves el hero */}
+      <section id="huella" className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl">
+            <div className="text-sm uppercase tracking-widest text-tierra-600">
+              Huella Mendoza
+            </div>
+            <h2 className="mt-4">Que es HUELLA</h2>
+            <p className="mt-4">
+              HUELLA es una plataforma de arquitectura y experiencias en la
+              montana. Integramos diseno, paisaje y operacion para crear
+              espacios que se viven con calma y permanencia. Desde modelos
+              eficientes hasta proyectos a medida y refugios, conectamos cada
+              decision con el territorio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-tierra-50">
+        <div className="container-custom">
+          <h2 className="text-center">Unidades de negocio</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {uenCards.map((card) => (
+              <div
+                key={card.title}
+                className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-xl">{card.title}</h3>
+                <p className="mt-3 text-sm text-gray-600">{card.copy}</p>
+                <Link
+                  href={card.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                >
+                  Ver detalles
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2>Proyectos</h2>
+              <p className="mt-3 max-w-2xl">
+                Evidencia real de lo que construimos: soluciones habitacionales,
+                diseno a medida y experiencias en refugios.
+              </p>
+            </div>
+            <Link href="/proyectos" className="btn-secondary px-6 py-3">
+              Ver todos
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {projectImages.map((src, index) => (
+              <div
+                key={`${src}-${index}`}
+                className="overflow-hidden rounded-2xl bg-gray-100"
+              >
+                <img
+                  src={src}
+                  alt={`Proyecto ${index + 1}`}
+                  className="h-56 w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-tierra-700 text-white">
+        <div className="container-custom">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2>Contanos tu idea</h2>
+              <p className="mt-3 max-w-2xl text-white/80">
+                Te ayudamos a elegir la unidad de negocio correcta y a definir
+                el camino para tu proyecto.
+              </p>
+            </div>
+            <Link href="/contacto" className="btn-secondary bg-white text-tierra-700">
+              Empezar ahora
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

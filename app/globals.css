@@ -9,49 +9,49 @@
   }
 
   h1 {
-    @apply text-4xl font-bold tracking-tight;
-  }
-
-  h2 {
     @apply text-3xl font-bold tracking-tight;
   }
 
+  h2 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
   h3 {
-    @apply text-2xl font-semibold;
+    @apply text-xl font-semibold;
   }
 
   p {
-    @apply text-base leading-relaxed;
+    @apply text-sm leading-relaxed;
   }
 }
 
 @media (min-width: 768px) {
   @layer base {
     h1 {
-      @apply text-6xl;
-    }
-
-    h2 {
       @apply text-5xl;
     }
 
+    h2 {
+      @apply text-4xl;
+    }
+
     h3 {
-      @apply text-3xl;
+      @apply text-2xl;
     }
 
     p {
-      @apply text-lg;
+      @apply text-base;
     }
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-tierra-600 text-white rounded-lg hover:bg-tierra-700 transition-all duration-300 font-medium;
+    @apply px-6 py-3 bg-tierra-600 text-white rounded-lg border border-tierra-700 shadow-sm hover:bg-tierra-700 transition-all duration-300 font-medium;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-tierra-700 border-2 border-tierra-600 rounded-lg hover:bg-tierra-50 transition-all duration-300 font-medium;
+    @apply px-6 py-3 bg-white text-tierra-700 border-2 border-tierra-600 rounded-lg shadow-sm hover:bg-tierra-50 transition-all duration-300 font-medium;
   }
 
   .section-padding {

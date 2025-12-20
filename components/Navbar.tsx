@@ -1,12 +1,16 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isHome = pathname === '/';
+  const isTransparent = isHome && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +22,20 @@ export default function Navbar() {
 
   const menuItems = [
     { name: 'Inicio', href: '/' },
-    { name: 'HUELLA', href: '#huella' },
+    { name: 'HUELLA', href: '/#huella' },
     { name: 'HUELLA Base', href: '/base' },
-    { name: 'HUELLA Diseño', href: '/diseno' },
+    { name: 'HUELLA Diseno', href: '/diseno' },
     { name: 'HUELLA Refugios', href: '/refugios' },
-    { name: 'Proyectos', href: '#proyectos' },
+    { name: 'Proyectos', href: '/proyectos' },
     { name: 'Contacto', href: '/contacto' },
   ];
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md'
-          : 'bg-transparent'
+        isTransparent
+          ? 'bg-transparent border-b border-white/10'
+          : 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200'
       }`}
     >
       <div className="container-custom">
@@ -48,9 +52,9 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-tierra-600'
-                    : 'text-white hover:text-tierra-200'
+                  isTransparent
+                    ? 'text-white hover:text-tierra-200'
+                    : 'text-gray-700 hover:text-tierra-600'
                 }`}
               >
                 {item.name}
@@ -64,9 +68,9 @@ export default function Navbar() {
             className="lg:hidden"
           >
             {isMobileMenuOpen ? (
-              <X className={isScrolled ? 'text-gray-800' : 'text-white'} />
+              <X className={isTransparent ? 'text-white' : 'text-gray-800'} />
             ) : (
-              <Menu className={isScrolled ? 'text-gray-800' : 'text-white'} />
+              <Menu className={isTransparent ? 'text-white' : 'text-gray-800'} />
             )}
           </button>
         </div>
