@@ -1,20 +1,4 @@
-const proyectos = [
-  {
-    title: 'Milzoe 01',
-    subtitle: 'Diseno y ejecucion - render',
-    image: '/images/proyectos/milzoe-01.jpeg',
-  },
-  {
-    title: 'Milzoe 02',
-    subtitle: 'Diseno y ejecucion - render',
-    image: '/images/proyectos/milzoe-02.jpeg',
-  },
-  {
-    title: 'Milzoe 03',
-    subtitle: 'Diseno y ejecucion - render',
-    image: '/images/proyectos/milzoe-03.jpeg',
-  },
-];
+import { proyectos } from '@/data/proyectos';
 
 export default function ProyectosPage() {
   return (
