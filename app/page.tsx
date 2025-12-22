@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
@@ -17,21 +17,31 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 text-center text-white px-6 max-w-5xl">
-          <h1 className="mb-6 text-5xl md:text-7xl font-bold tracking-tight">
+        <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
+          <h1 className="mb-6 font-bold tracking-tight text-[clamp(2.2rem,6vw,4rem)]">
             HUELLA
           </h1>
-          <p className="text-xl md:text-2xl mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-            Disenamos espacios que dialogan con el territorio. <br />
-            Experiencias que se integran al paisaje y a tu forma de habitar.
+          <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
+            <span className="block sm:hidden">Espacios que dialogan con el territorio.</span>
+            <span className="hidden sm:inline">
+              Disenamos espacios que dialogan con el territorio.
+              <br className="hidden sm:block" />
+              Experiencias que se integran al paisaje y a tu forma de habitar.
+            </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/base" className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:justify-center items-center">
+            <Link
+              href="/base"
+              className="btn-primary w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg flex items-center justify-center gap-2 rounded-xl"
+            >
               Unidades para habitar
               <ArrowRight size={20} />
             </Link>
-            <Link href="/refugios" className="btn-secondary text-lg px-8 py-4 flex items-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
+            <Link
+              href="/refugios"
+              className="btn-secondary w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 rounded-xl"
+            >
               Experiencias de descanso
               <ArrowRight size={20} />
             </Link>
