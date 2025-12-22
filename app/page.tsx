@@ -32,7 +32,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070"
+            src="/media/huella/home/home-protrerillos-embalse-1.png"
             alt="Montanas de Potrerillos"
             className="w-full h-full object-cover"
           />
