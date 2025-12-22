@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { proyectos } from '@/data/proyectos';
 
 export default function Home() {
   const uenCards = [
@@ -20,11 +21,7 @@ export default function Home() {
     },
   ];
 
-  const projectImages = [
-    '/images/proyectos/milzoe-01.jpeg',
-    '/images/proyectos/milzoe-02.jpeg',
-    '/images/proyectos/milzoe-03.jpeg',
-  ];
+  const projectImages = proyectos.slice(0, 6);
 
   return (
     <main>
@@ -248,14 +245,14 @@ export default function Home() {
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {projectImages.map((src, index) => (
+            {projectImages.map((project) => (
               <div
-                key={`${src}-${index}`}
+                key={project.title}
                 className="overflow-hidden rounded-2xl bg-gray-100"
               >
                 <img
-                  src={src}
-                  alt={`Proyecto ${index + 1}`}
+                  src={project.image}
+                  alt={project.title}
                   className="h-56 w-full object-cover"
                 />
               </div>
