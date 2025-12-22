@@ -18,20 +18,30 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center text-white px-6 max-w-5xl">
-          <h1 className="mb-6 text-5xl md:text-7xl font-bold tracking-tight">
+          <h1 className="mb-6 text-[clamp(2.2rem,6vw,4rem)] font-bold tracking-tight leading-tight">
             HUELLA
           </h1>
-          <p className="text-xl md:text-2xl mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-            Disenamos espacios que dialogan con el territorio. <br />
+          <p className="block sm:hidden text-[clamp(1rem,2.2vw,1.25rem)] font-light leading-snug md:leading-normal max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance mb-8">
+            Espacios que dialogan con el territorio.
+          </p>
+          <p className="hidden sm:block text-[clamp(1rem,2.2vw,1.25rem)] font-light leading-snug md:leading-normal max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance mb-12">
+            Disenamos espacios que dialogan con el territorio.
+            <br className="hidden sm:block" />
             Experiencias que se integran al paisaje y a tu forma de habitar.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/base" className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:justify-center">
+            <Link
+              href="/base"
+              className="btn-primary w-full sm:w-auto px-5 py-3 text-sm sm:text-base rounded-xl flex items-center justify-center gap-2"
+            >
               Unidades para habitar
               <ArrowRight size={20} />
             </Link>
-            <Link href="/refugios" className="btn-secondary text-lg px-8 py-4 flex items-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
+            <Link
+              href="/refugios"
+              className="btn-secondary w-full sm:w-auto px-5 py-3 text-sm sm:text-base rounded-xl flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
+            >
               Experiencias de descanso
               <ArrowRight size={20} />
             </Link>

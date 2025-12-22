@@ -67,6 +67,12 @@
   }
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 @media (min-width: 768px) {
   @layer components {
     .section-padding {
