@@ -3,17 +3,20 @@ import Link from 'next/link';
 const pathways = [
   {
     title: 'HUELLA Base',
-    description: 'Unidades claras para avanzar con orden y confianza.',
+    description:
+      'Venta de módulos habitacionales industrializados CBox. Soluciones rápidas, transportables y escalables, con acompañamiento local en Mendoza.',
     href: '/base',
   },
   {
     title: 'HUELLA Diseno',
-    description: 'Arquitectura integrada para decisiones claras y humanas.',
+    description:
+      'Personalización y adaptación arquitectónica sobre el modelo base. Modificaciones, ampliaciones y proyectos a medida según uso y terreno.',
     href: '/diseno',
   },
   {
     title: 'HUELLA Refugios',
-    description: 'Experiencias de descanso en dialogo con el paisaje.',
+    description:
+      'Unidades de alquiler turístico en Potrerillos. Espacios diseñados para descansar en diálogo con el paisaje.',
     href: '/refugios',
   },
 ];
