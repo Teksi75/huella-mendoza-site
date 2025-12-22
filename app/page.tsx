@@ -7,13 +7,13 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
             src="/media/huella/home/home-protrerillos-embalse-1.png"
             alt="Montanas de Potrerillos"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[70%_85%] md:object-center"
           />
         </div>
 
@@ -48,8 +48,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="animate-bounce">
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 z-20 bottom-[calc(16px+env(safe-area-inset-bottom))] md:bottom-8"
+          aria-hidden
+        >
+          <div className="animate-bounce drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
             <svg
               className="w-6 h-6 text-white"
               fill="none"
