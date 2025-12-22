@@ -10,8 +10,9 @@ export default function ProyectosPage() {
         <div className="container-custom">
           <h1>Proyectos</h1>
           <p className="mt-4 max-w-3xl">
-            Evidencia real del trabajo de HUELLA. Cada proyecto muestra
-            decisiones de diseno, eficiencia y relacion con el paisaje.
+            Proyectos construidos y en proceso que muestran como cada decision
+            de diseno, eficiencia y relacion con el paisaje se traduce en una
+            experiencia concreta.
           </p>
         </div>
       </section>

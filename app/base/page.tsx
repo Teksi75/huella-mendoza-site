@@ -11,12 +11,12 @@ export default function BasePage() {
           <div className="max-w-3xl">
             <h2>HUELLA Base</h2>
             <p className="mt-3">
-              Unidades claras para avanzar rapido, con orden y previsibilidad.
+              Modulos habitacionales estandarizados que avanzan con plazos, alcances y terminaciones definidas.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Plazos y pasos definidos desde el inicio.</li>
-              <li>Niveles de terminacion que se ajustan a tu presupuesto.</li>
-              <li>Costos claros para decidir con confianza.</li>
+              <li>Pasos y plazos cerrados desde el primer contacto.</li>
+              <li>Niveles de terminacion preestablecidos segun uso y presupuesto.</li>
+              <li>Costos transparentes para decidir con previsibilidad.</li>
             </ul>
             <Link href="/contacto" className="btn-secondary mt-8 inline-flex">
               Consultar

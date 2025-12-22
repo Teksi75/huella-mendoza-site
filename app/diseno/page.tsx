@@ -118,26 +118,26 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2>HUELLA Diseno</h2>
             <p className="mt-3">
-              Acompanamiento cercano para dar forma a un espacio con identidad.
+              Proyectos arquitectonicos a medida con acompanamiento profesional para integrar diseno, funcionalidad y territorio.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Escucha activa para entender tu forma de habitar.</li>
-              <li>Criterio de arquitectura integrada para resolver con coherencia.</li>
-              <li>Seguimiento simple y presente en cada etapa.</li>
+              <li>Relevamiento del sitio y de tus rutinas para definir el programa.</li>
+              <li>Propuestas comparables que equilibran materialidad, paisaje y uso diario.</li>
+              <li>Direccion y seguimiento cercano para sostener decisiones de inicio a fin.</li>
             </ul>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Modelos listos</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Alternativas probadas para avanzar sin vueltas.
+                  Alternativas probadas que combinan diseno y funcionalidad.
                   <br />
-                  Elegis el ritmo y el nivel de terminacion.
+                  Elegis el ritmo, el nivel de terminacion y acompanamiento.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Eleccion - Ajuste - Inicio de obra
+                  Eleccion - Ajuste al sitio - Inicio de obra
                 </p>
                 <Link
                   href="#diseno"
@@ -149,15 +149,15 @@ export default function DisenoPage() {
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Proyectos personalizados</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Ideas a medida que nacen del sitio y tu vida.
+                  Proyectos unicos que nacen del lugar y de tus necesidades.
                   <br />
-                  Criterio claro para decidir con confianza.
+                  Entregas claras para decidir con confianza.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Relevamiento - Propuesta - Ajustes finales
+                  Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
                 <Link
                   href="#diseno"
@@ -169,15 +169,15 @@ export default function DisenoPage() {
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Crecer sin romper la armonia del lugar.
+                  Crecer sin romper la coherencia arquitectonica y el paisaje.
                   <br />
-                  Soluciones simples que suman valor.
+                  Soluciones simples que suman uso y valor.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Diagnostico - Plan - Obra liviana
+                  Diagnostico - Propuesta - Obra liviana
                 </p>
                 <Link
                   href="#diseno"
@@ -199,7 +199,7 @@ export default function DisenoPage() {
           <div className="max-w-4xl">
             <h2>Galeria de croquis y maquetas</h2>
             <p className="mt-3 text-base text-gray-700">
-              Iteraciones que muestran decisiones tempranas y prueban la coherencia del diseno.
+              Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseno, uso y territorio.
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2>Diseno interior</h2>
             <p className="mt-3 text-base text-gray-700">
-              Materiales honestos, luz dirigida y conexiones claras con el exterior para habitar sin exceso.
+              Materiales honestos, luz dirigida y conexiones claras con el exterior para un habitar cotidiano y sin exceso.
             </p>
           </div>
 
@@ -270,7 +270,7 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2>Estructura integrada al entorno</h2>
             <p className="mt-3 text-base text-gray-700">
-              Vistas largas, plataformas ligeras y recorridos que siguen la pendiente para sostener el dialogo con el paisaje.
+              Vistas largas, plataformas ligeras y recorridos que siguen la pendiente para integrar estructura, funcionalidad y paisaje.
             </p>
           </div>
 

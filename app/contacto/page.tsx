@@ -18,7 +18,7 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
         <div className="container-custom">
           <h1>Contacto</h1>
           <p className="mt-4 max-w-3xl">
-            Contanos sobre tu proyecto y te respondemos con una propuesta clara.
+            Contanos sobre tu proyecto y te respondemos con una propuesta clara, pasos y plazos estimados.
           </p>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
           <div className="rounded-2xl border border-tierra-200 bg-white p-6">
             <h2 className="text-2xl">WhatsApp directo</h2>
             <p className="mt-3 text-sm text-gray-600">
-              Si preferis, escribinos y respondemos rapido.
+              Si preferis, escribinos y coordinamos la respuesta que necesitas.
             </p>
             <a
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
