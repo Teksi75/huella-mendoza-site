@@ -3,24 +3,6 @@ import Link from 'next/link';
 import { proyectos } from '@/data/proyectos';
 
 export default function Home() {
-  const uenCards = [
-    {
-      title: 'HUELLA Base',
-      copy: 'Unidades claras para avanzar con orden y confianza.',
-      href: '/base',
-    },
-    {
-      title: 'HUELLA Diseno',
-      copy: 'Arquitectura integrada para decisiones claras y humanas.',
-      href: '/diseno',
-    },
-    {
-      title: 'HUELLA Refugios',
-      copy: 'Experiencias de descanso en dialogo con el paisaje.',
-      href: '/refugios',
-    },
-  ];
-
   const projectImages = proyectos.slice(0, 6);
 
   return (
@@ -141,6 +123,23 @@ export default function Home() {
 
       <section className="section-padding bg-tierra-50">
         <div className="container-custom">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-lg text-gray-700">
+              Explora a tu ritmo las formas de habitar que proponemos.
+            </p>
+            <Link
+              href="/huella"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-tierra-700 px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-tierra-800"
+            >
+              Explorar HUELLA
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-tierra-50">
+        <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Base</h2>
             <p className="mt-3">
@@ -198,30 +197,6 @@ export default function Home() {
             <Link href="/refugios" className="btn-secondary mt-8 inline-flex">
               Explorar
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-tierra-50">
-        <div className="container-custom">
-          <h2 className="text-center">Unidades de negocio</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {uenCards.map((card) => (
-              <div
-                key={card.title}
-                className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
-              >
-                <h3 className="text-xl">{card.title}</h3>
-                <p className="mt-3 text-sm text-gray-600">{card.copy}</p>
-                <Link
-                  href={card.href}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
-                >
-                  Ver detalles
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
