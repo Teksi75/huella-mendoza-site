@@ -22,7 +22,7 @@ export default function Home() {
             HUELLA
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
-            <span className="block sm:hidden">Espacios que se integran al paisaje que los rodea.</span>
+            <span className="block sm:hidden">Espacios que dialogan con el territorio.</span>
             <span className="hidden sm:inline">
               Disenamos espacios que leen el territorio para definir cada decision.
               <br className="hidden sm:block" />
