@@ -1,23 +1,28 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const pathways = [
   {
     title: 'HUELLA Base',
     description:
-      'Venta de módulos habitacionales industrializados CBox. Soluciones rápidas, transportables y escalables, con acompañamiento local en Mendoza.',
+      'Modulo estructural del sistema Huella. Logistica clara y escalable para crecer por etapas.',
     href: '/base',
+    image: '/media/huella/base/huella-base-modulo-simple.webp',
+    ctaLabel: 'Ver Base',
   },
   {
     title: 'HUELLA Diseno',
     description:
       'Personalización y adaptación arquitectónica sobre el modelo base. Modificaciones, ampliaciones y proyectos a medida según uso y terreno.',
     href: '/diseno',
+    ctaLabel: 'Conocer mas',
   },
   {
     title: 'HUELLA Refugios',
     description:
       'Unidades de alquiler turístico en Potrerillos. Espacios diseñados para descansar en diálogo con el paisaje.',
     href: '/refugios',
+    ctaLabel: 'Conocer mas',
   },
 ];
 
@@ -43,6 +48,17 @@ export default function HuellaPage() {
                 className="flex flex-col justify-between rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
               >
                 <div>
+                  {pathway.image ? (
+                    <div className="relative mb-4 h-36 overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
+                      <Image
+                        src={pathway.image}
+                        alt={`${pathway.title} - preview tecnico`}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                      />
+                    </div>
+                  ) : null}
                   <h2 className="text-xl">{pathway.title}</h2>
                   <p className="mt-3 text-sm text-gray-600">{pathway.description}</p>
                 </div>
@@ -50,7 +66,7 @@ export default function HuellaPage() {
                   href={pathway.href}
                   className="mt-6 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
                 >
-                  Conocer más
+                  {pathway.ctaLabel}
                 </Link>
               </div>
             ))}
