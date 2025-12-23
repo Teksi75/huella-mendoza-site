@@ -10,7 +10,7 @@ const logisticaCards = [
   {
     src: '/media/huella/base/huella-base-logistica.webp',
     title: 'Montaje directo',
-    copy: 'Montaje ordenado en sitio con eficiencia logistica para reducir tiempos y coordinar despliegues.',
+    copy: 'Montaje ordenado en sitio con eficiencia logística para reducir tiempos y coordinar despliegues.',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function BasePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
               <Image
                 src="/media/huella/base/huella-base-modulo-simple.webp"
-                alt="Huella Base, modulo estructural"
+                alt="Huella Base, módulo estructural"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -38,10 +38,10 @@ export default function BasePage() {
                 HUELLA Base
               </p>
               <h1 className="mt-4 text-3xl md:text-4xl">
-                Base, el modulo estructural del sistema Huella
+                Base, el módulo estructural del sistema Huella
               </h1>
               <p className="mt-4 text-base text-gray-600">
-                Punto de partida claro para ordenar estructura, logistica y escalabilidad
+                Punto de partida claro para ordenar estructura, logística y escalabilidad
                 sin perder coherencia en cada etapa.
               </p>
             </div>
@@ -52,9 +52,9 @@ export default function BasePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Logistica y montaje</h2>
+            <h2>Logística y montaje</h2>
             <p className="mt-3 text-base text-gray-700">
-              Transporte optimizado, montaje directo y eficiencia logistica para mover y
+              Transporte optimizado, montaje directo y eficiencia logística para mover y
               desplegar unidades con orden.
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function BasePage() {
             <div className="max-w-xl">
               <h2>Escalabilidad</h2>
               <p className="mt-3 text-base text-gray-700">
-                Replicabilidad pensada para conjuntos, campamentos e implantaciones multiples.
+                Replicabilidad pensada para conjuntos, campamentos e implantaciones múltiples.
               </p>
               <p className="mt-3 text-sm text-gray-600">
                 La unidad base se repite con orden para crecer por etapas y sostener

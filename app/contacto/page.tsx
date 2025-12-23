@@ -47,7 +47,7 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
                 />
               </div>
               <div>
-                <label className="text-sm font-semibold">Telefono</label>
+                <label className="text-sm font-semibold">Teléfono</label>
                 <input
                   className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
                   name="telefono"
@@ -66,7 +66,7 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
                     Seleccionar motivo
                   </option>
                   <option value="base">Base</option>
-                  <option value="diseno">Diseno</option>
+                  <option value="diseno">Diseño</option>
                   <option value="refugios">Refugios</option>
                 </select>
               </div>
@@ -86,7 +86,7 @@ export default function ContactoPage({ searchParams }: ContactoPageProps) {
           <div className="rounded-2xl border border-tierra-200 bg-white p-6">
             <h2 className="text-2xl">WhatsApp directo</h2>
             <p className="mt-3 text-sm text-gray-600">
-              Si preferis, escribinos y coordinamos la respuesta que necesitas.
+              Si preferís, escribinos y coordinamos la respuesta que necesitás.
             </p>
             <a
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
