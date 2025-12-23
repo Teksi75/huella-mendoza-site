@@ -24,7 +24,7 @@ export default function Navbar() {
     { name: 'Inicio', href: '/' },
     { name: 'HUELLA', href: '/#huella' },
     { name: 'Base', href: '/base' },
-    { name: 'Diseno', href: '/diseno' },
+    { name: 'Diseño', href: '/diseno' },
     { name: 'Refugios', href: '/refugios' },
     { name: 'Proyectos', href: '/proyectos' },
     { name: 'Contacto', href: '/contacto' },

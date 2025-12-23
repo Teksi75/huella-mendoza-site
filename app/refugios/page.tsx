@@ -11,7 +11,7 @@ export default function RefugiosPage() {
           <div className="max-w-3xl">
             <h2>HUELLA Refugios</h2>
             <p className="mt-4 text-base text-gray-600">
-              Refugios de uso temporal disenados para descansar con luz suave, silencio y vistas abiertas.
+              Refugios de uso temporal diseñados para descansar con luz suave, silencio y vistas abiertas.
               <br />
               Todo resuelto para llegar, usar y volver liviano.
             </p>
@@ -27,10 +27,10 @@ export default function RefugiosPage() {
           <div className="max-w-3xl">
             <h2>La experiencia</h2>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Luz calida y abrigo resueltos para acompanar el ritmo del dia.</li>
+              <li>Luz cálida y abrigo resueltos para acompañar el ritmo del día.</li>
               <li>Silencio y privacidad para desconectar sin esfuerzos.</li>
               <li>Paisaje presente en cada mirada desde espacios simples de usar.</li>
-            </ul>
+          </ul>
           </div>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function RefugiosPage() {
       <section className="section-padding bg-tierra-50">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Como reservar</h2>
+            <h2>Cómo reservar</h2>
             <ol className="mt-6 grid gap-3 text-sm text-gray-600 list-decimal list-inside">
               <li>Contanos fechas, cantidad de personas y necesidades especiales.</li>
               <li>Confirmamos disponibilidad, servicios y detalles de acceso.</li>

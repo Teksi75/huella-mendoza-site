@@ -12,7 +12,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
             src="/media/huella/home/home-protrerillos-embalse-1.png"
-            alt="Montanas de Potrerillos"
+            alt="Montañas de Potrerillos"
             className="w-full h-full object-cover object-[70%_85%] md:object-center"
           />
         </div>
@@ -24,7 +24,7 @@ export default function Home() {
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
             <span className="block sm:hidden">Espacios que dialogan con el territorio.</span>
             <span className="hidden sm:inline">
-              Disenamos espacios que leen el territorio para definir cada decision.
+              Diseñamos espacios que leen el territorio para definir cada decisión.
               <br className="hidden sm:block" />
               Experiencias que combinan paisaje, uso cotidiano y calma.
             </span>
@@ -79,7 +79,7 @@ export default function Home() {
             </div>
             <h2 className="mt-4">Una forma consciente y flexible de habitar el territorio.</h2>
             <p className="mt-4 text-base text-gray-600">
-              Elegi la propuesta que mejor acompana tu forma de habitar y el tiempo que tenes para hacerlo realidad.
+              Elegí la propuesta que mejor acompaña tu forma de habitar y el tiempo que tenés para hacerlo realidad.
             </p>
           </div>
 
@@ -87,16 +87,16 @@ export default function Home() {
             <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
               <h3 className="text-2xl">HUELLA Base</h3>
               <p className="mt-3 text-sm text-gray-600">
-                Modulos habitacionales estandarizados con alcance, plazos y niveles de terminacion definidos.
+                Módulos habitacionales estandarizados con alcance, plazos y niveles de terminación definidos.
               </p>
               <Link href="/base" className="mt-6 inline-flex items-center btn-primary">
                 Explorar
               </Link>
             </div>
             <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl">HUELLA Diseno</h3>
+              <h3 className="text-2xl">HUELLA Diseño</h3>
               <p className="mt-3 text-sm text-gray-600">
-                Proyectos arquitectonicos a medida con criterio y acompanamiento profesional.
+                Proyectos arquitectónicos a medida con criterio y acompañamiento profesional.
               </p>
               <Link href="/diseno" className="mt-6 inline-flex items-center btn-secondary">
                 Explorar
@@ -105,7 +105,7 @@ export default function Home() {
             <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
               <h3 className="text-2xl">HUELLA Refugios</h3>
               <p className="mt-3 text-sm text-gray-600">
-                Unidades de descanso para estadias breves, centradas en paisaje y silencio.
+                Unidades de descanso para estadías breves, centradas en paisaje y silencio.
               </p>
               <Link href="/refugios" className="mt-6 inline-flex items-center btn-secondary">
                 Explorar
@@ -124,12 +124,12 @@ export default function Home() {
             <div className="text-sm uppercase tracking-widest text-tierra-600">
               Huella Mendoza
             </div>
-            <h2 className="mt-4">Que es HUELLA</h2>
+            <h2 className="mt-4">Qué es HUELLA</h2>
             <p className="mt-4">
               HUELLA es una propuesta de arquitectura y experiencias que parte
-              del territorio para definir cada obra. Integramos diseno,
+              del territorio para definir cada obra. Integramos diseño,
               funcionalidad y paisaje para crear espacios claros de habitar.
-              Desde modulos estandarizados hasta proyectos a medida y refugios,
+              Desde módulos estandarizados hasta proyectos a medida y refugios,
               ofrecemos caminos concretos y previsibles.
             </p>
           </div>
@@ -161,9 +161,9 @@ export default function Home() {
               Unidades habitacionales modulares con alcances definidos para avanzar con orden y sin sorpresas.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Niveles de terminacion especificados segun presupuesto y uso.</li>
+              <li>Niveles de terminación especificados según presupuesto y uso.</li>
               <li>Pasos y plazos detallados antes de iniciar.</li>
-              <li>Costos cerrados para tomar decisiones con anticipacion.</li>
+              <li>Costos cerrados para tomar decisiones con anticipación.</li>
             </ul>
             <Link href="/base" className="btn-secondary mt-8 inline-flex">
               Explorar
@@ -178,14 +178,14 @@ export default function Home() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>HUELLA Diseno</h2>
+            <h2>HUELLA Diseño</h2>
             <p className="mt-3">
-              Proyectos arquitectonicos a medida con acompanamiento profesional en cada etapa.
+              Proyectos arquitectónicos a medida con acompañamiento profesional en cada etapa.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Lectura del sitio y de tu modo de habitar para definir el diseno.</li>
+              <li>Lectura del sitio y de tu modo de habitar para definir el diseño.</li>
               <li>Propuestas comparables que integran funcionalidad y paisaje.</li>
-              <li>Direccion y seguimiento cercano para sostener las decisiones.</li>
+              <li>Dirección y seguimiento cercano para sostener las decisiones.</li>
             </ul>
             <Link href="/diseno" className="btn-secondary mt-8 inline-flex">
               Explorar
@@ -202,12 +202,12 @@ export default function Home() {
           <div className="max-w-3xl">
             <h2>HUELLA Refugios</h2>
             <p className="mt-3">
-              Unidades de descanso para estadias temporales, con foco en el paisaje y el silencio.
+              Unidades de descanso para estadías temporales, con foco en el paisaje y el silencio.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Iluminacion y climatizacion resueltas para uso inmediato.</li>
+              <li>Iluminación y climatización resueltas para uso inmediato.</li>
               <li>Equipamiento sencillo para disfrutar sin complejidad.</li>
-              <li>Reserva directa y acompanamiento en la llegada.</li>
+              <li>Reserva directa y acompañamiento en la llegada.</li>
             </ul>
             <Link href="/refugios" className="btn-secondary mt-8 inline-flex">
               Explorar
@@ -225,8 +225,8 @@ export default function Home() {
             <div>
               <h2>Proyectos</h2>
               <p className="mt-3 max-w-2xl">
-                Proyectos construidos y en marcha que muestran como trabajamos
-                modulos habitacionales, diseno a medida y refugios integrados al paisaje.
+                Proyectos construidos y en marcha que muestran cómo trabajamos
+                módulos habitacionales, diseño a medida y refugios integrados al paisaje.
               </p>
             </div>
             <Link href="/proyectos" className="btn-secondary px-6 py-3">

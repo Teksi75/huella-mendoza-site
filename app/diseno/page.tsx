@@ -5,7 +5,7 @@ export default function DisenoPage() {
   const croquis = [
     {
       src: '/media/huella/diseno/diseno-croquis-1.PNG',
-      title: 'Croquis volumetrico',
+      title: 'Croquis volumétrico',
       aspectClass: 'aspect-[4/3]',
     },
     {
@@ -50,7 +50,7 @@ export default function DisenoPage() {
     },
     {
       src: '/media/huella/diseno/diseno-croquis-10.png',
-      title: 'Croquis panoramico',
+      title: 'Croquis panorámico',
       aspectClass: 'aspect-[16/9]',
       highlight: true,
     },
@@ -60,7 +60,7 @@ export default function DisenoPage() {
     {
       src: '/media/huella/diseno/diseno-interior-1.png',
       title: 'Madera y luz natural',
-      copy: 'Texturas claras, planos calidos y luz filtrada que acompana el habitar diario.',
+      copy: 'Texturas claras, planos cálidos y luz filtrada que acompaña el habitar diario.',
     },
     {
       src: '/media/huella/diseno/diseno-interior-2.png',
@@ -70,12 +70,12 @@ export default function DisenoPage() {
     {
       src: '/media/huella/diseno/diseno-interior-3.png',
       title: 'Patios que conectan',
-      copy: 'Interior y exterior se mezclan con transparencias y vegetacion cercana.',
+      copy: 'Interior y exterior se mezclan con transparencias y vegetación cercana.',
     },
     {
       src: '/media/huella/diseno/diseno-interior-4.png',
       title: 'Materialidad honesta',
-      copy: 'Hormigon visto, madera y metal dialogan en capas coherentes.',
+      copy: 'Hormigón visto, madera y metal dialogan en capas coherentes.',
     },
   ];
 
@@ -89,12 +89,12 @@ export default function DisenoPage() {
     {
       src: '/media/huella/2.png',
       title: 'Frente integrado',
-      copy: 'Volumenes bajos que se alinean con la topografia existente.',
+      copy: 'Volúmenes bajos que se alinean con la topografía existente.',
     },
     {
       src: '/media/huella/3.png',
       title: 'Recortes de horizonte',
-      copy: 'Ventanas largas que enmarcan la montana sin romper la privacidad.',
+      copy: 'Ventanas largas que enmarcan la montaña sin romper la privacidad.',
     },
     {
       src: '/media/huella/13.png',
@@ -104,7 +104,7 @@ export default function DisenoPage() {
     {
       src: '/media/huella/16.png',
       title: 'Refugio en pendiente',
-      copy: 'Estructura apoyada en el terreno con minimo impacto visual.',
+      copy: 'Estructura apoyada en el terreno con mínimo impacto visual.',
     },
   ];
 
@@ -116,22 +116,22 @@ export default function DisenoPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>HUELLA Diseno</h2>
+            <h2>HUELLA Diseño</h2>
             <p className="mt-3">
-              Proyectos arquitectonicos a medida con acompanamiento profesional para integrar diseno, funcionalidad y territorio.
+              Proyectos arquitectónicos a medida con acompañamiento profesional para integrar diseño, funcionalidad y territorio.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
               <li>Relevamiento del sitio y de tus rutinas para definir el programa.</li>
               <li>Propuestas comparables que equilibran materialidad, paisaje y uso diario.</li>
-              <li>Direccion y seguimiento cercano para sostener decisiones de inicio a fin.</li>
+              <li>Dirección y seguimiento cercano para sostener decisiones de inicio a fin.</li>
             </ul>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Modelos listos</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Alternativas probadas que combinan diseno y funcionalidad.
+                  Alternativas probadas que combinan diseño y funcionalidad.
                   <br />
-                  Elegis el ritmo, el nivel de terminacion y acompanamiento.
+                  Elegís el ritmo, el nivel de terminación y acompañamiento.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
@@ -149,7 +149,7 @@ export default function DisenoPage() {
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Proyectos personalizados</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Proyectos unicos que nacen del lugar y de tus necesidades.
+                  Proyectos únicos que nacen del lugar y de tus necesidades.
                   <br />
                   Entregas claras para decidir con confianza.
                 </p>
@@ -169,7 +169,7 @@ export default function DisenoPage() {
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Crecer sin romper la coherencia arquitectonica y el paisaje.
+                  Crecer sin romper la coherencia arquitectónica y el paisaje.
                   <br />
                   Soluciones simples que suman uso y valor.
                 </p>
@@ -177,7 +177,7 @@ export default function DisenoPage() {
                   Proceso
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Diagnostico - Propuesta - Obra liviana
+                  Diagnóstico - Propuesta - Obra liviana
                 </p>
                 <Link
                   href="#diseno"
@@ -197,9 +197,9 @@ export default function DisenoPage() {
       <section className="section-padding bg-tierra-50">
         <div className="container-custom">
           <div className="max-w-4xl">
-            <h2>Galeria de croquis y maquetas</h2>
+            <h2>Galería de croquis y maquetas</h2>
             <p className="mt-3 text-base text-gray-700">
-              Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseno, uso y territorio.
+              Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseño, uso y territorio.
             </p>
           </div>
 
@@ -214,7 +214,7 @@ export default function DisenoPage() {
                 <div className={`relative overflow-hidden ${item.aspectClass}`}>
                   <Image
                     src={item.src}
-                    alt={`${item.title} - HUELLA Diseno`}
+                    alt={`${item.title} - HUELLA Diseño`}
                     fill
                     className="object-cover"
                     sizes={item.highlight ? '(min-width: 1024px) 66vw, 100vw' : '(min-width: 1024px) 33vw, 100vw'}
@@ -234,7 +234,7 @@ export default function DisenoPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Diseno interior</h2>
+            <h2>Diseño interior</h2>
             <p className="mt-3 text-base text-gray-700">
               Materiales honestos, luz dirigida y conexiones claras con el exterior para un habitar cotidiano y sin exceso.
             </p>

@@ -5,24 +5,24 @@ const pathways = [
   {
     title: 'HUELLA Base',
     description:
-      'Modulo estructural del sistema Huella. Logistica clara y escalable para crecer por etapas.',
+      'Módulo estructural del sistema Huella. Logística clara y escalable para crecer por etapas.',
     href: '/base',
     image: '/media/huella/base/huella-base-modulo-simple.webp',
     ctaLabel: 'Ver Base',
   },
   {
-    title: 'HUELLA Diseno',
+    title: 'HUELLA Diseño',
     description:
       'Personalización y adaptación arquitectónica sobre el modelo base. Modificaciones, ampliaciones y proyectos a medida según uso y terreno.',
     href: '/diseno',
-    ctaLabel: 'Conocer mas',
+    ctaLabel: 'Conocer más',
   },
   {
     title: 'HUELLA Refugios',
     description:
       'Unidades de alquiler turístico en Potrerillos. Espacios diseñados para descansar en diálogo con el paisaje.',
     href: '/refugios',
-    ctaLabel: 'Conocer mas',
+    ctaLabel: 'Conocer más',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function HuellaPage() {
             <p className="text-sm uppercase tracking-widest text-tierra-600">HUELLA</p>
             <h1 className="mt-4 text-3xl md:text-4xl">Tres formas de habitar el territorio</h1>
             <p className="mt-4 text-base text-gray-700">
-              Te presentamos los caminos para explorar HUELLA con calma. Elegi el
+              Te presentamos los caminos para explorar HUELLA con calma. Elegí el
               ritmo, la escala y el acompañamiento que mejor dialoguen con tu forma de
               vivir.
             </p>
@@ -52,7 +52,7 @@ export default function HuellaPage() {
                     <div className="relative mb-4 h-36 overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
                       <Image
                         src={pathway.image}
-                        alt={`${pathway.title} - preview tecnico`}
+                        alt={`${pathway.title} - preview técnico`}
                         fill
                         className="object-cover"
                         sizes="(min-width: 768px) 33vw, 100vw"
@@ -73,7 +73,7 @@ export default function HuellaPage() {
           </div>
 
           <div className="mt-12 text-center text-sm text-gray-600">
-            Elegi por donde empezar o consultanos para acompanarte en el proceso.
+            Elegí por dónde empezar o consultanos para acompañarte en el proceso.
           </div>
         </div>
       </section>
