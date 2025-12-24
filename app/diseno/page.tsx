@@ -4,55 +4,20 @@ import Link from 'next/link';
 export default function DisenoPage() {
   const croquis = [
     {
-      src: '/media/huella/diseno/diseno-croquis-1.PNG',
-      title: 'Croquis volumétrico',
-      aspectClass: 'aspect-[4/3]',
+      src: '/media/huella/diseno/diseno-croquis-10.png',
+      title: 'Croquis y maquetas',
+      aspectClass: 'aspect-[16/9]',
+      highlight: true,
     },
     {
-      src: '/media/huella/diseno/diseno-croquis-2.PNG',
-      title: 'Croquis de fachada',
+      src: '/media/huella/diseno/diseno-croquis-9.png',
+      title: 'Maqueta elevada',
       aspectClass: 'aspect-[4/3]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-3.png',
-      title: 'Maqueta inicial',
-      aspectClass: 'aspect-[3/4]',
     },
     {
       src: '/media/huella/diseno/diseno-croquis-4.png',
       title: 'Croquis de circulaciones',
       aspectClass: 'aspect-[4/3]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-5.png',
-      title: 'Maqueta de patio',
-      aspectClass: 'aspect-[3/4]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-6.png',
-      title: 'Croquis de ritmo',
-      aspectClass: 'aspect-[4/3]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-7.png',
-      title: 'Maqueta elevada',
-      aspectClass: 'aspect-[3/4]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-8.png',
-      title: 'Croquis de cubierta',
-      aspectClass: 'aspect-[4/3]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-9.png',
-      title: 'Croquis de detalles',
-      aspectClass: 'aspect-[4/3]',
-    },
-    {
-      src: '/media/huella/diseno/diseno-croquis-10.png',
-      title: 'Croquis panorámico',
-      aspectClass: 'aspect-[16/9]',
-      highlight: true,
     },
   ];
 
