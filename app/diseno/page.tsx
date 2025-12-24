@@ -56,26 +56,6 @@ export default function DisenoPage() {
       copy: 'Recorrido amplio que abre el paisaje y da bienvenida con calma.',
       highlight: true,
     },
-    {
-      src: '/media/huella/2.png',
-      title: 'Frente integrado',
-      copy: 'Volúmenes bajos que se alinean con la topografía existente.',
-    },
-    {
-      src: '/media/huella/3.png',
-      title: 'Recortes de horizonte',
-      copy: 'Ventanas largas que enmarcan la montaña sin romper la privacidad.',
-    },
-    {
-      src: '/media/huella/13.png',
-      title: 'Terrazas habitables',
-      copy: 'Plataformas livianas que extienden la vida exterior.',
-    },
-    {
-      src: '/media/huella/16.png',
-      title: 'Refugio en pendiente',
-      copy: 'Estructura apoyada en el terreno con mínimo impacto visual.',
-    },
   ];
 
   return (
