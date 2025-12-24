@@ -28,22 +28,12 @@ export default function DisenoPage() {
 
   const interiores = [
     {
-      src: '/media/huella/diseno/diseno-interior-1.png',
+      src: '/media/huella/diseno/diseno-interior-4.png',
       title: 'Madera y luz natural',
       copy: 'Texturas claras, planos cálidos y luz filtrada que acompaña el habitar diario.',
     },
     {
       src: '/media/huella/diseno/diseno-interior-2.png',
-      title: 'Escala humana',
-      copy: 'Mobiliario simple que ordena el espacio y deja respirar las vistas.',
-    },
-    {
-      src: '/media/huella/diseno/diseno-interior-3.png',
-      title: 'Patios que conectan',
-      copy: 'Interior y exterior se mezclan con transparencias y vegetación cercana.',
-    },
-    {
-      src: '/media/huella/diseno/diseno-interior-4.png',
       title: 'Materialidad honesta',
       copy: 'Hormigón visto, madera y metal dialogan en capas coherentes.',
     },
