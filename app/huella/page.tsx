@@ -17,6 +17,7 @@ const pathways = [
     description:
       'Proyecto a medida con acompañamiento profesional.',
     href: '/diseno',
+    image: '/media/huella/diseno/diseno-croquis-10.webp',
     ctaLabel: 'Conocer más',
   },
   {
