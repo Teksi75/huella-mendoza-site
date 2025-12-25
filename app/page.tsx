@@ -30,21 +30,33 @@ export default function Home() {
             </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:justify-center items-center">
+          <div className="flex flex-col items-center gap-4">
             <Link
-              href="/base"
-              className="btn-primary w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg flex items-center justify-center gap-2 rounded-xl"
+              href="/huella"
+              className="btn-primary w-full sm:w-auto px-6 py-3 sm:px-10 sm:py-4 text-sm sm:text-lg flex items-center justify-center gap-2 rounded-xl"
             >
-              Unidades modulares listas para habitar
-              <ArrowRight size={20} />
+              Explorar HUELLA →
             </Link>
-            <Link
-              href="/refugios"
-              className="btn-secondary w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 rounded-xl"
-            >
-              Refugios listos para descansar
-              <ArrowRight size={20} />
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/80">
+              <Link
+                href="/huella#base"
+                className="rounded-full border border-white/40 px-3 py-1.5 text-xs font-medium tracking-wide text-white/90 transition hover:border-white/70 hover:text-white"
+              >
+                Base · Unidades modulares
+              </Link>
+              <Link
+                href="/huella#diseno"
+                className="rounded-full border border-white/40 px-3 py-1.5 text-xs font-medium tracking-wide text-white/90 transition hover:border-white/70 hover:text-white"
+              >
+                Diseño · Proyecto a medida
+              </Link>
+              <Link
+                href="/huella#refugios"
+                className="rounded-full border border-white/40 px-3 py-1.5 text-xs font-medium tracking-wide text-white/90 transition hover:border-white/70 hover:text-white"
+              >
+                Refugios · Estadías / alquiler
+              </Link>
+            </div>
           </div>
         </div>
 

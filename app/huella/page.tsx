@@ -3,24 +3,27 @@ import Link from 'next/link';
 
 const pathways = [
   {
+    id: 'base',
     title: 'HUELLA Base',
     description:
-      'Módulo estructural del sistema Huella. Logística clara y escalable para crecer por etapas.',
+      'Unidades modulares listas, con alcances y plazos definidos.',
     href: '/base',
     image: '/media/huella/base/huella-base-modulo-simple.webp',
     ctaLabel: 'Ver Base',
   },
   {
+    id: 'diseno',
     title: 'HUELLA Diseño',
     description:
-      'Personalización y adaptación arquitectónica sobre el modelo base. Modificaciones, ampliaciones y proyectos a medida según uso y terreno.',
+      'Proyecto arquitectónico a medida con acompañamiento profesional.',
     href: '/diseno',
     ctaLabel: 'Conocer más',
   },
   {
+    id: 'refugios',
     title: 'HUELLA Refugios',
     description:
-      'Unidades de alquiler turístico en Potrerillos. Espacios diseñados para descansar en diálogo con el paisaje.',
+      'Estadías en Potrerillos pensadas para descansar.',
     href: '/refugios',
     ctaLabel: 'Conocer más',
   },
@@ -43,9 +46,10 @@ export default function HuellaPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {pathways.map((pathway) => (
-              <div
+              <section
                 key={pathway.title}
-                className="flex flex-col justify-between rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
+                id={pathway.id}
+                className="scroll-mt-28 flex flex-col justify-between rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm md:scroll-mt-32"
               >
                 <div>
                   {pathway.image ? (
@@ -68,7 +72,7 @@ export default function HuellaPage() {
                 >
                   {pathway.ctaLabel}
                 </Link>
-              </div>
+              </section>
             ))}
           </div>
 
