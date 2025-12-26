@@ -27,6 +27,7 @@ const pathways = [
       'Estadías para descansar en diálogo con el paisaje.',
     href: '/refugios',
     ctaLabel: 'Conocer más',
+    comingSoon: 'PRÓXIMAMENTE',
   },
 ];
 
@@ -53,8 +54,8 @@ export default function HuellaPage() {
                 className="flex flex-col justify-between rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm scroll-mt-28 md:scroll-mt-32"
               >
                 <div>
-                  {pathway.image ? (
-                    <div className="relative mb-4 h-36 overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
+                  <div className="relative mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
+                    {pathway.image ? (
                       <Image
                         src={pathway.image}
                         alt={`${pathway.title} - preview técnico`}
@@ -62,8 +63,13 @@ export default function HuellaPage() {
                         className="object-cover"
                         sizes="(min-width: 768px) 33vw, 100vw"
                       />
-                    </div>
-                  ) : null}
+                    ) : null}
+                    {pathway.comingSoon ? (
+                      <span className="relative rounded-full border border-tierra-200 bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-tierra-600 backdrop-blur">
+                        {pathway.comingSoon}
+                      </span>
+                    ) : null}
+                  </div>
                   <h2 className="text-xl">{pathway.title}</h2>
                   <p className="mt-3 text-sm text-gray-600">{pathway.description}</p>
                 </div>
