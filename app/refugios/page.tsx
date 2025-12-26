@@ -1,4 +1,9 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'HUELLA Refugios – Estadías en Potrerillos',
+};
 
 export default function RefugiosPage() {
   return (
