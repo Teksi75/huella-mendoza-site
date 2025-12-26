@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HUELLA - Diseño y experiencias en la montaña",
+  title: "HUELLA – Arquitectura y espacios para habitar",
   description: "Soluciones habitacionales y experiencias turísticas integradas al paisaje de Potrerillos, Mendoza",
 };
 

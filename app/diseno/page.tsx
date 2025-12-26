@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'HUELLA Diseño – Proyecto a medida',
+};
 
 export default function DisenoPage() {
   const croquisDestacado = {
