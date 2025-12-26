@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { proyectos } from '@/data/proyectos';
 
@@ -144,23 +143,6 @@ export default function Home() {
               Desde módulos estandarizados hasta proyectos a medida y refugios,
               ofrecemos caminos concretos y previsibles.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-tierra-50">
-        <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-lg text-gray-700">
-              Explorá a tu ritmo las tres propuestas y elegí la que mejor se ajusta a tu necesidad.
-            </p>
-            <Link
-              href="/huella"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-tierra-700 px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-tierra-800"
-            >
-              Explorar HUELLA
-              <ArrowRight size={18} />
-            </Link>
           </div>
         </div>
       </section>
