@@ -49,8 +49,7 @@ export default function BasePage() {
                 Un punto de partida claro y eficiente.
               </p>
               <div className="mb-6">
-                <h2 className="text-lg font-semibold mb-2 text-center md:text-left">Qué es</h2>
-                <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
+                                <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
                   Base, el módulo estructural del sistema HUELLA. Punto de partida claro para
                   ordenar estructura, logística y escalabilidad sin perder coherencia en cada
                   etapa.
@@ -157,3 +156,4 @@ export default function BasePage() {
     </main>
   );
 }
+
