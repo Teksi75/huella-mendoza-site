@@ -22,7 +22,7 @@ export default function Home() {
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
             <span className="block">Arquitectura modular para habitar el paisaje.</span>
-            <span className="block">Diseño claro, pensado para uso real.</span>
+            <span className="block">Espacios que acompañan tu forma de vivir.</span>
           </p>
 
           <div className="flex flex-col items-center gap-4">
