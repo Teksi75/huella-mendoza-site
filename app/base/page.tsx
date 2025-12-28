@@ -137,15 +137,7 @@ export default function BasePage() {
                 </p>
               </div>
               <div className="mb-8">
-                <h2 className="text-lg font-semibold mb-2">Qué podés definir</h2>
                 <p className="text-base leading-relaxed text-gray-700">
-                  Vos elegís:
-                  <br />– nivel de terminación
-                  <br />– equipamiento
-                  <br />– usos y destino
-                  <br />– cómo y cuándo escalar
-                </p>
-                <p className="mt-3 text-base leading-relaxed text-gray-700">
                   HUELLA Base se adapta a tu proyecto, no al revés.
                 </p>
               </div>
