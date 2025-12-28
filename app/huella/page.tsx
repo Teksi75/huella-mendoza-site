@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { altText } from '@/data/altText';
 
 const pathways = [
   {
@@ -58,7 +59,7 @@ export default function HuellaPage() {
                     {pathway.image ? (
                       <Image
                         src={pathway.image}
-                        alt={`${pathway.title} - preview técnico`}
+                        alt={altText[pathway.image]}
                         fill
                         className="object-cover"
                         sizes="(min-width: 768px) 33vw, 100vw"
