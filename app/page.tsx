@@ -18,12 +18,11 @@ export default function Home() {
 
         <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
           <h1 className="mb-6 font-bold tracking-tight text-[clamp(2.2rem,6vw,4rem)]">
-            <span className="block">Arquitectura modular</span>
-            <span className="block">para habitar el paisaje</span>
+            HUELLA
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
-            <span className="block">Soluciones claras.</span>
-            <span className="block">Plazos definidos.</span>
+            <span className="block">Arquitectura modular para habitar el paisaje.</span>
+            <span className="block">Diseño claro, pensado para uso real.</span>
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -31,7 +30,7 @@ export default function Home() {
               href="/huella"
               className="btn-primary flex h-12 w-full items-center justify-center rounded-full px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
-              Explorar propuestas
+              Explorar HUELLA →
             </Link>
             <div className="flex flex-col sm:flex-row items-center gap-2 text-sm sm:text-base text-white/90">
               <Link
@@ -92,42 +91,57 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl">HUELLA Base</h3>
-              <p className="mt-3 text-sm text-gray-600">
-                Rápido. Claro. Accesible.
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                <span className="block">Soluciones modulares con costos y tiempos definidos.</span>
-                <span className="block">Vos elegís el nivel de terminación.</span>
-              </p>
-              <Link href="/base" className="mt-6 inline-flex items-center btn-primary">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+              <div className="flex-1 pb-6">
+                <h3 className="text-2xl">HUELLA Base</h3>
+                <p className="mt-3 text-sm text-gray-600">
+                  Rápido. Claro. Accesible.
+                </p>
+                <p className="mt-2 text-sm text-gray-600">
+                  <span className="block">Soluciones modulares con costos claros.</span>
+                  <span className="block">Vos elegís el nivel de terminación.</span>
+                </p>
+              </div>
+              <Link
+                href="/base"
+                className="btn-primary mt-auto inline-flex h-12 w-full items-center justify-center"
+              >
                 Pedir presupuesto
               </Link>
             </div>
-            <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl">HUELLA Diseño</h3>
-              <p className="mt-3 text-sm text-gray-600">
-                Arquitectura pensada para vos.
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                <span className="block">Modelos listos, proyectos personalizados</span>
-                <span className="block">y ampliaciones que se integran a lo existente.</span>
-              </p>
-              <Link href="/diseno" className="mt-6 inline-flex items-center btn-secondary">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+              <div className="flex-1 pb-6">
+                <h3 className="text-2xl">HUELLA Diseño</h3>
+                <p className="mt-3 text-sm text-gray-600">
+                  Arquitectura pensada para vos.
+                </p>
+                <p className="mt-2 text-sm text-gray-600">
+                  <span className="block">Modelos listos, proyectos personalizados</span>
+                  <span className="block">y ampliaciones que se integran a lo existente.</span>
+                </p>
+              </div>
+              <Link
+                href="/diseno"
+                className="btn-secondary mt-auto inline-flex h-12 w-full items-center justify-center"
+              >
                 Solicitar asesoramiento
               </Link>
             </div>
-            <div className="rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl">HUELLA Refugios</h3>
-              <p className="mt-3 text-sm text-gray-600">
-                Espacios para vivir la experiencia.
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                <span className="block">Refugios integrados al entorno</span>
-                <span className="block">pensados para el descanso y el paisaje.</span>
-              </p>
-              <Link href="/refugios" className="mt-6 inline-flex items-center btn-secondary">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+              <div className="flex-1 pb-6">
+                <h3 className="text-2xl">HUELLA Refugios</h3>
+                <p className="mt-3 text-sm text-gray-600">
+                  Espacios para vivir la experiencia.
+                </p>
+                <p className="mt-2 text-sm text-gray-600">
+                  <span className="block">Refugios integrados al entorno</span>
+                  <span className="block">pensados para el descanso y el paisaje.</span>
+                </p>
+              </div>
+              <Link
+                href="/refugios"
+                className="btn-secondary mt-auto inline-flex h-12 w-full items-center justify-center"
+              >
                 Consultar disponibilidad
               </Link>
             </div>
@@ -146,13 +160,15 @@ export default function Home() {
             </div>
             <h2 className="mt-4">Una forma consciente de habitar el territorio</h2>
             <p className="mt-4">
-              <span className="block">HUELLA es una marca paraguas de arquitectura y espacios habitables.</span>
-              <span className="block">Trabajamos desde soluciones modulares claras</span>
-              <span className="block">hasta proyectos diseñados a medida.</span>
+              <span className="block">Diseñamos soluciones habitables que se adaptan a tu terreno</span>
+              <span className="block">y a tu forma de vivir.</span>
             </p>
             <p className="mt-3">
-              <span className="block">Diseño, paisaje y uso real,</span>
-              <span className="block">sin sobrepromesas.</span>
+              <span className="block">Desde módulos claros para avanzar rápido,</span>
+              <span className="block">hasta proyectos a medida.</span>
+            </p>
+            <p className="mt-3">
+              <span className="block">Diseño, paisaje y uso real.</span>
             </p>
             <Link href="/huella" className="btn-secondary mt-6 inline-flex">
               Ver cómo trabajamos
@@ -170,7 +186,7 @@ export default function Home() {
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-gray-600">
               <li>Niveles de terminación especificados según presupuesto y uso.</li>
-              <li>Pasos y plazos detallados antes de iniciar.</li>
+              <li>Pasos y alcances detallados antes de iniciar.</li>
               <li>Costos cerrados para tomar decisiones con anticipación.</li>
             </ul>
             <Link href="/base" className="btn-secondary mt-8 inline-flex">
