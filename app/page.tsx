@@ -33,19 +33,19 @@ export default function Home() {
             </Link>
             <div className="flex flex-col sm:flex-row items-center gap-2 text-sm sm:text-base text-white/90">
               <Link
-                href="https://huella-mendoza-site.vercel.app/base"
+                href="/base"
                 className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
               >
                 Base · Unidades modulares
               </Link>
               <Link
-                href="https://huella-mendoza-site.vercel.app/diseno"
+                href="/diseno"
                 className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
               >
                 Diseño · Proyecto a medida
               </Link>
               <Link
-                href="https://huella-mendoza-site.vercel.app/refugios"
+                href="/refugios"
                 className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
               >
                 Refugios · Estadías / alquiler
