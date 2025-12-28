@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { proyectos } from '@/data/proyectos';
+import { altText } from '@/data/altText';
 
 export default function Home() {
   const projectImages = proyectos.slice(0, 6);
@@ -11,7 +12,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
             src="/media/huella/home/home-protrerillos-embalse-1.png"
-            alt="Montañas de Potrerillos"
+            alt={altText['/media/huella/home/home-protrerillos-embalse-1.png']}
             className="w-full h-full object-cover object-[70%_85%] md:object-center"
           />
         </div>
@@ -252,7 +253,7 @@ export default function Home() {
               >
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={altText[project.image]}
                   className="h-56 w-full object-cover"
                 />
               </div>

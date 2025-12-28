@@ -1,4 +1,5 @@
 import { proyectos } from '@/data/proyectos';
+import { altText } from '@/data/altText';
 
 export default function ProyectosPage() {
   return (
@@ -26,7 +27,7 @@ export default function ProyectosPage() {
             >
               <img
                 src={proyecto.image}
-                alt={proyecto.title}
+                alt={altText[proyecto.image]}
                 className="h-52 w-full object-cover"
               />
               <div className="p-5">

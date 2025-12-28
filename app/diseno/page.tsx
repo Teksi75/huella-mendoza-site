@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { altText } from '@/data/altText';
 
 export const metadata: Metadata = {
   title: 'HUELLA Diseño – Proyecto a medida',
@@ -153,7 +154,7 @@ export default function DisenoPage() {
               <div className={`relative overflow-hidden ${croquisDestacado.aspectClass}`}>
                 <Image
                   src={croquisDestacado.src}
-                  alt={`${croquisDestacado.title} - HUELLA Diseño`}
+                  alt={altText[croquisDestacado.src]}
                   fill
                   className="object-cover"
                   sizes="100vw"
@@ -172,7 +173,7 @@ export default function DisenoPage() {
                   <div className={`relative overflow-hidden ${item.aspectClass}`}>
                     <Image
                       src={item.src}
-                      alt={`${item.title} - HUELLA Diseño`}
+                      alt={altText[item.src]}
                       fill
                       className="object-cover"
                       sizes="(min-width: 768px) 33vw, 100vw"
@@ -207,7 +208,7 @@ export default function DisenoPage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl rounded-b-none">
                   <Image
                     src={item.src}
-                    alt={`${item.title} - interior HUELLA`}
+                    alt={altText[item.src]}
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 50vw, 100vw"
@@ -243,7 +244,7 @@ export default function DisenoPage() {
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
                       src={item.src}
-                      alt={`${item.title} integrado al paisaje`}
+                      alt={altText[item.src]}
                       fill
                       className="object-cover"
                       sizes="100vw"
@@ -268,7 +269,7 @@ export default function DisenoPage() {
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image
                         src={item.src}
-                        alt={`${item.title} - estructura y paisaje`}
+                        alt={altText[item.src]}
                         fill
                         className="object-cover"
                         sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"

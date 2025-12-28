@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { altText } from '@/data/altText';
 
 export const metadata: Metadata = {
   title: 'HUELLA Base – Unidades modulares',
@@ -31,7 +32,7 @@ export default function BasePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
               <Image
                 src="/media/huella/base/huella-base-modulo-simple.webp"
-                alt="Huella Base, módulo estructural"
+                alt={altText['/media/huella/base/huella-base-modulo-simple.webp']}
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -49,7 +50,7 @@ export default function BasePage() {
                 Un punto de partida claro y eficiente.
               </p>
               <div className="mb-6">
-                                <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
+                <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
                   Base, el módulo estructural del sistema HUELLA. Punto de partida claro para
                   ordenar estructura, logística y escalabilidad sin perder coherencia en cada
                   etapa.
@@ -80,7 +81,7 @@ export default function BasePage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl rounded-b-none">
                   <Image
                     src={item.src}
-                    alt={`${item.title} - Huella Base`}
+                    alt={altText[item.src]}
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 50vw, 100vw"
@@ -115,7 +116,7 @@ export default function BasePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
               <Image
                 src="/media/huella/base/huella-base-campamento.webp"
-                alt="Huella Base en conjunto"
+                alt={altText['/media/huella/base/huella-base-campamento.webp']}
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -156,4 +157,3 @@ export default function BasePage() {
     </main>
   );
 }
-
