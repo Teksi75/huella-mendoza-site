@@ -22,7 +22,6 @@ export default function Home() {
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
             <span className="block">Arquitectura modular para habitar el paisaje.</span>
-            <span className="block">Espacios que acompañan tu forma de vivir.</span>
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -102,7 +101,10 @@ export default function Home() {
                   <span className="block">Vos elegís el nivel de terminación.</span>
                 </p>
               </div>
-              <Link href="/base" className="btn-primary mt-auto inline-flex h-12 w-full items-center justify-center">
+              <Link
+                href="/base"
+                className="btn-primary mt-auto inline-flex h-10 w-full items-center justify-center text-sm"
+              >
                 Pedir presupuesto
               </Link>
             </div>
@@ -117,7 +119,10 @@ export default function Home() {
                   <span className="block">y ampliaciones que se integran a lo existente.</span>
                 </p>
               </div>
-              <Link href="/diseno" className="btn-secondary mt-auto inline-flex h-12 w-full items-center justify-center">
+              <Link
+                href="/diseno"
+                className="btn-secondary mt-auto inline-flex h-10 w-full items-center justify-center text-sm"
+              >
                 Solicitar asesoramiento
               </Link>
             </div>
@@ -132,7 +137,10 @@ export default function Home() {
                   <span className="block">pensados para el descanso y el paisaje.</span>
                 </p>
               </div>
-              <Link href="/refugios" className="btn-secondary mt-auto inline-flex h-12 w-full items-center justify-center">
+              <Link
+                href="/refugios"
+                className="btn-secondary mt-auto inline-flex h-10 w-full items-center justify-center text-sm"
+              >
                 Consultar disponibilidad
               </Link>
             </div>
