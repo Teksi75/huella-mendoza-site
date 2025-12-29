@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export const metadata: Metadata = {
   title: 'HUELLA Refugios – Estadías en Potrerillos',
@@ -20,7 +21,12 @@ export default function RefugiosPage() {
               <br />
               Todo resuelto para llegar, usar y volver liviano.
             </p>
-            <Link href="/contacto" className="btn-secondary mt-8 inline-flex">
+            <Link
+              href={buildWhatsAppUrl(whatsappMessages.refugios)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary mt-8 inline-flex"
+            >
               Consultar disponibilidad
             </Link>
           </div>
@@ -49,7 +55,12 @@ export default function RefugiosPage() {
               <li>Confirmamos disponibilidad, servicios y detalles de acceso.</li>
               <li>Coordinamos la reserva y el ingreso de forma simple.</li>
             </ol>
-            <Link href="/contacto" className="btn-secondary mt-8 inline-flex">
+            <Link
+              href={buildWhatsAppUrl(whatsappMessages.refugios)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary mt-8 inline-flex"
+            >
               Consultar disponibilidad
             </Link>
           </div>

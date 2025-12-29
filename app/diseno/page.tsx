@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { altText } from '@/data/altText';
+import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export const metadata: Metadata = {
   title: 'HUELLA Diseño – Proyecto a medida',
@@ -133,7 +134,12 @@ export default function DisenoPage() {
                 </Link>
               </div>
             </div>
-            <Link href="/contacto" className="btn-secondary mt-8 inline-flex">
+            <Link
+              href={buildWhatsAppUrl(whatsappMessages.diseno)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary mt-8 inline-flex"
+            >
               Consultar
             </Link>
           </div>

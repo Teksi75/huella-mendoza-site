@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { altText } from '@/data/altText';
+import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export const metadata: Metadata = {
   title: 'HUELLA Base – Unidades modulares',
@@ -138,13 +139,17 @@ export default function BasePage() {
               </div>
               <div>
                 <Link
-                  href="/contacto"
+                  href={buildWhatsAppUrl(whatsappMessages.base)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-3 bg-primary text-white font-semibold text-center rounded-md text-lg mb-4 inline-flex justify-center"
                 >
                   Pedir presupuesto
                 </Link>
                 <Link
-                  href="/contacto"
+                  href={buildWhatsAppUrl(whatsappMessages.base)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-3 border border-primary text-primary font-semibold text-center rounded-md text-lg inline-flex justify-center"
                 >
                   Consultar opciones

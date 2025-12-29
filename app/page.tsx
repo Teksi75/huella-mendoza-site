@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { proyectos } from '@/data/proyectos';
 import { altText } from '@/data/altText';
+import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export default function Home() {
   const projectImages = proyectos.slice(0, 6);
@@ -276,10 +277,20 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/contacto" className="btn-secondary bg-white text-tierra-700">
+              <Link
+                href={buildWhatsAppUrl(whatsappMessages.home)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary bg-white text-tierra-700"
+              >
                 Hablar por WhatsApp
               </Link>
-              <Link href="/contacto" className="btn-secondary bg-white text-tierra-700">
+              <Link
+                href={buildWhatsAppUrl(whatsappMessages.home)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary bg-white text-tierra-700"
+              >
                 Pedir presupuesto
               </Link>
             </div>
