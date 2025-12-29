@@ -8,6 +8,6 @@ export const whatsappMessages = {
   diseno: 'Hola, estoy evaluando un proyecto arquitectónico y quisiera orientación.',
   refugios: 'Hola, me interesa conocer HUELLA Refugios y disponibilidad.',
   proyectos: 'Hola, quiero consultar por proyectos y alternativas según mi necesidad.',
-  contacto: 'Hola, quisiera hacer una consulta.',
+  contacto: 'Hola, quisiera hacer una consulta sobre HUELLA.',
   home: 'Hola, quisiera conocer más sobre HUELLA y sus opciones.',
 };
