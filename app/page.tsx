@@ -167,6 +167,28 @@ export default function Home() {
 
       <section className="section-padding bg-tierra-50">
         <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-semibold text-tierra-900">
+              Descubrí la forma de habitar que mejor dialoga con vos
+            </h3>
+            <p className="mt-4 text-base text-gray-700 leading-relaxed">
+              Base, Diseno y Refugios conviven como caminos complementarios.
+              Tomate un momento para explorarlos antes de elegir el paso
+              siguiente.
+            </p>
+            <Link
+              href="/explorar"
+              className="mt-8 inline-flex items-center justify-center gap-2 btn-primary text-lg px-8 py-4"
+            >
+              Explorar HUELLA
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-tierra-50">
+        <div className="container-custom">
           <div className="max-w-3xl">
             <h2>HUELLA Base</h2>
             <p className="mt-3">
