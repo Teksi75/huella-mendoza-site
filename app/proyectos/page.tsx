@@ -1,5 +1,4 @@
-import { proyectos } from '@/data/proyectos';
-import { altText } from '@/data/altText';
+import ProjectsGrid from './ProjectsGrid';
 
 export default function ProyectosPage() {
   return (
@@ -19,24 +18,7 @@ export default function ProyectosPage() {
       </section>
 
       <section className="section-padding bg-tierra-50">
-        <div className="container-custom grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {proyectos.map((proyecto) => (
-            <div
-              key={proyecto.title}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm"
-            >
-              <img
-                src={proyecto.image}
-                alt={altText[proyecto.image]}
-                className="h-52 w-full object-cover"
-              />
-              <div className="p-5">
-                <h3 className="text-lg">{proyecto.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{proyecto.subtitle}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ProjectsGrid />
       </section>
     </main>
   );
