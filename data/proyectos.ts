@@ -16,14 +16,17 @@ export const proyectos: Proyecto[] = [
     galleryImages: ['/images/proyectos/milzoe-01.jpeg'],
   },
   {
-    title: 'Milzoe 02',
-    subtitle: 'Diseño y ejecución - exterior render',
-    label: 'Diseño y ejecución · render',
+    title: 'Modelo 725',
+    subtitle: '72,5 m² · 3 dormitorios · 1 baño',
+    label: 'Propuesta arquitectónica · render',
     image: '/images/proyectos/proyecto-externo-72.jpg',
     galleryImages: [
       '/images/proyectos/proyecto-externo-72.jpg',
       '/images/proyectos/proyecto-interior-72.jpg',
+      '/images/proyectos/planta_3_dor.png',
     ],
+    description:
+      'Propuesta compacta pensada para maximizar luz natural y funcionalidad familiar.',
   },
   {
     title: 'Milzoe 03',
@@ -83,17 +86,5 @@ export const proyectos: Proyecto[] = [
     label: 'Detalle técnico · planta',
     image: '/images/proyectos/planta-02.jpeg',
     galleryImages: ['/images/proyectos/planta-02.jpeg'],
-  },
-  {
-    title: 'Modelo 725',
-    subtitle: '72,5 m² · 3 dormitorios · 1 baño',
-    label: 'Propuesta arquitectónica · render',
-    image: '/images/proyectos/proyecto-externo-72.jpg',
-    galleryImages: [
-      '/images/proyectos/proyecto-externo-72.jpg',
-      '/images/proyectos/proyecto-interior-72.jpg',
-    ],
-    description:
-      'Propuesta compacta pensada para maximizar luz natural y funcionalidad familiar.',
   },
 ];
