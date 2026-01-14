@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { proyectos } from '@/data/proyectos';
 import { altText } from '@/data/altText';
@@ -250,12 +251,15 @@ export default function Home() {
             {projectImages.map((project) => (
               <div
                 key={project.title}
-                className="overflow-hidden rounded-2xl bg-gray-100"
+                className="relative h-56 overflow-hidden rounded-2xl bg-gray-100"
               >
-                <img
+                <Image
                   src={project.image}
                   alt={altText[project.image]}
-                  className="h-56 w-full object-cover"
+                  fill
+                  quality={90}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
             ))}
