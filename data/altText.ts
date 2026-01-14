@@ -71,6 +71,7 @@ export const altText: Record<string, string> = {
   '/images/proyectos/milzoe-03.jpeg': 'Milzoe 03, render exterior',
   '/images/proyectos/diseño-4.jpeg': 'Diseño 04, render arquitectónico',
   '/images/proyectos/diseno-5.jpeg': 'Diseño 05, render arquitectónico',
+  '/images/proyectos/diseno-6.jpeg': 'Diseño 06, render arquitectónico',
   '/images/proyectos/proyecto-interior-72.jpg': 'Proyecto interior 72, render arquitectónico',
   '/images/proyectos/diseno-7.jpeg': 'Diseño 07, render arquitectónico',
   '/images/proyectos/diseno-8.jpeg': 'Diseño 08, render arquitectónico',
