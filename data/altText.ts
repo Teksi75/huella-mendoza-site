@@ -76,4 +76,5 @@ export const altText: Record<string, string> = {
   '/images/proyectos/diseno-8.jpeg': 'Diseño 08, render arquitectónico',
   '/images/proyectos/planta-01.jpeg': 'Planta 01, detalle arquitectónico',
   '/images/proyectos/planta-02.jpeg': 'Planta 02, detalle arquitectónico',
+  '/images/proyectos/planta_3_dor.png': 'Planta modelo 725, 3 dormitorios',
 };
