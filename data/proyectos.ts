@@ -13,7 +13,7 @@ export const proyectos: Proyecto[] = [
   {
     title: 'Milzoe 02',
     subtitle: 'Diseño y ejecución - exterior render',
-    image: '/images/proyectos/milzoe-02.jpeg',
+    image: '/images/proyectos/proyecto-externo-72.jpg',
   },
   {
     title: 'Milzoe 03',
@@ -33,7 +33,7 @@ export const proyectos: Proyecto[] = [
   {
     title: 'Diseño 06',
     subtitle: 'Propuesta arquitectónica - render',
-    image: '/images/proyectos/diseno-6.jpeg',
+    image: '/images/proyectos/proyecto-interior-72.jpg',
   },
   {
     title: 'Diseño 07',
