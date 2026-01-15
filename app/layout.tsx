@@ -7,9 +7,33 @@ import { buildWhatsAppUrl, whatsappMessages } from "@/data/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteUrl = "https://huella-mendoza-site.vercel.app";
+const title = "HUELLA";
+const description = "Arquitectura para habitar el paisaje.";
+
 export const metadata: Metadata = {
-  title: "HUELLA – Arquitectura y espacios para habitar",
-  description: "Soluciones habitacionales y experiencias turísticas integradas al paisaje de Potrerillos, Mendoza",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: title,
+    type: "website",
+    images: [
+      {
+        url: "/og/og-huella.png",
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og/og-huella.png"],
+  },
 };
 
 export default function RootLayout({
