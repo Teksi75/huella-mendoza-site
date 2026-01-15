@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://huella-mendoza-site.vercel.app/sitemap.xml
