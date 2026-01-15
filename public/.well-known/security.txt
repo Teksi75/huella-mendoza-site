@@ -1,0 +1,4 @@
+Contact: mailto:pablosiklosi@gmail.com
+Preferred-Languages: es, en
+Expires: 2026-07-15
+Canonical: https://huella-mendoza-site.vercel.app/.well-known/security.txt
