@@ -5,7 +5,7 @@ import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export default function Home() {
-  const projectImages = proyectos.slice(0, 6);
+  const projectImages = proyectos.slice(0, 3);
 
   return (
     <main>
@@ -251,16 +251,24 @@ export default function Home() {
             {projectImages.map((project) => (
               <div
                 key={project.title}
-                className="relative h-56 overflow-hidden rounded-2xl bg-gray-100"
+                className="overflow-hidden rounded-2xl bg-white shadow-sm"
               >
-                <Image
-                  src={project.image}
-                  alt={altText[project.image]}
-                  fill
-                  quality={90}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
-                />
+                <div className="relative h-56 w-full overflow-hidden bg-gray-100">
+                  <Image
+                    src={project.image}
+                    alt={altText[project.image]}
+                    fill
+                    quality={90}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg">{project.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    {project.subtitle}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
