@@ -154,7 +154,7 @@ export default function ProjectsGrid() {
             </button>
             <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
               <div>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-tierra-50">
+                <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-xl bg-tierra-50">
                   <Image
                     src={selectedProject.galleryImages[activeIndex]}
                     alt={getAltText(
@@ -164,7 +164,7 @@ export default function ProjectsGrid() {
                     fill
                     sizes={modalImageSizes}
                     quality={90}
-                    className="object-cover"
+                    className="object-contain object-center"
                   />
                 </div>
                 <div className="mt-3 flex items-center justify-between text-sm text-gray-600">
