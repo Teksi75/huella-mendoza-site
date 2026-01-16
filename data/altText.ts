@@ -67,7 +67,11 @@ export const altText: Record<string, string> = {
     'Refugio con iluminación cálida y vista al lago y montañas',
   '/media/huella/8.png': 'Sendero principal con vistas al paisaje',
   '/images/proyectos/milzoe-01.jpeg': 'Milzoe 01, render exterior',
-  '/images/proyectos/proyecto-externo-30.jpg': 'Proyecto externo 300, render exterior',
+  '/images/proyectos/proyecto-externo-30.jpg': 'Modelo 300 – vista exterior principal',
+  '/images/proyectos/proyecto-externo-30_frente.jpg': 'Modelo 300 – vista exterior frente',
+  '/images/proyectos/proyecto-externo-30_frente_izq.jpg':
+    'Modelo 300 – vista exterior frente izquierda',
+  '/images/proyectos/planta_1_dor.png': 'Modelo 300 – planta 1 dormitorio',
   '/images/proyectos/proyecto-externo-72.jpg': 'Proyecto externo 72, render exterior',
   '/images/proyectos/milzoe-03.jpeg': 'Milzoe 03, render exterior',
   '/images/proyectos/diseño-4.jpeg': 'Diseño 04, render arquitectónico',
