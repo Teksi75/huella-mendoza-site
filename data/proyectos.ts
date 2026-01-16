@@ -9,7 +9,7 @@ export type Proyecto = {
 
 export const proyectos: Proyecto[] = [
   {
-    title: 'Modelo 30',
+    title: 'Modelo 300',
     subtitle: '30 m² · 1 dormitorio · 1 baño',
     label: 'Propuesta arquitectónica · render',
     image: '/images/proyectos/proyecto-externo-30.jpg',
