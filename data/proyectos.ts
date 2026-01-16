@@ -9,16 +9,11 @@ export type Proyecto = {
 
 export const proyectos: Proyecto[] = [
   {
-    title: 'Modelo 725',
-    subtitle: '72,5 m² · 3 dormitorios · 1 baño',
+    title: 'Modelo 30',
+    subtitle: '30 m² · 1 dormitorio · 1 baño',
     label: 'Propuesta arquitectónica · render',
-    image: '/images/proyectos/proyecto-externo-72.jpg',
-    galleryImages: [
-      '/images/proyectos/proyecto-externo-72.jpg',
-      '/images/proyectos/proyecto-interior-72.jpg',
-      '/images/proyectos/proyecto-interior-comedor-72.png',
-      '/images/proyectos/planta_3_dor.png',
-    ],
+    image: '/images/proyectos/proyecto-externo-30.jpg',
+    galleryImages: ['/images/proyectos/proyecto-externo-30.jpg'],
   },
   {
     title: 'Modelo 550',
@@ -34,6 +29,18 @@ export const proyectos: Proyecto[] = [
       '/images/proyectos/diseno-8.jpeg',
       '/images/proyectos/planta-01.jpeg',
       '/images/proyectos/planta-02.jpeg',
+    ],
+  },
+  {
+    title: 'Modelo 725',
+    subtitle: '72,5 m² · 3 dormitorios · 1 baño',
+    label: 'Propuesta arquitectónica · render',
+    image: '/images/proyectos/proyecto-externo-72.jpg',
+    galleryImages: [
+      '/images/proyectos/proyecto-externo-72.jpg',
+      '/images/proyectos/proyecto-interior-72.jpg',
+      '/images/proyectos/proyecto-interior-comedor-72.png',
+      '/images/proyectos/planta_3_dor.png',
     ],
   },
 ];
