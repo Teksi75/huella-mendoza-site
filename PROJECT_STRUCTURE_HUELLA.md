@@ -96,5 +96,22 @@
 - Un solo layout global en `app/layout.tsx`.
 - No hay grupos de rutas (carpetas con parens) en la estructura actual.
 
+## Comportamiento responsive (mobile / desktop)
+- La experiencia mobile prioriza jerarquia visual, lectura y foco en la accion principal; en desktop se expande el contenido sin perder claridad.
+- La Navbar permanece fija y cambia de transparencia en home al hacer scroll; en mobile se accede via menu colapsado y en desktop via barra completa.
+- ProjectsGrid pasa de tarjetas apiladas a grilla amplia y el modal favorece el recorrido por imagenes con navegacion simple.
+- El layout global mantiene CTA flotante (WhatsApp) y debe evitar tapar acciones clave en pantallas pequenas.
+- El Footer se presenta apilado en mobile para lectura rapida y en columnas en desktop para escaneo.
+
+## Componentes con logica especifica para mobile
+- `components/Navbar.tsx`: alterna menu mobile (abrir/cerrar), ajusta contraste segun scroll y cierra el menu al navegar.
+- `app/proyectos/ProjectsGrid.tsx`: modal bloquea el scroll de fondo y el carrusel se recorre con gesto horizontal; botones de navegacion visibles en desktop.
+- `components/Footer.tsx`: sin logica JS, pero su estructura apilada es la referencia para mobile.
+- `app/layout.tsx`: CTA flotante persistente y layout fijo con Navbar + Footer en todas las paginas.
+
 ## Excluidos
 - `node_modules/`, `.next/`, `.git/`, `dist/`, `build/`, `.turbo/`, `.vercel/`, `coverage/`, archivos lock y caches.
+
+## Nota final para asistentes de codigo
+- Antes de cambiar estilos o layout, verifica que Navbar, ProjectsGrid, Footer y el layout global mantengan la UX mobile descrita.
+- Si se ajustan grillas, modales o CTA flotantes, actualiza este documento para evitar desalineaciones con el comportamiento responsive real.
