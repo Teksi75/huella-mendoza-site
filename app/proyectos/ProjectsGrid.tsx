@@ -19,28 +19,40 @@ export default function ProjectsGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const subtitleId = useId();
 
   const closeModal = () => setSelectedProject(null);
 
+  const scrollToIndex = (index: number) => {
+    const node = galleryRef.current;
+    if (!node) return;
+    node.scrollTo({
+      left: node.clientWidth * index,
+      behavior: 'smooth',
+    });
+    setActiveIndex(index);
+  };
+
   const showPrevious = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === 0 ? selectedProject.galleryImages.length - 1 : prev - 1,
+    scrollToIndex(
+      activeIndex === 0 ? selectedProject.galleryImages.length - 1 : activeIndex - 1,
     );
   };
 
   const showNext = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === selectedProject.galleryImages.length - 1 ? 0 : prev + 1,
+    scrollToIndex(
+      activeIndex === selectedProject.galleryImages.length - 1 ? 0 : activeIndex + 1,
     );
   };
 
   useEffect(() => {
     if (!selectedProject) return;
     setActiveIndex(0);
+    galleryRef.current?.scrollTo({ left: 0 });
   }, [selectedProject]);
 
   useEffect(() => {
@@ -93,6 +105,13 @@ export default function ProjectsGrid() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [selectedProject]);
 
+  const handleGalleryScroll = () => {
+    const node = galleryRef.current;
+    if (!node) return;
+    const index = Math.round(node.scrollLeft / node.clientWidth);
+    setActiveIndex(index);
+  };
+
   return (
     <>
       <div className="container-custom grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -141,76 +160,91 @@ export default function ProjectsGrid() {
             aria-modal="true"
             aria-labelledby={titleId}
             aria-describedby={subtitleId}
-            className="relative z-10 w-full max-w-4xl rounded-2xl bg-white p-6 shadow-xl"
+            className="relative z-10 w-full max-w-4xl rounded-2xl bg-white shadow-xl"
           >
             <button
               ref={closeButtonRef}
               type="button"
               onClick={closeModal}
-              className="absolute right-4 top-4 rounded-full border border-gray-200 px-3 py-1 text-sm text-gray-600 transition hover:bg-gray-100"
+              className="absolute right-3 top-3 z-50 rounded-full border border-white/60 bg-white/90 px-3 py-1 text-sm text-gray-700 shadow-sm backdrop-blur transition hover:bg-white"
               aria-label="Cerrar"
             >
               Cerrar
             </button>
-            <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <div>
-                <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-xl bg-tierra-50">
-                  <Image
-                    src={selectedProject.galleryImages[activeIndex]}
-                    alt={getAltText(
-                      selectedProject.galleryImages[activeIndex],
-                      `${selectedProject.title} - imagen ${activeIndex + 1}`,
-                    )}
-                    fill
-                    sizes={modalImageSizes}
-                    quality={90}
-                    className="object-contain object-center"
-                  />
-                </div>
-                <div className="mt-3 flex items-center justify-between text-sm text-gray-600">
-                  <button
-                    type="button"
-                    onClick={showPrevious}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
+            <div className="max-h-[90vh] overflow-y-auto p-6">
+              <div className="flex flex-col gap-6 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+                <div>
+                  <div
+                    ref={galleryRef}
+                    onScroll={handleGalleryScroll}
+                    className="flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
                   >
-                    Anterior
-                  </button>
-                  <span>
-                    {activeIndex + 1} / {selectedProject.galleryImages.length}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={showNext}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
-                  >
-                    Siguiente
-                  </button>
+                    {selectedProject.galleryImages.map((image, index) => (
+                      <div
+                        key={image}
+                        className="relative flex min-w-full snap-center items-center justify-center overflow-hidden rounded-xl bg-tierra-50"
+                      >
+                        <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+                          <Image
+                            src={image}
+                            alt={getAltText(
+                              image,
+                              `${selectedProject.title} - imagen ${index + 1}`,
+                            )}
+                            fill
+                            sizes={modalImageSizes}
+                            quality={90}
+                            className="object-contain object-center"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-sm text-gray-600">
+                    <button
+                      type="button"
+                      onClick={showPrevious}
+                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                    >
+                      Anterior
+                    </button>
+                    <span>
+                      {activeIndex + 1} / {selectedProject.galleryImages.length}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={showNext}
+                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                    >
+                      Siguiente
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col">
-                <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
-                  {selectedProject.label}
-                </p>
-                <h2 id={titleId} className="mt-2 text-2xl">
-                  {selectedProject.title}
-                </h2>
-                <p
-                  id={subtitleId}
-                  className="mt-2 text-sm text-gray-600"
-                >
-                  {selectedProject.subtitle}
-                </p>
-                {selectedProject.description && (
-                  <p className="mt-4 text-sm text-gray-600">
-                    {selectedProject.description}
+                <div className="flex flex-col">
+                  <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
+                    {selectedProject.label}
                   </p>
-                )}
-                <Link
-                  href="/contacto"
-                  className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
-                >
-                  Contactar
-                </Link>
+                  <h2 id={titleId} className="mt-2 text-2xl">
+                    {selectedProject.title}
+                  </h2>
+                  <p
+                    id={subtitleId}
+                    className="mt-2 text-sm text-gray-600"
+                  >
+                    {selectedProject.subtitle}
+                  </p>
+                  {selectedProject.description && (
+                    <p className="mt-4 text-sm text-gray-600">
+                      {selectedProject.description}
+                    </p>
+                  )}
+                  <Link
+                    href="/contacto"
+                    className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
+                  >
+                    Contactar
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
