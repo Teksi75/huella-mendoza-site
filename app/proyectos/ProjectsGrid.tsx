@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { proyectos, type Proyecto } from '@/data/proyectos';
@@ -19,6 +19,8 @@ export default function ProjectsGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const scrollTimeout = useRef<number | null>(null);
   const titleId = useId();
   const subtitleId = useId();
 
@@ -26,22 +28,59 @@ export default function ProjectsGrid() {
 
   const showPrevious = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === 0 ? selectedProject.galleryImages.length - 1 : prev - 1,
-    );
+    const nextIndex =
+      activeIndex === 0
+        ? selectedProject.galleryImages.length - 1
+        : activeIndex - 1;
+    scrollToIndex(nextIndex);
   };
 
   const showNext = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === selectedProject.galleryImages.length - 1 ? 0 : prev + 1,
-    );
+    const nextIndex =
+      activeIndex === selectedProject.galleryImages.length - 1
+        ? 0
+        : activeIndex + 1;
+    scrollToIndex(nextIndex);
   };
+
+  const scrollToIndex = useCallback((index: number) => {
+    const container = galleryRef.current;
+    if (!container) return;
+    container.scrollTo({
+      left: container.clientWidth * index,
+      behavior: 'smooth',
+    });
+    setActiveIndex(index);
+  }, []);
+
+  const handleGalleryScroll = useCallback(() => {
+    const container = galleryRef.current;
+    if (!container) return;
+
+    if (scrollTimeout.current) {
+      window.clearTimeout(scrollTimeout.current);
+    }
+
+    scrollTimeout.current = window.setTimeout(() => {
+      const index = Math.round(container.scrollLeft / container.clientWidth);
+      setActiveIndex(index);
+    }, 80);
+  }, []);
 
   useEffect(() => {
     if (!selectedProject) return;
     setActiveIndex(0);
+    galleryRef.current?.scrollTo({ left: 0, behavior: 'auto' });
   }, [selectedProject]);
+
+  useEffect(() => {
+    return () => {
+      if (scrollTimeout.current) {
+        window.clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!selectedProject) return;
@@ -141,47 +180,62 @@ export default function ProjectsGrid() {
             aria-modal="true"
             aria-labelledby={titleId}
             aria-describedby={subtitleId}
-            className="relative z-10 w-full max-w-4xl rounded-2xl bg-white p-6 shadow-xl"
+            className="relative z-10 w-full max-w-4xl max-h-[90vh] rounded-2xl bg-white p-6 shadow-xl"
           >
             <button
               ref={closeButtonRef}
               type="button"
               onClick={closeModal}
-              className="absolute right-4 top-4 rounded-full border border-gray-200 px-3 py-1 text-sm text-gray-600 transition hover:bg-gray-100"
+              className="absolute right-3 top-3 z-50 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-sm text-gray-700 shadow-sm backdrop-blur transition hover:bg-white"
               aria-label="Cerrar"
             >
               Cerrar
             </button>
-            <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <div>
-                <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-xl bg-tierra-50">
-                  <Image
-                    src={selectedProject.galleryImages[activeIndex]}
-                    alt={getAltText(
-                      selectedProject.galleryImages[activeIndex],
-                      `${selectedProject.title} - imagen ${activeIndex + 1}`,
-                    )}
-                    fill
-                    sizes={modalImageSizes}
-                    quality={90}
-                    className="object-contain object-center"
-                  />
+            <div className="grid max-h-[calc(90vh-3rem)] gap-6 overflow-y-auto pr-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+              <div className="flex flex-col">
+                <div className="overflow-hidden rounded-xl bg-tierra-50">
+                  <div
+                    ref={galleryRef}
+                    onScroll={handleGalleryScroll}
+                    className="flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
+                  >
+                    {selectedProject.galleryImages.map((imageSrc, index) => (
+                      <div
+                        key={imageSrc}
+                        className="min-w-full flex-[0_0_100%] snap-center"
+                      >
+                        <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+                          <Image
+                            src={imageSrc}
+                            alt={getAltText(
+                              imageSrc,
+                              `${selectedProject.title} - imagen ${index + 1}`,
+                            )}
+                            fill
+                            sizes={modalImageSizes}
+                            quality={90}
+                            className="object-contain object-center"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="mt-3 flex items-center justify-between text-sm text-gray-600">
                   <button
                     type="button"
                     onClick={showPrevious}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
+                    className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 sm:inline-flex"
                   >
                     Anterior
                   </button>
-                  <span>
+                  <span className="mx-auto sm:mx-0">
                     {activeIndex + 1} / {selectedProject.galleryImages.length}
                   </span>
                   <button
                     type="button"
                     onClick={showNext}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
+                    className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 sm:inline-flex"
                   >
                     Siguiente
                   </button>
@@ -194,10 +248,7 @@ export default function ProjectsGrid() {
                 <h2 id={titleId} className="mt-2 text-2xl">
                   {selectedProject.title}
                 </h2>
-                <p
-                  id={subtitleId}
-                  className="mt-2 text-sm text-gray-600"
-                >
+                <p id={subtitleId} className="mt-2 text-sm text-gray-600">
                   {selectedProject.subtitle}
                 </p>
                 {selectedProject.description && (
