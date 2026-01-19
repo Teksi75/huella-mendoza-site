@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { proyectos, type Proyecto } from '@/data/proyectos';
+import { proyectos, type Proyecto, type ProyectoImage } from '@/data/proyectos';
 import { altText } from '@/data/altText';
 
 const gridImageSizes =
@@ -13,6 +13,10 @@ const modalImageSizes = '(max-width: 768px) 100vw, 600px';
 
 const getAltText = (src: string, fallback: string) =>
   altText[src] ?? fallback;
+
+const normalizeGalleryImage = (
+  image: string | ProyectoImage,
+): ProyectoImage => (typeof image === 'string' ? { src: image } : image);
 
 export default function ProjectsGrid() {
   const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
@@ -172,59 +176,84 @@ export default function ProjectsGrid() {
             <div className="max-h-[90vh] overflow-y-auto p-6 pt-12">
               <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
                 <div>
-                  <div
-                    ref={carouselRef}
-                    onScroll={(event) => {
-                      const container = event.currentTarget;
-                      const width = container.clientWidth;
-                      if (!width) return;
-                      const nextIndex = Math.round(container.scrollLeft / width);
-                      setActiveIndex((current) =>
-                        current === nextIndex ? current : nextIndex,
-                      );
-                    }}
-                    className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
-                  >
-                    {selectedProject.galleryImages.map((image, index) => (
-                      <div
-                        key={image}
-                        className="relative flex min-w-full snap-center items-center justify-center overflow-hidden"
-                      >
-                        <div className="relative flex aspect-[4/3] w-full items-center justify-center">
-                          <Image
-                            src={image}
-                            alt={getAltText(
-                              image,
-                              `${selectedProject.title} - imagen ${index + 1}`,
-                            )}
-                            fill
-                            sizes={modalImageSizes}
-                            quality={90}
-                            className="object-contain object-center"
-                          />
+                  {(() => {
+                    const galleryImages = selectedProject.galleryImages.map(
+                      normalizeGalleryImage,
+                    );
+
+                    return (
+                      <>
+                        <div
+                          ref={carouselRef}
+                          onScroll={(event) => {
+                            const container = event.currentTarget;
+                            const width = container.clientWidth;
+                            if (!width) return;
+                            const nextIndex = Math.round(
+                              container.scrollLeft / width,
+                            );
+                            setActiveIndex((current) =>
+                              current === nextIndex ? current : nextIndex,
+                            );
+                          }}
+                          className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
+                        >
+                          {galleryImages.map((image, index) => {
+                            const isActiveFloorplan =
+                              index === activeIndex &&
+                              image.type === 'floorplan';
+                            return (
+                              <div
+                                key={image.src}
+                                className="relative flex min-w-full snap-center items-center justify-center overflow-hidden"
+                              >
+                                <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+                                  {isActiveFloorplan &&
+                                    selectedProject.floorplanLabel && (
+                                      <span className="absolute left-4 top-4 z-20 rounded-full border border-tierra-200 bg-white/90 px-3 py-1 text-xs font-semibold text-tierra-700 shadow-sm">
+                                        {selectedProject.floorplanLabel}
+                                      </span>
+                                    )}
+                                  <Image
+                                    src={image.src}
+                                    alt={getAltText(
+                                      image.altKey ?? image.src,
+                                      `${selectedProject.title} - imagen ${
+                                        index + 1
+                                      }`,
+                                    )}
+                                    fill
+                                    sizes={modalImageSizes}
+                                    quality={90}
+                                    className="object-contain object-center"
+                                  />
+                                </div>
+                              </div>
+                            );
+                          })}
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-3 flex items-center justify-center text-sm text-gray-600 md:justify-between">
-                    <button
-                      type="button"
-                      onClick={showPrevious}
-                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
-                    >
-                      Anterior
-                    </button>
-                    <span>
-                      {activeIndex + 1} / {selectedProject.galleryImages.length}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={showNext}
-                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
-                    >
-                      Siguiente
-                    </button>
-                  </div>
+                        <div className="mt-3 flex items-center justify-center text-sm text-gray-600 md:justify-between">
+                          <button
+                            type="button"
+                            onClick={showPrevious}
+                            className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                          >
+                            Anterior
+                          </button>
+                          <span>
+                            {activeIndex + 1} / {galleryImages.length}
+                          </span>
+                          <button
+                            type="button"
+                            onClick={showNext}
+                            className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                          >
+                            Siguiente
+                          </button>
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
                 <div className="flex flex-col">
                   <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
