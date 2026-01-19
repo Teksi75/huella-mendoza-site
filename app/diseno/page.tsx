@@ -87,10 +87,10 @@ export default function DisenoPage() {
                   Eleccion - Ajuste al sitio - Inicio de obra
                 </p>
                 <Link
-                  href="#diseno"
+                  href="/diseno/modelos"
                   className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
                 >
-                  Ver mas
+                  Explorar modelos disponibles
                 </Link>
               </div>
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
