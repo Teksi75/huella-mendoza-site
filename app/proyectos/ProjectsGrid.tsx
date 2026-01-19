@@ -19,28 +19,45 @@ export default function ProjectsGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const subtitleId = useId();
 
   const closeModal = () => setSelectedProject(null);
 
+  const scrollToIndex = (index: number) => {
+    const container = carouselRef.current;
+    if (!container) return;
+    const slide = container.children[index] as HTMLElement | undefined;
+    slide?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+  };
+
   const showPrevious = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === 0 ? selectedProject.galleryImages.length - 1 : prev - 1,
-    );
+    const nextIndex =
+      activeIndex === 0
+        ? selectedProject.galleryImages.length - 1
+        : activeIndex - 1;
+    setActiveIndex(nextIndex);
+    scrollToIndex(nextIndex);
   };
 
   const showNext = () => {
     if (!selectedProject) return;
-    setActiveIndex((prev) =>
-      prev === selectedProject.galleryImages.length - 1 ? 0 : prev + 1,
-    );
+    const nextIndex =
+      activeIndex === selectedProject.galleryImages.length - 1
+        ? 0
+        : activeIndex + 1;
+    setActiveIndex(nextIndex);
+    scrollToIndex(nextIndex);
   };
 
   useEffect(() => {
     if (!selectedProject) return;
     setActiveIndex(0);
+    if (carouselRef.current) {
+      carouselRef.current.scrollTo({ left: 0, behavior: 'auto' });
+    }
   }, [selectedProject]);
 
   useEffect(() => {
@@ -141,76 +158,99 @@ export default function ProjectsGrid() {
             aria-modal="true"
             aria-labelledby={titleId}
             aria-describedby={subtitleId}
-            className="relative z-10 w-full max-w-4xl rounded-2xl bg-white p-6 shadow-xl"
+            className="relative z-10 w-full max-w-4xl rounded-2xl bg-white shadow-xl"
           >
             <button
               ref={closeButtonRef}
               type="button"
               onClick={closeModal}
-              className="absolute right-4 top-4 rounded-full border border-gray-200 px-3 py-1 text-sm text-gray-600 transition hover:bg-gray-100"
+              className="absolute right-3 top-3 z-50 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-sm text-gray-700 shadow-sm backdrop-blur transition hover:bg-white"
               aria-label="Cerrar"
             >
               Cerrar
             </button>
-            <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <div>
-                <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-xl bg-tierra-50">
-                  <Image
-                    src={selectedProject.galleryImages[activeIndex]}
-                    alt={getAltText(
-                      selectedProject.galleryImages[activeIndex],
-                      `${selectedProject.title} - imagen ${activeIndex + 1}`,
-                    )}
-                    fill
-                    sizes={modalImageSizes}
-                    quality={90}
-                    className="object-contain object-center"
-                  />
-                </div>
-                <div className="mt-3 flex items-center justify-between text-sm text-gray-600">
-                  <button
-                    type="button"
-                    onClick={showPrevious}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
+            <div className="max-h-[90vh] overflow-y-auto p-6 pt-12">
+              <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+                <div>
+                  <div
+                    ref={carouselRef}
+                    onScroll={(event) => {
+                      const container = event.currentTarget;
+                      const width = container.clientWidth;
+                      if (!width) return;
+                      const nextIndex = Math.round(container.scrollLeft / width);
+                      setActiveIndex((current) =>
+                        current === nextIndex ? current : nextIndex,
+                      );
+                    }}
+                    className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
                   >
-                    Anterior
-                  </button>
-                  <span>
-                    {activeIndex + 1} / {selectedProject.galleryImages.length}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={showNext}
-                    className="rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100"
-                  >
-                    Siguiente
-                  </button>
+                    {selectedProject.galleryImages.map((image, index) => (
+                      <div
+                        key={image}
+                        className="relative flex min-w-full snap-center items-center justify-center overflow-hidden"
+                      >
+                        <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+                          <Image
+                            src={image}
+                            alt={getAltText(
+                              image,
+                              `${selectedProject.title} - imagen ${index + 1}`,
+                            )}
+                            fill
+                            sizes={modalImageSizes}
+                            quality={90}
+                            className="object-contain object-center"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-3 flex items-center justify-center text-sm text-gray-600 md:justify-between">
+                    <button
+                      type="button"
+                      onClick={showPrevious}
+                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                    >
+                      Anterior
+                    </button>
+                    <span>
+                      {activeIndex + 1} / {selectedProject.galleryImages.length}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={showNext}
+                      className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                    >
+                      Siguiente
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col">
-                <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
-                  {selectedProject.label}
-                </p>
-                <h2 id={titleId} className="mt-2 text-2xl">
-                  {selectedProject.title}
-                </h2>
-                <p
-                  id={subtitleId}
-                  className="mt-2 text-sm text-gray-600"
-                >
-                  {selectedProject.subtitle}
-                </p>
-                {selectedProject.description && (
-                  <p className="mt-4 text-sm text-gray-600">
-                    {selectedProject.description}
+                <div className="flex flex-col">
+                  <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
+                    {selectedProject.label}
                   </p>
-                )}
-                <Link
-                  href="/contacto"
-                  className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
-                >
-                  Contactar
-                </Link>
+                  <h2 id={titleId} className="mt-2 text-2xl">
+                    {selectedProject.title}
+                  </h2>
+                  <p
+                    id={subtitleId}
+                    className="mt-2 text-sm text-gray-600"
+                  >
+                    {selectedProject.subtitle}
+                  </p>
+                  {selectedProject.description && (
+                    <p className="mt-4 text-sm text-gray-600">
+                      {selectedProject.description}
+                    </p>
+                  )}
+                  <Link
+                    href="/contacto"
+                    className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
+                  >
+                    Contactar
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
