@@ -14,6 +14,11 @@ const modalImageSizes = '(max-width: 768px) 100vw, 600px';
 const getAltText = (src: string, fallback: string) =>
   altText[src] ?? fallback;
 
+const normalizeGalleryImages = (images: Proyecto['galleryImages']) =>
+  images.map((image) =>
+    typeof image === 'string' ? { src: image } : image,
+  );
+
 export default function ProjectsGrid() {
   const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,6 +29,10 @@ export default function ProjectsGrid() {
   const subtitleId = useId();
 
   const closeModal = () => setSelectedProject(null);
+
+  const galleryImages = selectedProject
+    ? normalizeGalleryImages(selectedProject.galleryImages)
+    : [];
 
   const scrollToIndex = (index: number) => {
     const container = carouselRef.current;
@@ -36,7 +45,7 @@ export default function ProjectsGrid() {
     if (!selectedProject) return;
     const nextIndex =
       activeIndex === 0
-        ? selectedProject.galleryImages.length - 1
+        ? galleryImages.length - 1
         : activeIndex - 1;
     setActiveIndex(nextIndex);
     scrollToIndex(nextIndex);
@@ -45,7 +54,7 @@ export default function ProjectsGrid() {
   const showNext = () => {
     if (!selectedProject) return;
     const nextIndex =
-      activeIndex === selectedProject.galleryImages.length - 1
+      activeIndex === galleryImages.length - 1
         ? 0
         : activeIndex + 1;
     setActiveIndex(nextIndex);
@@ -185,16 +194,23 @@ export default function ProjectsGrid() {
                     }}
                     className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
                   >
-                    {selectedProject.galleryImages.map((image, index) => (
+                    {galleryImages.map((image, index) => (
                       <div
-                        key={image}
+                        key={image.src}
                         className="relative flex min-w-full snap-center items-center justify-center overflow-hidden"
                       >
                         <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+                          {selectedProject.floorplanLabel &&
+                            image.type === 'floorplan' &&
+                            index === activeIndex && (
+                              <span className="absolute left-4 top-4 z-20 rounded-full border border-gray-200 bg-white/90 px-3 py-1 text-xs font-semibold text-gray-700 shadow-sm">
+                                {selectedProject.floorplanLabel}
+                              </span>
+                            )}
                           <Image
-                            src={image}
+                            src={image.src}
                             alt={getAltText(
-                              image,
+                              image.altKey ?? image.src,
                               `${selectedProject.title} - imagen ${index + 1}`,
                             )}
                             fill
@@ -215,7 +231,7 @@ export default function ProjectsGrid() {
                       Anterior
                     </button>
                     <span>
-                      {activeIndex + 1} / {selectedProject.galleryImages.length}
+                      {activeIndex + 1} / {galleryImages.length}
                     </span>
                     <button
                       type="button"

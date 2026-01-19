@@ -71,7 +71,7 @@ export const altText: Record<string, string> = {
   '/images/proyectos/proyecto-externo-30_frente.jpg': 'Modelo 300 – vista exterior frente',
   '/images/proyectos/proyecto-externo-30_frente_izq.jpg':
     'Modelo 300 – vista exterior frente izquierda',
-  '/images/proyectos/planta_1_dor.png': 'Modelo 300 – planta 1 dormitorio',
+  '/images/proyectos/planta_1_dor.png': 'Planta Modelo 300 – 1 dormitorio',
   '/images/proyectos/proyecto-externo-72.jpg': 'Proyecto externo 72, render exterior',
   '/images/proyectos/milzoe-03.jpeg': 'Milzoe 03, render exterior',
   '/images/proyectos/diseño-4.jpeg': 'Diseño 04, render arquitectónico',
@@ -79,7 +79,8 @@ export const altText: Record<string, string> = {
   '/images/proyectos/proyecto-interior-72.jpg': 'Proyecto interior 72, render arquitectónico',
   '/images/proyectos/diseno-7.jpeg': 'Diseño 07, render arquitectónico',
   '/images/proyectos/diseno-8.jpeg': 'Diseño 08, render arquitectónico',
-  '/images/proyectos/planta-01.jpeg': 'Planta 01, detalle arquitectónico',
-  '/images/proyectos/planta-02.jpeg': 'Planta 02, detalle arquitectónico',
-  '/images/proyectos/planta_3_dor.png': 'Planta modelo 725, 3 dormitorios',
+  '/images/proyectos/planta-01.jpeg': 'Planta Modelo 550 – 2 dormitorios',
+  '/images/proyectos/planta-02.jpeg':
+    'Planta Modelo 550 – 2 dormitorios (detalle)',
+  '/images/proyectos/planta_3_dor.png': 'Planta Modelo 725 – 3 dormitorios',
 };
