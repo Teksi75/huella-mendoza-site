@@ -144,7 +144,7 @@ export default function BasePage() {
                   sin perder coherencia.
                 </p>
                 <p className="mt-3 text-base font-semibold text-gray-700">
-                  Un mismo punto de partida × múltiples módulos posibles.
+                  Un sistema base que crece con tu proyecto.
                 </p>
               </div>
               <div className="mb-4 text-base leading-relaxed text-gray-700">
