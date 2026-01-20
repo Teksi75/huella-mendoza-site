@@ -252,14 +252,30 @@ export default function Home() {
             <h2>Cómo trabajamos</h2>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {workSteps.map((step, index) => (
-              <div key={step.title} className="rounded-2xl border border-tierra-200 p-6">
-                <div className="text-sm font-semibold text-tierra-600">Paso {index + 1}</div>
-                <h3 className="mt-3 text-xl">{step.title}</h3>
-                <p className="mt-3 text-sm text-gray-600">{step.description}</p>
-              </div>
-            ))}
+          <div className="relative mt-8">
+            <div className="pointer-events-none absolute left-6 right-6 top-[42px] hidden h-px bg-tierra-200/70 md:block lg:left-10 lg:right-10" />
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {workSteps.map((step, index) => {
+                const isHighlighted = index === 1;
+
+                return (
+                  <div
+                    key={step.title}
+                    className={`group rounded-2xl border p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md ${
+                      isHighlighted
+                        ? "border-tierra-300 bg-tierra-50/60 ring-1 ring-tierra-200/60"
+                        : "border-tierra-200 bg-white"
+                    }`}
+                  >
+                    <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-tierra-300 bg-tierra-50 text-sm font-semibold text-tierra-600 shadow-sm">
+                      {index + 1}
+                    </div>
+                    <h3 className="mt-4 text-xl">{step.title}</h3>
+                    <p className="mt-3 text-sm text-gray-600">{step.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
