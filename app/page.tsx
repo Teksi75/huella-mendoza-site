@@ -56,7 +56,7 @@ const HomeLandscapeBreak = () => (
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[100svh] md:min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-0">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
-          <h1 className="mb-6 font-bold tracking-tight text-[clamp(1.9rem,4.6vw,3.2rem)]">
+          <h1 className="mb-6 -mt-6 md:mt-0 font-bold tracking-tight text-[clamp(1.9rem,4.6vw,3.2rem)]">
             Arquitectura modular para habitar el paisaje
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[0.9rem] sm:text-[clamp(1rem,2.2vw,1.25rem)] max-w-[38ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
