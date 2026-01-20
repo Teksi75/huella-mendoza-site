@@ -23,9 +23,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og/og-huella.png",
+        url: `${siteUrl}/og/og-huella.png`,
+        secureUrl: `${siteUrl}/og/og-huella.png`,
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: title,
       },
     ],
@@ -34,7 +36,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og/og-huella.png"],
+    images: [
+      {
+        url: `${siteUrl}/og/og-huella.png`,
+        alt: title,
+      },
+    ],
   },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
