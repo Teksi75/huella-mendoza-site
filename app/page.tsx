@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
+import HomeContactForm from '@/components/HomeContactForm';
 
 const projectModels = [
   { title: 'Modelo 300', detail: '30 m² · 1 dormitorio' },
@@ -251,49 +252,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <form className="rounded-2xl bg-white p-6 text-gray-800 shadow-sm">
-            <div className="grid gap-4">
-              <div>
-                <label htmlFor="nombre" className="text-sm font-medium">
-                  Nombre
-                </label>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
-                  placeholder="Tu nombre"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
-                  placeholder="tu@email.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="mensaje" className="text-sm font-medium">
-                  Mensaje
-                </label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  rows={4}
-                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
-                  placeholder="Contanos sobre tu proyecto"
-                />
-              </div>
-            </div>
-            <button type="submit" className="btn-primary mt-6 w-full">
-              Enviar consulta
-            </button>
-          </form>
+          <HomeContactForm />
         </div>
       </section>
     </main>
