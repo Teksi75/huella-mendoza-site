@@ -41,15 +41,12 @@ export default function BasePage() {
               />
             </div>
             <div className="max-w-xl">
-              <p className="text-sm uppercase tracking-widest text-tierra-600 text-center md:text-left">
-                HUELLA Base
-              </p>
-              <h1 className="text-3xl font-bold leading-tight text-center mb-4 md:text-left">
-                HUELLA Base
+              <h1 className="text-3xl font-bold uppercase tracking-widest text-tierra-600 text-center mb-4 md:text-4xl md:text-left">
+                HUELLA BASE
               </h1>
-              <p className="text-xl font-semibold text-center mb-6 md:text-left">
+              <h2 className="text-xl font-semibold text-center mb-6 md:text-left">
                 Bases modulares: previsibilidad, orden y escalabilidad desde el inicio.
-              </p>
+              </h2>
               <div className="mb-6">
                 <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
                   Base es el módulo estructural del sistema HUELLA. Cada proyecto se define a
