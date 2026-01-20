@@ -72,6 +72,12 @@ export const altText: Record<string, string> = {
   '/images/proyectos/proyecto-externo-30_frente_izq.jpg':
     'Modelo 300 – vista exterior frente izquierda',
   '/images/proyectos/planta_1_dor.png': 'Modelo 300 – planta 1 dormitorio',
+  '/images/proyectos/proyecto-interior-30-1.jpg':
+    'Interior del Modelo 300: estar-comedor con luz natural y terminaciones cálidas',
+  '/images/proyectos/proyecto-interior-30-2.jpg':
+    'Interior del Modelo 300: cocina integrada y circulación hacia el dormitorio',
+  '/images/proyectos/proyecto-interior-30-3.jpg':
+    'Interior del Modelo 300: dormitorio con almacenamiento y atmósfera serena',
   '/images/proyectos/proyecto-externo-72.jpg': 'Proyecto externo 72, render exterior',
   '/images/proyectos/milzoe-03.jpeg': 'Milzoe 03, render exterior',
   '/images/proyectos/diseño-4.jpeg': 'Diseño 04, render arquitectónico',
