@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
-          <h1 className="mb-6 font-bold tracking-tight text-[clamp(2.2rem,6vw,4rem)]">
+          <h1 className="mb-6 font-bold tracking-tight text-[clamp(2rem,5vw,3.5rem)]">
             Arquitectura modular para habitar el paisaje
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[0.9rem] sm:text-[clamp(1rem,2.2vw,1.25rem)] max-w-[38ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
