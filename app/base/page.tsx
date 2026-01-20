@@ -41,10 +41,10 @@ export default function BasePage() {
               />
             </div>
             <div className="max-w-xl">
-              <p className="text-sm uppercase tracking-widest text-tierra-600 text-center md:text-left">
+              <p className="text-sm uppercase tracking-widest text-tierra-600 text-center md:text-left mb-3">
                 HUELLA Base
               </p>
-              <h1 className="text-3xl font-bold leading-tight text-center mb-4 md:text-left">
+              <h1 className="text-3xl font-bold leading-tight text-center mb-4 md:text-4xl md:text-left">
                 HUELLA Base
               </h1>
               <p className="text-xl font-semibold text-center mb-6 md:text-left">
