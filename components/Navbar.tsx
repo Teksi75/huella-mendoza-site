@@ -21,13 +21,10 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: 'Inicio', href: '/' },
-    { name: 'HUELLA', href: '/#huella' },
-    { name: 'Base', href: '/base' },
-    { name: 'Diseño', href: '/diseno' },
-    { name: 'Refugios', href: '/refugios' },
+    { name: 'Servicios', href: '/#servicios' },
+    { name: 'Por qué HUELLA', href: '/#por-que-huella' },
     { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/contacto' },
+    { name: 'Contacto', href: '/#contacto' },
   ];
 
   return (
@@ -60,6 +57,9 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link href="/#contacto" className="btn-primary text-sm">
+              Consultar
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,6 +92,13 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className="btn-primary block text-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Consultar
+            </Link>
           </div>
         </div>
       )}
