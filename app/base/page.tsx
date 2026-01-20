@@ -44,7 +44,7 @@ export default function BasePage() {
               <p className="text-sm uppercase tracking-widest text-tierra-600 text-center md:text-left">
                 HUELLA Base
               </p>
-              <h1 className="text-3xl font-bold leading-tight text-center mb-4 md:text-left">
+              <h1 className="mt-2 text-3xl font-semibold leading-tight text-center mb-4 md:mt-0 md:text-left md:font-bold">
                 HUELLA Base
               </h1>
               <p className="text-xl font-semibold text-center mb-6 md:text-left">
