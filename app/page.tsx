@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Compass, Layers, Leaf } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import HomeContactForm from '@/components/HomeContactForm';
@@ -104,9 +105,12 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
               <div className="min-h-[200px]">
-                <h3 className="text-2xl">HUELLA Base</h3>
+                <div className="flex items-center gap-3">
+                  <Layers className="h-5 w-5 text-tierra-500" aria-hidden />
+                  <h3 className="text-2xl">HUELLA Base</h3>
+                </div>
                 <p className="mt-3 text-sm text-gray-600">
                   Sistema habitacional modular, claro y previsible.
                 </p>
@@ -120,9 +124,12 @@ export default function Home() {
                 Ver HUELLA Base
               </Link>
             </div>
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-9 shadow-md shadow-black/5 ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10">
               <div className="min-h-[200px]">
-                <h3 className="text-2xl">HUELLA Diseño</h3>
+                <div className="flex items-center gap-2.5">
+                  <Compass className="h-[21px] w-[21px] text-tierra-600" aria-hidden />
+                  <h3 className="text-2xl">HUELLA Diseño</h3>
+                </div>
                 <p className="mt-3 text-sm text-gray-600">
                   Arquitectura pensada para vos y para el lugar.
                 </p>
@@ -132,13 +139,19 @@ export default function Home() {
                   <li>Acompañamiento en cada decisión</li>
                 </ul>
               </div>
-              <Link href="/diseno" className="btn-secondary mt-6 inline-flex w-full items-center justify-center text-sm">
+              <Link
+                href="/diseno"
+                className="btn-primary mt-6 inline-flex w-full items-center justify-center text-sm shadow-md shadow-black/10 transition-all duration-500 ease-out hover:shadow-lg hover:shadow-black/15"
+              >
                 Explorar Diseño
               </Link>
             </div>
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
               <div className="min-h-[200px]">
-                <h3 className="text-2xl">HUELLA Refugios</h3>
+                <div className="flex items-center gap-3">
+                  <Leaf className="h-5 w-5 text-tierra-500" aria-hidden />
+                  <h3 className="text-2xl">HUELLA Refugios</h3>
+                </div>
                 <p className="mt-3 text-sm text-gray-600">
                   Espacios pensados para la experiencia.
                 </p>
