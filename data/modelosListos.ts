@@ -37,8 +37,8 @@ export const modelosListos: ModeloListo[] = [
         type: 'render',
       },
       {
-        src: '/images/proyectos/proyecto-externo-30_frente_izq.jpg',
-        alt: 'Modelo 300 – vista exterior frente izquierda',
+        src: '/images/proyectos/proyecto-interior-30-1.jpg',
+        alt: 'Modelo 300 – estar-comedor con luz natural',
         type: 'render',
       },
     ],
