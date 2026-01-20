@@ -51,7 +51,7 @@ export const modelosListos: ModeloListo[] = [
     bullets: ['Convivencia flexible', 'Expansión al jardín', 'Pensado para 3-4 personas'],
     images: [
       {
-        src: '/images/proyectos/planta-01.jpeg',
+        src: '/images/proyectos/planta_2_dor_1.png',
         alt: 'Modelo 550 – planta 2 dormitorios',
         type: 'floorplan',
       },

@@ -32,8 +32,8 @@ export const proyectos: Proyecto[] = [
       '/images/proyectos/diseno-5.jpeg',
       '/images/proyectos/diseno-7.jpeg',
       '/images/proyectos/diseno-8.jpeg',
-      '/images/proyectos/planta-01.jpeg',
-      '/images/proyectos/planta-02.jpeg',
+      '/images/proyectos/planta_2_dor_1.png',
+      '/images/proyectos/planta_2_dor_2.png',
     ],
   },
   {
