@@ -96,9 +96,9 @@ export default function DisenoPage() {
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Proyectos personalizados</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Proyectos únicos que nacen del lugar y de tus necesidades.
+                  Experiencias diseñadas a partir del lugar y de tu forma de habitar.
                   <br />
-                  Entregas claras para decidir con confianza.
+                  Decisiones claras para una solución adaptada a tu situación.
                 </p>
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
@@ -106,12 +106,15 @@ export default function DisenoPage() {
                 <p className="mt-2 text-sm text-gray-600">
                   Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
-                <Link
-                  href="#diseno"
-                  className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                <div
+                  aria-disabled="true"
+                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
                 >
-                  Ver mas
-                </Link>
+                  <span>Ver más</span>
+                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
+                    Disponible próximamente
+                  </span>
+                </div>
               </div>
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
@@ -126,12 +129,15 @@ export default function DisenoPage() {
                 <p className="mt-2 text-sm text-gray-600">
                   Diagnóstico - Propuesta - Obra liviana
                 </p>
-                <Link
-                  href="#diseno"
-                  className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                <div
+                  aria-disabled="true"
+                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
                 >
-                  Ver mas
-                </Link>
+                  <span>Ver más</span>
+                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
+                    Disponible próximamente
+                  </span>
+                </div>
               </div>
             </div>
             <Link
