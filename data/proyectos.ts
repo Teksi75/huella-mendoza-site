@@ -18,6 +18,9 @@ export const proyectos: Proyecto[] = [
       '/images/proyectos/proyecto-externo-30_frente.jpg',
       '/images/proyectos/proyecto-externo-30_frente_izq.jpg',
       '/images/proyectos/planta_1_dor.png',
+      '/images/proyectos/proyecto-interior-30-1.jpg',
+      '/images/proyectos/proyecto-interior-30-2.jpg',
+      '/images/proyectos/proyecto-interior-30-3.jpg',
     ],
   },
   {
