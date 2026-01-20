@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Compass, Layers, Leaf } from 'lucide-react';
 import { altText } from '@/data/altText';
@@ -34,6 +35,25 @@ const reasons = [
       'Los espacios pueden crecer, adaptarse o transformarse con el tiempo, acompañando cambios reales en la forma de habitar.',
   },
 ];
+
+const HomeLandscapeBreak = () => (
+  <section className="section-padding bg-white">
+    <div className="container-custom">
+      <div className="rounded-3xl bg-tierra-50 p-6 shadow-sm md:p-10">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-tierra-200 shadow-sm">
+          <Image
+            src="/media/huella/home/home-protrerillos-embalse-2.png"
+            alt="Paisaje de Potrerillos junto al embalse con una vivienda HUELLA integrada al entorno"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority={false}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default function Home() {
   return (
@@ -194,6 +214,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HomeLandscapeBreak />
 
       <section
         id="proyectos"
