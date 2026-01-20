@@ -21,13 +21,10 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: 'Inicio', href: '/' },
-    { name: 'HUELLA', href: '/#huella' },
-    { name: 'Base', href: '/base' },
-    { name: 'Diseño', href: '/diseno' },
-    { name: 'Refugios', href: '/refugios' },
+    { name: 'Servicios', href: '/#servicios' },
+    { name: 'Por qué HUELLA', href: '/#por-que-huella' },
     { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/contacto' },
+    { name: 'Contacto', href: '/#contacto' },
   ];
 
   return (
@@ -60,6 +57,14 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className={`btn-primary inline-flex items-center justify-center px-5 py-2 text-xs uppercase tracking-wide ${
+                isTransparent ? 'bg-white/10 text-white hover:bg-white/20' : ''
+              }`}
+            >
+              Consultar
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,6 +97,13 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className="btn-primary inline-flex w-full items-center justify-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Consultar
+            </Link>
           </div>
         </div>
       )}

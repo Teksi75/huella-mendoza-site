@@ -1,12 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { proyectos } from '@/data/proyectos';
-import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
 export default function Home() {
-  const projectImages = proyectos.slice(0, 3);
-
   return (
     <main>
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
@@ -14,46 +9,32 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
             src="/media/huella/home/home-protrerillos-embalse-1.png"
-            alt={altText['/media/huella/home/home-protrerillos-embalse-1.png']}
+            alt="Vista del paisaje de Potrerillos con una propuesta HUELLA"
             className="w-full h-full object-cover object-[70%_85%] md:object-center"
           />
         </div>
 
         <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
           <h1 className="mb-6 font-bold tracking-tight text-[clamp(2.2rem,6vw,4rem)]">
-            HUELLA
+            Arquitectura modular para habitar el paisaje
           </h1>
           <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
-            <span className="block">Arquitectura modular para habitar el paisaje.</span>
+            Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
           </p>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href="/huella"
+              href="/#servicios"
               className="btn-primary flex h-12 w-full items-center justify-center rounded-full px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
-              Explorar HUELLA →
+              Explorar soluciones
             </Link>
-            <div className="flex flex-col sm:flex-row items-center gap-2 text-sm sm:text-base text-white/90">
-              <Link
-                href="/base"
-                className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
-              >
-                Base · Unidades modulares
-              </Link>
-              <Link
-                href="/diseno"
-                className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
-              >
-                Diseño · Proyecto a medida
-              </Link>
-              <Link
-                href="/refugios"
-                className="rounded-full border border-white/30 px-3 py-1 transition hover:border-white/60 hover:text-white"
-              >
-                Refugios · Estadías / alquiler
-              </Link>
-            </div>
+            <Link
+              href="/proyectos"
+              className="btn-secondary flex h-12 w-full items-center justify-center rounded-full px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
+            >
+              Ver proyectos
+            </Link>
           </div>
         </div>
 
@@ -78,64 +59,73 @@ export default function Home() {
       </section>
 
       <section
-        id="huella-base"
+        id="servicios"
         className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="text-sm uppercase tracking-widest text-tierra-600">
-              HUELLA
-            </div>
-            <h2 className="mt-4">Una forma consciente y flexible de habitar el territorio.</h2>
+            <h2>Tres formas de habitar con HUELLA</h2>
             <p className="mt-4 text-base text-gray-600">
-              Elegí la propuesta que mejor acompaña tu forma de habitar y el tiempo que tenés para hacerlo realidad.
+              Una misma mirada, distintos caminos según tu necesidad, tu uso y tu proyecto.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <div className="min-h-[144px]">
+              <div>
                 <h3 className="text-2xl">HUELLA Base</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Rápido. Claro. Accesible.
+                  Sistema habitacional modular, claro y previsible.
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
-                  <span className="block">Soluciones modulares con costos claros.</span>
-                  <span className="block">Vos elegís el nivel de terminación.</span>
-                </p>
+                <ul className="mt-6 grid gap-2 text-sm text-gray-600">
+                  <li>Niveles de terminación definidos desde el inicio</li>
+                  <li>Posibilidad de crecer o adaptarse en el tiempo</li>
+                  <li>Una base real para vivir, no una solución transitoria</li>
+                </ul>
               </div>
-              <Link href="/base" className="btn-primary mt-auto inline-flex h-10 w-full items-center justify-center text-sm">
-                Pedir presupuesto
+              <Link
+                href="/base"
+                className="btn-primary mt-6 inline-flex h-10 w-full items-center justify-center text-sm"
+              >
+                Ver HUELLA Base
               </Link>
             </div>
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <div className="min-h-[144px]">
+              <div>
                 <h3 className="text-2xl">HUELLA Diseño</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Arquitectura pensada para vos.
+                  Arquitectura pensada para vos y para el lugar.
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
-                  <span className="block">Modelos listos, proyectos personalizados</span>
-                  <span className="block">y ampliaciones que se integran a lo existente.</span>
-                </p>
+                <ul className="mt-6 grid gap-2 text-sm text-gray-600">
+                  <li>Modelos listos y proyectos personalizados</li>
+                  <li>Lectura del sitio y modo de habitar</li>
+                  <li>Acompañamiento en cada decisión</li>
+                </ul>
               </div>
-              <Link href="/diseno" className="btn-secondary mt-auto inline-flex h-10 w-full items-center justify-center text-sm">
-                Solicitar asesoramiento
+              <Link
+                href="/diseno"
+                className="btn-secondary mt-6 inline-flex h-10 w-full items-center justify-center text-sm"
+              >
+                Explorar Diseño
               </Link>
             </div>
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm">
-              <div className="min-h-[144px]">
+              <div>
                 <h3 className="text-2xl">HUELLA Refugios</h3>
                 <p className="mt-3 text-sm text-gray-600">
-                  Espacios para vivir la experiencia.
+                  Espacios pensados para la experiencia.
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
-                  <span className="block">Refugios integrados al entorno</span>
-                  <span className="block">pensados para el descanso y el paisaje.</span>
-                </p>
+                <ul className="mt-6 grid gap-2 text-sm text-gray-600">
+                  <li>Uso recreativo o turístico</li>
+                  <li>Integración con el entorno natural</li>
+                  <li>Soluciones simples, robustas y habitables</li>
+                </ul>
               </div>
-              <Link href="/refugios" className="btn-secondary mt-auto inline-flex h-10 w-full items-center justify-center text-sm">
-                Consultar disponibilidad
+              <Link
+                href="/refugios"
+                className="btn-secondary mt-6 inline-flex h-10 w-full items-center justify-center text-sm"
+              >
+                Ver Refugios
               </Link>
             </div>
           </div>
@@ -143,132 +133,93 @@ export default function Home() {
       </section>
 
       <section
-        id="huella"
+        id="por-que-huella"
         className="section-padding bg-white scroll-mt-28 md:scroll-mt-32"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="text-sm uppercase tracking-widest text-tierra-600">
-              Huella Mendoza
+            <h2>Por qué elegir HUELLA</h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-tierra-700">Sostenibilidad</h3>
+              <p className="mt-3 text-sm text-gray-600">
+                Construimos con respeto por el entorno, reduciendo el impacto frente a la construcción tradicional y
+                priorizando una relación equilibrada con el paisaje.
+              </p>
             </div>
-            <h2 className="mt-4">Una forma consciente de habitar el territorio</h2>
-            <p className="mt-4">
-              <span className="block">Diseñamos soluciones habitables que se adaptan a tu terreno y a tu forma de vivir.</span>
-              <span className="block">Desde módulos claros para avanzar rápido, hasta proyectos a medida.</span>
-            </p>
-            <p className="mt-3">
-              <span className="block">Diseño, paisaje y uso real.</span>
-            </p>
-            <Link href="/huella" className="btn-secondary mt-6 inline-flex">
-              Ver cómo trabajamos
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-tierra-50">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h2>HUELLA Base</h2>
-            <p className="mt-3">
-              Unidades habitacionales modulares con alcances definidos para avanzar con orden y sin sorpresas.
-            </p>
-            <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Niveles de terminación especificados según presupuesto y uso.</li>
-              <li>Pasos y plazos detallados antes de iniciar.</li>
-              <li>Costos cerrados para tomar decisiones con anticipación.</li>
-            </ul>
-            <Link href="/base" className="btn-secondary mt-8 inline-flex">
-              Explorar
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="huella-diseno"
-        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
-      >
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h2>HUELLA Diseño</h2>
-            <p className="mt-3">
-              Proyectos arquitectónicos a medida con acompañamiento profesional en cada etapa.
-            </p>
-            <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Lectura del sitio y de tu modo de habitar para definir el diseño.</li>
-              <li>Propuestas comparables que integran funcionalidad y paisaje.</li>
-              <li>Dirección y seguimiento cercano para sostener las decisiones.</li>
-            </ul>
-            <Link href="/diseno" className="btn-secondary mt-8 inline-flex">
-              Explorar
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="huella-refugios"
-        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
-      >
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h2>HUELLA Refugios</h2>
-            <p className="mt-3">
-              Unidades de descanso para estadías temporales, con foco en el paisaje y el silencio.
-            </p>
-            <ul className="mt-6 grid gap-3 text-sm text-gray-600">
-              <li>Iluminación y climatización resueltas para uso inmediato.</li>
-              <li>Equipamiento sencillo para disfrutar sin complejidad.</li>
-              <li>Reserva directa y acompañamiento en la llegada.</li>
-            </ul>
-            <Link href="/refugios" className="btn-secondary mt-8 inline-flex">
-              Explorar
-            </Link>
+            <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-tierra-700">Previsibilidad</h3>
+              <p className="mt-3 text-sm text-gray-600">
+                Procesos claros, decisiones ordenadas y acompañamiento durante todo el proyecto. Menos incertidumbre,
+                más tranquilidad en cada etapa.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-tierra-700">Flexibilidad</h3>
+              <p className="mt-3 text-sm text-gray-600">
+                Los espacios pueden crecer, adaptarse o transformarse con el tiempo, acompañando cambios reales en la
+                forma de habitar.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section
         id="proyectos"
-        className="section-padding bg-white scroll-mt-28 md:scroll-mt-32"
+        className="section-padding bg-tierra-50 scroll-mt-28 md:scroll-mt-32"
       >
         <div className="container-custom">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2>Proyectos reales. Resultados concretos.</h2>
-              <p className="mt-3 max-w-2xl">
-                <span className="block">Arquitectura integrada al entorno,</span>
-                <span className="block">pensada para ser usada y habitada.</span>
+            <div className="max-w-3xl">
+              <h2>Proyectos reales</h2>
+              <p className="mt-3">
+                Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
             </div>
             <Link href="/proyectos" className="btn-secondary px-6 py-3">
-              Ver proyectos
+              Ver todos los proyectos
             </Link>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {projectImages.map((project) => (
+            {[
+              { name: 'Modelo 300', detail: '30 m² · 1 dormitorio' },
+              { name: 'Modelo 550', detail: '55 m² · 2 dormitorios' },
+              { name: 'Modelo 725', detail: '72,5 m² · 3 dormitorios' },
+            ].map((modelo) => (
               <div
-                key={project.title}
-                className="overflow-hidden rounded-2xl bg-white shadow-sm"
+                key={modelo.name}
+                className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
               >
-                <div className="relative h-56 w-full overflow-hidden bg-gray-100">
-                  <Image
-                    src={project.image}
-                    alt={altText[project.image]}
-                    fill
-                    quality={90}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg">{project.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">
-                    {project.subtitle}
-                  </p>
-                </div>
+                <h3 className="text-lg font-semibold">{modelo.name}</h3>
+                <p className="mt-2 text-sm text-gray-600">{modelo.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl">
+            <h2>Cómo trabajamos</h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'Consulta', description: 'Entendemos tu necesidad, el uso y el lugar.' },
+              { title: 'Diseño', description: 'Propuesta clara y comparable según tu proyecto.' },
+              { title: 'Fabricación', description: 'Construcción bajo control, con procesos definidos.' },
+              { title: 'Entrega', description: 'Instalación y acompañamiento final.' },
+            ].map((paso, index) => (
+              <div
+                key={paso.title}
+                className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
+              >
+                <div className="text-sm font-semibold text-tierra-600">Paso {index + 1}</div>
+                <h3 className="mt-2 text-lg font-semibold">{paso.title}</h3>
+                <p className="mt-3 text-sm text-gray-600">{paso.description}</p>
               </div>
             ))}
           </div>
@@ -280,30 +231,68 @@ export default function Home() {
         className="section-padding bg-tierra-700 text-white scroll-mt-28 md:scroll-mt-32"
       >
         <div className="container-custom">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h2>¿Listo para avanzar?</h2>
-              <p className="mt-3 max-w-2xl text-white/80">
-                <span className="block">Te ayudamos a encontrar la mejor solución</span>
-                <span className="block">según tu terreno, uso y presupuesto.</span>
+          <div className="max-w-3xl">
+            <h2>¿Hablamos de tu proyecto?</h2>
+            <p className="mt-3 text-white/80">
+              Te ayudamos a encontrar la mejor solución según tu terreno y tu forma de habitar. Sin compromisos, sin
+              apuro.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+            <form className="rounded-2xl bg-white p-6 text-gray-700 shadow-lg">
+              <div className="grid gap-4">
+                <div>
+                  <label htmlFor="nombre" className="text-sm font-semibold">
+                    Nombre y apellido
+                  </label>
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-tierra-500 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="text-sm font-semibold">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-tierra-500 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="mensaje" className="text-sm font-semibold">
+                    Mensaje
+                  </label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows={4}
+                    className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-tierra-500 focus:outline-none"
+                  />
+                </div>
+                <button type="submit" className="btn-primary h-11">
+                  Enviar consulta
+                </button>
+              </div>
+            </form>
+
+            <div className="rounded-2xl border border-white/20 bg-white/10 p-6">
+              <h3 className="text-lg font-semibold">Contacto directo</h3>
+              <p className="mt-3 text-sm text-white/80">
+                Si preferís, coordinamos por WhatsApp para avanzar con tu consulta.
               </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href={buildWhatsAppUrl(whatsappMessages.home)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary bg-white text-tierra-700"
+                className="btn-secondary mt-6 inline-flex w-full items-center justify-center bg-white text-tierra-700"
               >
                 Hablar por WhatsApp
-              </Link>
-              <Link
-                href={buildWhatsAppUrl(whatsappMessages.home)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary bg-white text-tierra-700"
-              >
-                Pedir presupuesto
               </Link>
             </div>
           </div>
