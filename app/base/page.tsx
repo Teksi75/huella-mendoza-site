@@ -44,7 +44,7 @@ export default function BasePage() {
               <p className="text-sm uppercase tracking-widest text-tierra-600 text-center md:text-left">
                 HUELLA Base
               </p>
-              <h1 className="text-3xl font-bold leading-tight text-center mb-4 md:text-left">
+              <h1 className="mt-2 text-3xl font-semibold leading-tight text-center mb-4 md:mt-0 md:text-left md:font-bold">
                 HUELLA Base
               </h1>
               <p className="text-xl font-semibold text-center mb-6 md:text-left">
@@ -147,11 +147,15 @@ export default function BasePage() {
                   sin perder coherencia.
                 </p>
                 <p className="mt-3 text-base font-semibold text-gray-700">
-                  Un mismo punto de partida × múltiples módulos posibles.
+                  Este enfoque permite pensar tanto soluciones individuales como conjuntos de
+                  mayor escala.
+                </p>
+                <p className="mt-3 text-base font-semibold text-gray-700">
+                  <strong>Un mismo punto de partida × múltiples módulos posibles.</strong>
                 </p>
               </div>
               <div className="mb-4 text-base leading-relaxed text-gray-700">
-                <p>Analizamos tu idea y la cantidad de módulos.</p>
+                <p>Analizamos tu idea y la cantidad de módulos que le dan sentido.</p>
                 <p className="mt-2">
                   Contanos tu proyecto para ver cuántos módulos base tiene sentido planificar y
                   cómo se puede organizar.
