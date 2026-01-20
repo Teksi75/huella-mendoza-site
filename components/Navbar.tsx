@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -21,13 +21,10 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: 'Inicio', href: '/' },
-    { name: 'HUELLA', href: '/#huella' },
-    { name: 'Base', href: '/base' },
-    { name: 'Diseño', href: '/diseno' },
-    { name: 'Refugios', href: '/refugios' },
+    { name: 'Servicios', href: '/#servicios' },
+    { name: 'Por qué HUELLA', href: '/#por-que-huella' },
     { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/contacto' },
+    { name: 'Contacto', href: '/#contacto' },
   ];
 
   return (
@@ -40,12 +37,10 @@ export default function Navbar() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-tierra-700">HUELLA</div>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <Link
@@ -60,9 +55,18 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+                isTransparent
+                  ? 'bg-white text-tierra-700 hover:bg-white/90'
+                  : 'bg-tierra-600 text-white hover:bg-tierra-700'
+              }`}
+            >
+              Consultar
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden"
@@ -78,7 +82,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t">
           <div className="container-custom py-4 space-y-3">
@@ -92,6 +95,13 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-tierra-600 px-4 py-2 text-sm font-semibold text-white hover:bg-tierra-700"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Consultar
+            </Link>
           </div>
         </div>
       )}
