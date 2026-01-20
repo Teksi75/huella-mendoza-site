@@ -51,7 +51,7 @@ export default function Home() {
           <h1 className="mb-6 font-bold tracking-tight text-[clamp(2.2rem,6vw,4rem)]">
             Arquitectura modular para habitar el paisaje
           </h1>
-          <p className="mb-8 font-light leading-snug md:leading-normal text-[clamp(1rem,2.2vw,1.25rem)] max-w-[32ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
+          <p className="mb-8 font-light leading-snug md:leading-normal text-[0.9rem] sm:text-[clamp(1rem,2.2vw,1.25rem)] max-w-[38ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance">
             Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
           </p>
 
