@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -21,14 +21,15 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: 'Inicio', href: '/' },
-    { name: 'HUELLA', href: '/#huella' },
-    { name: 'Base', href: '/base' },
-    { name: 'Diseño', href: '/diseno' },
-    { name: 'Refugios', href: '/refugios' },
+    { name: 'Servicios', href: '/#servicios' },
+    { name: 'Por qué HUELLA', href: '/#por-que-huella' },
     { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/contacto' },
+    { name: 'Contacto', href: '/#contacto' },
   ];
+
+  const ctaClasses = isTransparent
+    ? 'inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10'
+    : 'btn-primary inline-flex items-center justify-center rounded-full px-5 py-2 text-sm';
 
   return (
     <nav
@@ -60,6 +61,9 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link href="/#contacto" className={ctaClasses}>
+              Consultar
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,6 +96,13 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/#contacto"
+              className="btn-primary inline-flex w-full items-center justify-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Consultar
+            </Link>
           </div>
         </div>
       )}
