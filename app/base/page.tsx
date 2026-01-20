@@ -48,13 +48,15 @@ export default function BasePage() {
                 HUELLA Base
               </h1>
               <p className="text-xl font-semibold text-center mb-6 md:text-left">
-                Un punto de partida claro y eficiente.
+                Bases modulares: previsibilidad, orden y escalabilidad desde el inicio.
               </p>
               <div className="mb-6">
                 <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
-                  Base, el módulo estructural del sistema HUELLA. Punto de partida claro para
-                  ordenar estructura, logística y escalabilidad sin perder coherencia en cada
-                  etapa.
+                  Base es el módulo estructural del sistema HUELLA. Cada proyecto se define a
+                  partir de una cantidad de módulos base que funcionan como la pieza fundamental
+                  para organizar costos, tiempos y posibilidades futuras. Esto permite planificar
+                  con claridad, reducir incertidumbres y pensar espacios que crecen sin
+                  improvisaciones.
                 </p>
               </div>
             </div>
@@ -68,7 +70,10 @@ export default function BasePage() {
             <h2>Logística y obra</h2>
             <div className="mb-6">
               <p className="text-base leading-relaxed text-gray-700">
-                La lógica modular simplifica la logística, reduce tiempos de obra.
+                La lógica modular hace que las unidades encajen entre sí y en el transporte, la
+                obra en sitio se coordine con menos imprevistos y los tiempos de montaje se
+                optimicen. Definir la cantidad de módulos base desde el principio permite
+                planificar logística y obra de forma ordenada y clara.
               </p>
             </div>
           </div>
@@ -104,7 +109,8 @@ export default function BasePage() {
                 tratamiento térmico para un uso confortable y continuo.
               </p>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-                Materiales y aislaciones pensadas para acompañar el clima y el entorno.
+                Pensamos los materiales y aislamientos para acompañar el clima y el entorno, tanto
+                en una unidad como en varias combinadas.
               </p>
             </div>
           </div>
@@ -127,14 +133,28 @@ export default function BasePage() {
               <div className="mb-6">
                 <h2 className="text-lg font-semibold mb-2">Escalabilidad</h2>
                 <p className="text-base leading-relaxed text-gray-700">
-                  HUELLA Base no es un producto cerrado. Es un sistema que permite crecer.
+                  HUELLA Base no es un producto cerrado. Es un sistema que permite crecer,
+                  reconfigurar y ampliar tu proyecto según tus necesidades.
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-gray-700">
-                  Podés empezar con una unidad y ampliar, adaptar o sumar nuevas piezas a
-                  medida que cambian tus necesidades.
+                  Podés empezar con una sola unidad, sumar módulos base, combinar configuraciones
+                  para diferentes usos y pensar un conjunto de módulos como un sistema mayor que se
+                  adapta con el tiempo.
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-gray-700">
-                  Un mismo punto de partida, múltiples configuraciones posibles.
+                  Este enfoque por cantidad de módulos organiza mejor la logística y la obra desde
+                  el inicio, facilita cotizaciones claras y permite proyectar espacios que crecen
+                  sin perder coherencia.
+                </p>
+                <p className="mt-3 text-base font-semibold text-gray-700">
+                  Un mismo punto de partida × múltiples módulos posibles.
+                </p>
+              </div>
+              <div className="mb-4 text-base leading-relaxed text-gray-700">
+                <p>Analizamos tu idea y la cantidad de módulos.</p>
+                <p className="mt-2">
+                  Contanos tu proyecto para ver cuántos módulos base tiene sentido planificar y
+                  cómo se puede organizar.
                 </p>
               </div>
               <div>
