@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import UsosPosiblesGallery from '@/components/UsosPosiblesGallery';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 
@@ -106,6 +107,7 @@ export default function DisenoPage() {
                 <p className="mt-2 text-sm text-gray-600">
                   Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
+                <UsosPosiblesGallery />
                 <div
                   aria-disabled="true"
                   className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
