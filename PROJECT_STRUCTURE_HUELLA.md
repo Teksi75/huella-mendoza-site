@@ -160,6 +160,7 @@
 - Navegación global: `components/Navbar.tsx` (estado de scroll y menú mobile).
 - Footer global: `components/Footer.tsx`.
 - Layout global, metadata OG/Twitter, favicon y CTA de WhatsApp fijo: `app/layout.tsx`.
+- CTA flotante de WhatsApp con mensaje contextual por ruta: `components/WhatsAppCTA.tsx` (usa `usePathname`).
 - Estilos globales y tokens de UI: `app/globals.css`.
 - Páginas por ruta: `app/<segment>/page.tsx` y subruta `app/diseno/modelos/page.tsx`.
 - Componentes de UI con lógica: `app/proyectos/ProjectsGrid.tsx`, `components/ImageCarouselModal.tsx`, `components/HomeContactForm.tsx`, `components/UsosPosiblesGallery.tsx`, `app/diseno/modelos/ModelosListosClient.tsx`.
@@ -189,7 +190,7 @@
 - App Router: rutas basadas en `app/<segment>/page.tsx` con layout global en `app/layout.tsx`.
 - Metadata global en `app/layout.tsx` (OpenGraph, Twitter, iconos) y metadata específica en `app/base/page.tsx`, `app/diseno/page.tsx`, `app/diseno/modelos/page.tsx`, `app/refugios/page.tsx`.
 - SEO estático: `public/robots.txt` referencia `public/sitemap.xml` (lista `/`, `/base`, `/diseno`, `/huella`, `/proyectos`, `/refugios`, `/contacto`).
-- Datos tipados en `data/*.ts` (proyectos, modelos listos, textos de contacto, alt text).
+- Datos tipados en `data/*.ts` (proyectos, modelos listos, textos de contacto, alt text). `data/contact.ts` incluye mensajes diferenciados por intención (base presupuesto/opciones, refugios reserva, contacto directo).
 - Rutas de imágenes apuntan a paths bajo `public/`.
 
 ## Layouts y grupos de rutas
@@ -201,7 +202,7 @@
 - La Navbar es fija y cambia de fondo según scroll en home; el menú desktop aparece en `lg` y el menú mobile se despliega debajo.
 - Las grillas cambian de columnas con `sm`/`md`/`lg` (ej: `ProjectsGrid` usa 2 columnas en `sm` y 3 en `lg`; el `Footer` pasa a 3 columnas en `md`).
 - `ImageCarouselModal` permite scroll horizontal con snap y bloquea el scroll del body; los botones Anterior/Siguiente sólo se muestran en `md+`.
-- El CTA de WhatsApp es flotante (`fixed bottom-4 right-4`) en todas las páginas.
+- El CTA de WhatsApp es flotante (`fixed bottom-4 right-4`) en todas las páginas y ajusta su mensaje según la ruta actual.
 
 ## Componentes con lógica específica para mobile
 - `components/Navbar.tsx`: apertura/cierre del menú mobile y cambio de transparencia por scroll.
