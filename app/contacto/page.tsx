@@ -40,7 +40,7 @@ export default function ContactoPage() {
             </p>
             <Link
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 hover:text-tierra-900"
-              href={buildWhatsAppUrl(whatsappMessages.contacto)}
+              href={buildWhatsAppUrl(whatsappMessages.contactoDirecto)}
               target="_blank"
               rel="noopener noreferrer"
             >

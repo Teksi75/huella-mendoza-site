@@ -56,12 +56,12 @@ export default function RefugiosPage() {
               <li>Coordinamos la reserva y el ingreso de forma simple.</li>
             </ol>
             <Link
-              href={buildWhatsAppUrl(whatsappMessages.refugios)}
+              href={buildWhatsAppUrl(whatsappMessages.refugiosReserva)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary mt-8 inline-flex"
             >
-              Consultar disponibilidad
+              Coordinar reserva
             </Link>
           </div>
         </div>
