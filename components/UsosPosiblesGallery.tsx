@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import { Images } from 'lucide-react';
 import ImageCarouselModal from '@/components/ImageCarouselModal';
 
 const usosImages = [
@@ -32,24 +32,16 @@ export default function UsosPosiblesGallery() {
       <p className="mt-2 text-sm text-gray-600">
         Oficinas, estudios y espacios de trabajo que se adaptan al uso, al entorno y a la escala del proyecto.
       </p>
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        {usosImages.map((image, index) => (
-          <button
-            key={image.src}
-            type="button"
-            onClick={() => handleOpen(index)}
-            className="group relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-tierra-100"
-            aria-label={`Abrir ${image.title}`}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-            />
-          </button>
-        ))}
+      <div className="mt-3 border-t border-black/5 pt-3">
+        <button
+          type="button"
+          onClick={() => handleOpen(0)}
+          aria-label="Abrir galería de usos posibles"
+          className="group inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 transition-colors duration-200 hover:text-tierra-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300"
+        >
+          Ver galería
+          <Images className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[1px]" />
+        </button>
       </div>
       <ImageCarouselModal
         isOpen={isOpen}

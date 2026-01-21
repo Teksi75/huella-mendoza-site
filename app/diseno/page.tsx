@@ -108,15 +108,6 @@ export default function DisenoPage() {
                   Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
                 <UsosPosiblesGallery />
-                <div
-                  aria-disabled="true"
-                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
-                >
-                  <span>Ver más</span>
-                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                    Disponible próximamente
-                  </span>
-                </div>
               </div>
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
