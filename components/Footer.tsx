@@ -1,3 +1,5 @@
+import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-white">
@@ -32,7 +34,12 @@ export default function Footer() {
                   <span className="text-stone-500">Instagram</span>
                 </li>
                 <li>
-                  <a className="text-gray-300 hover:text-white" href="#">
+                  <a
+                    className="text-gray-300 hover:text-white"
+                    href={buildWhatsAppUrl(whatsappMessages.contacto)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     WhatsApp
                   </a>
                 </li>
