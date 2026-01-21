@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
+import { PersonalizadosCard } from '@/components/diseno/PersonalizadosCard';
 
 export const metadata: Metadata = {
   title: 'HUELLA Diseño – Proyecto a medida',
@@ -93,29 +94,7 @@ export default function DisenoPage() {
                   Explorar modelos disponibles
                 </Link>
               </div>
-              <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
-                <h3 className="text-xl">Proyectos personalizados</h3>
-                <p className="mt-3 text-sm text-gray-600">
-                  Experiencias diseñadas a partir del lugar y de tu forma de habitar.
-                  <br />
-                  Decisiones claras para una solución adaptada a tu situación.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
-                  Proceso
-                </p>
-                <p className="mt-2 text-sm text-gray-600">
-                  Relevamiento - Propuesta - Desarrollo ejecutivo
-                </p>
-                <div
-                  aria-disabled="true"
-                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
-                >
-                  <span>Ver más</span>
-                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                    Disponible próximamente
-                  </span>
-                </div>
-              </div>
+              <PersonalizadosCard />
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
                 <p className="mt-3 text-sm text-gray-600">
