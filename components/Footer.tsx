@@ -7,8 +7,8 @@ export default function Footer() {
             <div>
               <div className="text-2xl font-bold tracking-tight">HUELLA</div>
               <p className="mt-4 text-sm text-gray-300">
-                Arquitectura y experiencias en la montana, pensadas para vivir
-                el territorio con diseno y serenidad.
+                Arquitectura y sistemas habitables, pensados para acompañar
+                distintas formas de vivir el territorio.
               </p>
             </div>
 
@@ -17,7 +17,7 @@ export default function Footer() {
                 Contacto rapido
               </div>
               <ul className="mt-4 space-y-2 text-sm text-gray-300">
-                <li>info@huella.com</li>
+                <li>babytomba@gmail.com</li>
                 <li>+54 9 261 5010488</li>
                 <li>Potrerillos, Mendoza</li>
               </ul>
@@ -29,14 +29,7 @@ export default function Footer() {
               </div>
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
-                  <a className="text-gray-300 hover:text-white" href="#">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-300 hover:text-white" href="#">
-                    LinkedIn
-                  </a>
+                  <span className="text-stone-500">Instagram</span>
                 </li>
                 <li>
                   <a className="text-gray-300 hover:text-white" href="#">
