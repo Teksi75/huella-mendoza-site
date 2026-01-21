@@ -139,7 +139,7 @@ export default function DisenoPage() {
               rel="noopener noreferrer"
               className="btn-secondary mt-8 inline-flex"
             >
-              Consultar
+              Hacer una consulta
             </Link>
           </div>
         </div>

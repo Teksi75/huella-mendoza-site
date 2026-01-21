@@ -19,7 +19,7 @@ export default function ContactoPage() {
       <section className="section-padding bg-tierra-50">
         <div className="container-custom grid gap-10 md:grid-cols-2">
           <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <h2 className="text-2xl">Escribinos por WhatsApp</h2>
+            <h2 className="text-2xl">Consulta por WhatsApp</h2>
             <p className="mt-3 text-sm text-gray-600">
               Contanos qué necesitás y te orientamos sobre próximos pasos.
             </p>
@@ -29,7 +29,7 @@ export default function ContactoPage() {
               rel="noopener noreferrer"
               className="btn-primary mt-6 inline-flex"
             >
-              Iniciar conversación
+              Hacer una consulta
             </Link>
           </div>
 
