@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
+import UsosPosiblesGallery from '@/components/UsosPosiblesGallery';
 
 export const metadata: Metadata = {
   title: 'HUELLA Diseño – Proyecto a medida',
@@ -106,15 +107,7 @@ export default function DisenoPage() {
                 <p className="mt-2 text-sm text-gray-600">
                   Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
-                <div
-                  aria-disabled="true"
-                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
-                >
-                  <span>Ver más</span>
-                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                    Disponible próximamente
-                  </span>
-                </div>
+                <UsosPosiblesGallery />
               </div>
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl">Ampliaciones</h3>
