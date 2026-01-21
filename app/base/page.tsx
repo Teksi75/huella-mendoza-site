@@ -156,7 +156,7 @@ export default function BasePage() {
               </div>
               <div>
                 <Link
-                  href={buildWhatsAppUrl(whatsappMessages.base)}
+                  href={buildWhatsAppUrl(whatsappMessages.basePresupuesto)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-primary text-white font-semibold text-center rounded-md text-lg mb-4 inline-flex justify-center"
@@ -164,7 +164,7 @@ export default function BasePage() {
                   Pedir presupuesto
                 </Link>
                 <Link
-                  href={buildWhatsAppUrl(whatsappMessages.base)}
+                  href={buildWhatsAppUrl(whatsappMessages.baseOpciones)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 border border-primary text-primary font-semibold text-center rounded-md text-lg inline-flex justify-center"
