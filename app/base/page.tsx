@@ -161,7 +161,7 @@ export default function BasePage() {
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-primary text-white font-semibold text-center rounded-md text-lg mb-4 inline-flex justify-center"
                 >
-                  Pedir presupuesto
+                  Solicitar presupuesto
                 </Link>
                 <Link
                   href={buildWhatsAppUrl(whatsappMessages.baseOpciones)}
@@ -169,7 +169,7 @@ export default function BasePage() {
                   rel="noopener noreferrer"
                   className="w-full py-3 border border-primary text-primary font-semibold text-center rounded-md text-lg inline-flex justify-center"
                 >
-                  Consultar opciones
+                  Explorar opciones
                 </Link>
               </div>
             </div>

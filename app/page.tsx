@@ -297,7 +297,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn-secondary mt-6 inline-flex bg-white text-tierra-700"
             >
-              Hablar por WhatsApp
+              Hacer una consulta
             </Link>
           </div>
 

@@ -61,7 +61,7 @@ export default function RefugiosPage() {
               rel="noopener noreferrer"
               className="btn-secondary mt-8 inline-flex"
             >
-              Coordinar reserva
+              Confirmar disponibilidad
             </Link>
           </div>
         </div>
