@@ -51,6 +51,13 @@ export default function Footer() {
             (c) {new Date().getFullYear()} HUELLA. Todos los derechos
             reservados.
           </div>
+          <a
+            href="/llms.txt"
+            className="sr-only focus:not-sr-only focus:absolute focus:bottom-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-black focus:shadow"
+            rel="nofollow"
+          >
+            LLM index
+          </a>
         </div>
       </div>
     </footer>
