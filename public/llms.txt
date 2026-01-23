@@ -1,0 +1,44 @@
+# HUELLA — Arquitectura modular y sistemas habitables (Argentina)
+
+HUELLA es una marca paraguas que propone una forma consciente y flexible de habitar el territorio.
+Ofrece soluciones habitables modulares para vivienda, turismo y usos complementarios, con foco en claridad, acompañamiento y experiencia del espacio.
+
+## Líneas de HUELLA
+### HUELLA Base
+Sistema habitacional modular, rápido y previsible. Escalable por etapas (base estructural → base habitable → evolución hacia diseño).
+
+### HUELLA Diseño
+Intervención arquitectónica: modelos listos, proyectos personalizados y ampliaciones. El valor está en el criterio, el diseño y el acompañamiento.
+
+### HUELLA Refugios
+Unidad experiencial orientada al alquiler turístico. Comunicación visual y directa, pensada para proyectos de glamping/cabañas y experiencias.
+
+## Páginas clave (URLs relativas)
+- Home: /
+- Marca HUELLA (visión): /huella
+- HUELLA Base: /base
+- HUELLA Diseño: /diseno
+- Modelos listos (Diseño): /diseno/modelos
+- Proyectos (casos e inspiración): /proyectos
+- HUELLA Refugios: /refugios
+- Contacto: /contacto
+
+## Cómo suele buscarse esto (sinónimos comunes)
+- casa contenedor / casa container / container home
+- vivienda modular / casa modular / construcción modular
+- vivienda industrializada / construcción industrializada
+- casa prefabricada / cabaña prefabricada
+- tiny house
+- glamping / glamping cabin
+- cabaña modular turística / cabaña para alquiler
+- oficina contenedor / oficina modular
+- ampliación modular / quincho modular
+- llave en mano
+
+## Intención de consulta
+- Para pedir una propuesta o cotización: /contacto
+- Para ver modelos listos: /diseno/modelos
+- Para ver casos/proyectos: /proyectos
+
+## Ubicación y alcance
+Base operativa: Mendoza (Argentina). Alcance comercial: Argentina (según proyecto y logística).
