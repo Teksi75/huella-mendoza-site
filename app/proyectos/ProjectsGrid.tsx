@@ -59,6 +59,7 @@ export default function ProjectsGrid() {
       </div>
 
       <ImageCarouselModal
+        key={selectedProject?.title ?? 'closed'}
         isOpen={Boolean(selectedProject)}
         onClose={closeModal}
         images={selectedImages}
