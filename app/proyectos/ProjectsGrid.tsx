@@ -58,23 +58,21 @@ export default function ProjectsGrid() {
         ))}
       </div>
 
-      <ImageCarouselModal
-        isOpen={Boolean(selectedProject)}
-        onClose={closeModal}
-        images={selectedImages}
-        eyebrow={selectedProject?.label}
-        title={selectedProject?.title}
-        subtitle={selectedProject?.subtitle}
-        description={selectedProject?.description}
-        cta={
-          selectedProject
-            ? {
-                href: '/contacto',
-                label: 'Contactar',
-              }
-            : undefined
-        }
-      />
+      {selectedProject ? (
+        <ImageCarouselModal
+          isOpen={Boolean(selectedProject)}
+          onClose={closeModal}
+          images={selectedImages}
+          eyebrow={selectedProject.label}
+          title={selectedProject.title}
+          subtitle={selectedProject.subtitle}
+          description={selectedProject.description}
+          cta={{
+            href: '/contacto',
+            label: 'Contactar',
+          }}
+        />
+      ) : null}
     </>
   );
 }
