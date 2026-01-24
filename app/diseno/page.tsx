@@ -89,7 +89,7 @@ export default function DisenoPage() {
                 </p>
                 <Link
                   href="/diseno/modelos"
-                  className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                  className="mt-5 inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-tierra-700 underline decoration-tierra-300 underline-offset-4 transition-colors hover:text-tierra-900 hover:decoration-tierra-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 >
                   Explorar modelos disponibles
                 </Link>

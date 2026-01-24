@@ -69,7 +69,6 @@ export default function ImageCarouselModal({
 
   useEffect(() => {
     if (!isOpen) return;
-    setActiveIndex(initialIndex);
     if (carouselRef.current) {
       carouselRef.current.scrollTo({
         left: carouselRef.current.clientWidth * initialIndex,
