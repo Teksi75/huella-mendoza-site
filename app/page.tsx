@@ -56,7 +56,7 @@ const HomeLandscapeBreak = () => (
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-start justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0 md:items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
           <img
