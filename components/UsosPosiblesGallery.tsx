@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Images } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ImageCarouselModal from '@/components/ImageCarouselModal';
 
 const usosImages = [
@@ -37,20 +37,22 @@ export default function UsosPosiblesGallery() {
           type="button"
           onClick={() => handleOpen(0)}
           aria-label="Abrir galería de usos posibles"
-          className="group inline-flex items-center gap-2 text-sm font-semibold text-tierra-700 transition-colors duration-200 hover:text-tierra-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300"
+          className="group inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-tierra-700 underline underline-offset-4 decoration-tierra-300/70 transition-colors duration-200 hover:text-tierra-900 hover:decoration-tierra-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
         >
           Ver galería
-          <Images className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[1px]" />
+          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </button>
       </div>
-      <ImageCarouselModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        images={usosImages}
-        initialIndex={initialIndex}
-        eyebrow="USOS POSIBLES"
-        subtitle="Oficinas, estudios y espacios de trabajo que se adaptan al uso, al entorno y a la escala del proyecto."
-      />
+      {isOpen ? (
+        <ImageCarouselModal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          images={usosImages}
+          initialIndex={initialIndex}
+          eyebrow="USOS POSIBLES"
+          subtitle="Oficinas, estudios y espacios de trabajo que se adaptan al uso, al entorno y a la escala del proyecto."
+        />
+      ) : null}
     </div>
   );
 }

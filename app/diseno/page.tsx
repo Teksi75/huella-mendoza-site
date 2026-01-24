@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import UsosPosiblesGallery from '@/components/UsosPosiblesGallery';
@@ -89,9 +90,10 @@ export default function DisenoPage() {
                 </p>
                 <Link
                   href="/diseno/modelos"
-                  className="mt-5 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                  className="group mt-5 inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-tierra-700 underline underline-offset-4 decoration-tierra-300/70 transition-colors duration-200 hover:text-tierra-900 hover:decoration-tierra-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 >
                   Explorar modelos disponibles
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
               <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">

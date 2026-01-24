@@ -59,10 +59,13 @@ export default function Home() {
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
-          <img
+          <Image
             src="/media/huella/home/home-protrerillos-embalse-1.png"
             alt={altText['/media/huella/home/home-protrerillos-embalse-1.png']}
-            className="w-full h-full object-cover object-[70%_85%] md:object-center"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-[70%_85%] md:object-center"
           />
         </div>
 
