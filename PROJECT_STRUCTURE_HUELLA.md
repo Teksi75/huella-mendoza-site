@@ -1,11 +1,11 @@
-# Project Structure: Huella Web
+﻿# Project Structure: Huella Web
 
 ## Resumen de stack
-- Next.js 16.1.1 con App Router (carpeta `app/`).
-- React 19.2.3 + TypeScript 5.9.3.
-- Tailwind CSS 4.1.18 (PostCSS: `postcss.config.mjs`, `tailwind.config.ts`).
-- ESLint 9.39.2 (`eslint.config.mjs`).
-- Framer Motion 12.23.26 y Lucide React 0.562.0.
+- Next.js ^16.1.1 con App Router (carpeta `app/`).
+- React ^19.2.3 + TypeScript ^5.
+- Tailwind CSS ^4 (PostCSS: `postcss.config.mjs`, `tailwind.config.ts`, `@tailwindcss/postcss`).
+- ESLint ^9 (`eslint.config.mjs`, `eslint-config-next` 16.1.0).
+- Framer Motion ^12.23.26 y Lucide React ^0.562.0.
 - Tipografía base: `next/font/google` (Inter) en `app/layout.tsx`.
 
 ## Estructura de carpetas (real)
@@ -38,6 +38,7 @@
 |   |-- ImageCarouselModal.tsx
 |   |-- Navbar.tsx
 |   |-- UsosPosiblesGallery.tsx
+|   |-- WhatsAppCTA.tsx
 |-- data/
 |   |-- altText.ts
 |   |-- contact.ts
@@ -137,6 +138,7 @@
 |   |-- favicon.svg
 |   |-- file.svg
 |   |-- globe.svg
+|   |-- llms.txt
 |   |-- next.svg
 |   |-- robots.txt
 |   |-- security.txt
@@ -159,14 +161,24 @@
 ## Qué se modifica dónde
 - Navegación global: `components/Navbar.tsx` (estado de scroll y menú mobile).
 - Footer global: `components/Footer.tsx`.
-- Layout global, metadata OG/Twitter, favicon y CTA de WhatsApp fijo: `app/layout.tsx`.
-- CTA flotante de WhatsApp con mensaje contextual por ruta: `components/WhatsAppCTA.tsx` (usa `usePathname`).
+- Layout global, metadata OG/Twitter, favicon y CTA de WhatsApp fijo: `app/layout.tsx` + `components/WhatsAppCTA.tsx`.
+- CTA flotante de WhatsApp con mensaje contextual por ruta: `components/WhatsAppCTA.tsx` (usa `usePathname` y `data/contact.ts`).
 - Estilos globales y tokens de UI: `app/globals.css`.
 - Páginas por ruta: `app/<segment>/page.tsx` y subruta `app/diseno/modelos/page.tsx`.
 - Componentes de UI con lógica: `app/proyectos/ProjectsGrid.tsx`, `components/ImageCarouselModal.tsx`, `components/HomeContactForm.tsx`, `components/UsosPosiblesGallery.tsx`, `app/diseno/modelos/ModelosListosClient.tsx`.
 - Datos estructurados: `data/altText.ts`, `data/contact.ts`, `data/proyectos.ts`, `data/modelosListos.ts`.
 - Assets estáticos: `public/images/proyectos/*`, `public/media/huella/**`, `public/og/og-huella.png`, `public/favicon.svg`, `app/favicon.ico`.
-- SEO estático y seguridad: `public/robots.txt`, `public/sitemap.xml`, `public/.well-known/security.txt`, `public/security.txt`.
+- SEO estático y seguridad: `public/robots.txt`, `public/sitemap.xml`, `public/.well-known/security.txt`, `public/security.txt`, `public/llms.txt`.
+
+## Contenido y CTAs (operativo, 2026-01)
+- CTA flotante de WhatsApp: se monta en `app/layout.tsx` con `components/WhatsAppCTA.tsx`. Si cambia el número o el mensaje prearmado, revisar también `data/contact.ts`.
+- Mensajes y datos de contacto: `data/contact.ts` (teléfono, WhatsApp, mail, textos).
+- Cards y micro-CTAs de Diseño (incluye “Ver galería” y la sección “Usos posibles” en Proyectos personalizados): `app/diseno/page.tsx` + `components/UsosPosiblesGallery.tsx` + `components/ImageCarouselModal.tsx` (reusa el mismo modal/carrusel de `/proyectos`).
+- Assets “Oficina” (uso posible): `public/media/huella/diseno/usos/Oficina_concept_1.png` y `public/media/huella/diseno/usos/Oficina_concept_2.png`.
+
+## Nota de UX (interno)
+- “Proyectos personalizados” en Diseño se comunica como adaptación al caso (no necesariamente premium).
+- Cuando se agregue un toque “premium” en CTAs (icono Lucide + microinteracciones), cuidar accesibilidad (foco visible, `aria-label`) y que el layout no cambie en mobile.
 
 ## Rutas clave
 - `/` -> `app/page.tsx`
@@ -185,12 +197,13 @@
 - Media editorial: `public/media/huella/base/*`, `public/media/huella/diseno/*`, `public/media/huella/diseno/usos/*`, `public/media/huella/home/*`, `public/media/huella/refugios/*`.
 - Imágenes sueltas numeradas: `public/media/huella/1.png` a `public/media/huella/16.png`.
 - Otros assets en raíz de `public/`: `file.svg`, `globe.svg`, `next.svg`, `vercel.svg`, `window.svg`.
+- Archivos de control/validación: `public/robots.txt`, `public/sitemap.xml`, `public/.well-known/security.txt`, `public/security.txt`, `public/llms.txt`.
 
 ## Convenciones del repo
 - App Router: rutas basadas en `app/<segment>/page.tsx` con layout global en `app/layout.tsx`.
 - Metadata global en `app/layout.tsx` (OpenGraph, Twitter, iconos) y metadata específica en `app/base/page.tsx`, `app/diseno/page.tsx`, `app/diseno/modelos/page.tsx`, `app/refugios/page.tsx`.
 - SEO estático: `public/robots.txt` referencia `public/sitemap.xml` (lista `/`, `/base`, `/diseno`, `/huella`, `/proyectos`, `/refugios`, `/contacto`).
-- Datos tipados en `data/*.ts` (proyectos, modelos listos, textos de contacto, alt text). `data/contact.ts` incluye mensajes diferenciados por intención (base presupuesto/opciones, refugios reserva, contacto directo).
+- Datos tipados en `data/*.ts` (proyectos, modelos listos, textos de contacto, alt text).
 - Rutas de imágenes apuntan a paths bajo `public/`.
 
 ## Layouts y grupos de rutas
