@@ -63,7 +63,7 @@ export const altText: Record<string, string> = {
     'Refugio integrado al paisaje con vista amplia al lago',
   '/media/huella/diseno/Hero-16.png':
     'Vista de refugio moderno en entorno de montaña al atardecer',
-  '/media/huella/diseno/Herro-13.png':
+  '/media/huella/diseno/Hero-13.png':
     'Refugio con iluminación cálida y vista al lago y montañas',
   '/media/huella/8.png': 'Sendero principal con vistas al paisaje',
   '/images/proyectos/milzoe-01.jpeg': 'Milzoe 01, render exterior',

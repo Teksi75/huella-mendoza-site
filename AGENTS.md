@@ -33,6 +33,7 @@
 
 ## Jerarquía de instrucciones (AGENTS.md anidados)
 - Codex debe leer AGENTS.md desde la raíz hacia el directorio de trabajo y aplicar precedencia por cercanía (el más cercano al archivo manda).
+- Las instrucciones directas del chat (usuario/desarrollador/sistema) tienen prioridad sobre estos archivos.
 - Si el archivo crece demasiado, partirlo en `app/AGENTS.md`, `components/AGENTS.md`, etc., para scopes más precisos.
 
 ## Tareas comunes (modo rápido)
@@ -46,6 +47,9 @@
 - SEO/archivos públicos: `public/robots.txt`, `public/sitemap.xml`, `public/.well-known/security.txt`, `public/security.txt`, `public/llms.txt`.
 
 ## Guardrails (no romper)
+- No romper UX/responsive actual; preservar accesibilidad mínima.
+- No agregar dependencias sin justificarlo y sin actualizar `package-lock.json`.
+- No tocar configuraciones base (Next/TS/ESLint/Tailwind) sin dejarlo explicitado en el resumen de cambios.
 - Navbar: transparencia al hacer scroll + menú mobile.
 - ImageCarouselModal: bloqueo de scroll del body, snap horizontal y focus trap; botones prev/next en `md+`.
 - WhatsAppCTA: mensaje cambia por ruta (`usePathname`) y se arma en `data/contact.ts`.
@@ -53,15 +57,18 @@
 - ProjectsGrid: abre el modal con la galería correcta.
 
 ## Checklist antes de finalizar
-- Ejecutar `npm run lint` y `npm run build` (y tests si se agregan).
-- Verificar rutas clave (`/`, `/base`, `/diseno`, `/diseno/modelos`, `/huella`, `/proyectos`, `/refugios`, `/contacto`).
-- Confirmar assets referenciados en `public/`.
+- Si se tocó `tsconfig.json`, `next-env.d.ts`, `package.json`/`package-lock.json`, `.gitignore`, `app/layout.tsx`, rutas en `app/**/page.tsx` o assets en `public/`: ejecutar `npm run lint` y `npm run build`.
+- Si sólo cambió documentación (`*.md`): ejecutar al menos `npm run lint` (si es rápido) o justificar por qué no se ejecutó.
+- Verificar rutas clave (`/`, `/base`, `/diseno`, `/diseno/modelos`, `/huella`, `/proyectos`, `/refugios`, `/contacto`) si hubo cambios de UI/rutas.
 
 Docs relacionadas: PROJECT_STRUCTURE_HUELLA.md (mapa extendido)
 
 ## Log de cambios (auditoría)
 - **Qué cambió y por qué**
-  - Se agregaron secciones de jerarquía de instrucciones y tareas comunes para acelerar trabajo sin recorrer todo el repo.
+  - Se aclaró la precedencia de instrucciones del chat y se ajustaron guardrails para dependencias/configuración.
+  - Se refinó el checklist para ejecutar lint/build según el tipo de cambios.
+- **Decisiones tomadas**
+  - Mantener npm como gestor operativo y usar `npm run lint`/`npm run build` como base para validaciones.
 - **Qué validé (comandos/archivos)**
-  - Comandos: `git status --porcelain`, `cat package.json`, `cat package-lock.json`.
-  - Archivos leídos: `AGENTS.md`, `PROJECT_STRUCTURE_HUELLA.md`, `package.json`, `package-lock.json`.
+  - Comandos: `git rev-parse --show-toplevel`, `git status --porcelain`, `cat package.json`, `rg --files -g 'AGENTS.md'`, `npm run docs:structure`, `npm run lint`, `npm run build` (falló por fetch de Google Fonts sin red).
+  - Archivos leídos: `AGENTS.md`, `PROJECT_STRUCTURE_HUELLA.md`, `package.json`.

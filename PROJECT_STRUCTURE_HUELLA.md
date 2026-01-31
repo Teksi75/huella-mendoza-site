@@ -1,6 +1,7 @@
 # Project Structure: Huella Web
 
 ## Resumen de stack
+Fuente de verdad: `package.json` (lockfile: `package-lock.json`).
 - Next.js ^16.1.1 con App Router (carpeta `app/`).
 - React ^19.2.3 + React DOM ^19.2.3.
 - TypeScript ^5 (strict en `tsconfig.json`).
@@ -10,43 +11,17 @@
 - Tipografía base: `next/font/google` (Inter) en `app/layout.tsx`.
 
 ## Estructura de carpetas (real)
-(AUTO-GENERADO) — No editar a mano. Regenerar cuando cambie la estructura.
-Comando canónico (preferido si existe `tree`):
-- `tree -L 6 -a -I 'node_modules|.next|.git|dist|build|coverage|.turbo|.vercel'`
-Alternativa sin `tree` (mismo depth y excludes):
-```
-python - <<'PY'
-import os
-from pathlib import Path
-
-root = Path('.')
-excludes = {"node_modules", ".next", ".git", "dist", "build", "coverage", ".turbo", ".vercel"}
-max_depth = 6
-
-def walk(dir_path, prefix="", depth=0):
-    if depth > max_depth:
-        return
-    entries = [p for p in sorted(dir_path.iterdir(), key=lambda p: p.name) if p.name not in excludes]
-    for idx, path in enumerate(entries):
-        connector = "└── " if idx == len(entries) - 1 else "├── "
-        print(prefix + connector + path.name)
-        if path.is_dir():
-            extension = "    " if idx == len(entries) - 1 else "│   "
-            if depth + 1 <= max_depth:
-                walk(path, prefix + extension, depth + 1)
-
-print(".")
-walk(root, depth=0)
-PY
-```
-Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` sin expandir en exceso media pesada.
+No editar a mano; regenerar con: `npm run docs:structure`.
+- Script: `scripts/docs-structure.mjs`.
+- Excluye: `node_modules/`, `.next/`, `.git/`, `dist/`, `build/`, `coverage/`, `.turbo/`, `.vercel/`.
+- Profundidad: 6 (cubre `app/`, `components/`, `data/` y `public/` sin expandir media pesada).
+- Validación opcional: `npm run docs:check`.
+<!-- AUTO-GENERADO:START -->
 ```
 .
 ├── .gitattributes
 ├── .gitignore
 ├── AGENTS.md
-├── PROJECT_STRUCTURE_HUELLA.md
-├── README.md
 ├── app
 │   ├── base
 │   │   └── page.tsx
@@ -64,8 +39,8 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 │   ├── layout.tsx
 │   ├── page.tsx
 │   ├── proyectos
-│   │   ├── ProjectsGrid.tsx
-│   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   └── ProjectsGrid.tsx
 │   └── refugios
 │       └── page.tsx
 ├── components
@@ -86,6 +61,7 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
+├── PROJECT_STRUCTURE_HUELLA.md
 ├── public
 │   ├── .well-known
 │   │   └── security.txt
@@ -109,16 +85,16 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 │   │       ├── planta_2_dor_1.png
 │   │       ├── planta_2_dor_2.png
 │   │       ├── planta_3_dor.png
-│   │       ├── proyecto-externo-30.jpg
-│   │       ├── proyecto-externo-30_frente.jpg
 │   │       ├── proyecto-externo-30_frente_izq.jpg
+│   │       ├── proyecto-externo-30_frente.jpg
+│   │       ├── proyecto-externo-30.jpg
 │   │       ├── proyecto-externo-72.jpg
 │   │       ├── proyecto-interior-30-1.jpg
 │   │       ├── proyecto-interior-30-2.jpg
 │   │       ├── proyecto-interior-30-3.jpg
 │   │       ├── proyecto-interior-72.jpg
 │   │       ├── proyecto-interior-comedor-72.png
-│   │       └── reame.txt
+│   │       └── readme.txt
 │   ├── llms.txt
 │   ├── media
 │   │   └── huella
@@ -141,16 +117,11 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 │   │       ├── base
 │   │       │   ├── huella-base-campamento.webp
 │   │       │   ├── huella-base-logistica.webp
-│   │       │   ├── huella-base-modulo-simple.webp
 │   │       │   ├── huella-base-modulo-simple_old.webp
+│   │       │   ├── huella-base-modulo-simple.webp
 │   │       │   ├── huella-base-plegado.webp
 │   │       │   └── pan-huella-base-modulo-simple.mp4
 │   │       ├── diseno
-│   │       │   ├── Hero-16.png
-│   │       │   ├── Hero-2.png
-│   │       │   ├── Hero-3.png
-│   │       │   ├── Hero-8.png
-│   │       │   ├── Herro-13.png
 │   │       │   ├── diseno-croquis-1.PNG
 │   │       │   ├── diseno-croquis-10.png
 │   │       │   ├── diseno-croquis-10.webp
@@ -167,6 +138,11 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 │   │       │   ├── diseno-interior-3.png
 │   │       │   ├── diseno-interior-4.png
 │   │       │   ├── diseno-interior-5.png
+│   │       │   ├── Hero-13.png
+│   │       │   ├── Hero-16.png
+│   │       │   ├── Hero-2.png
+│   │       │   ├── Hero-3.png
+│   │       │   ├── Hero-8.png
 │   │       │   └── usos
 │   │       │       ├── Oficina_concept_1.png
 │   │       │       └── Oficina_concept_2.png
@@ -187,13 +163,21 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 │   ├── sitemap.xml
 │   ├── vercel.svg
 │   └── window.svg
+├── README.md
+├── scripts
+│   └── docs-structure.mjs
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
+<!-- AUTO-GENERADO:END -->
 
 ## Cambios detectados
 - Se detectó que `tsconfig.json` referencia `next-env.d.ts`; se decidió versionar el archivo con el contenido estándar de Next.js (ver sección siguiente).
-- Posibles typos en assets: `public/images/proyectos/reame.txt` y `public/media/huella/diseno/Herro-13.png` (no se modifican, sólo se documentan).
+- Se normalizaron typos en assets de `public/` y se actualizaron referencias: `reame.txt` → `readme.txt`, `Herro-13.png` → `Hero-13.png`.
+
+## Decisión sobre typos en assets
+- **Decisión tomada:** renombrar los assets con typo y actualizar referencias para mantener coherencia y reducir confusiones futuras.
+- **Impacto:** paths corregidos en `public/` y en los mapas de imágenes/alt text; no quedan aliases con la ortografía anterior.
 
 ## Estado de next-env.d.ts (decisión)
 - **Decisión tomada:** versionar `next-env.d.ts` en la raíz, porque `tsconfig.json` lo incluye y es parte del flujo estándar de Next.js para typings.
@@ -273,9 +257,12 @@ Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` 
 
 ## Log de cambios (auditoría)
 - **Qué cambió y por qué**
-  - Se documentó el comando canónico para regenerar el árbol (con fallback sin `tree`) y el criterio de profundidad/excludes para evitar regeneraciones costosas.
-  - Se actualizó el árbol para incluir `next-env.d.ts` y mantenerlo alineado con el repo actual.
-  - Se aclaró el estado/decisión sobre `next-env.d.ts` y se documentaron typos aparentes en assets sin modificarlos.
+  - Se agregó el script reproducible para regenerar el árbol (`scripts/docs-structure.mjs`) con comando npm y bloque auto-generado acotado por marcadores.
+  - Se actualizó el árbol auto-generado para reflejar el repo actual y se aclararon excludes/profundidad.
+  - Se corrigieron typos en assets de `public/` y se ajustaron referencias relacionadas.
+- **Decisiones tomadas**
+  - Mantener `next-env.d.ts` versionado porque es parte del flujo estándar de Next.js y está incluido en `tsconfig.json`.
+  - Corregir typos de assets renombrando archivos y actualizando referencias para evitar ambigüedad futura.
 - **Qué validé (comandos/archivos)**
-  - Comandos: `git status --porcelain`, `cat package.json`, `cat package-lock.json`, script Python de árbol con excludes/`-L 6`.
-  - Archivos leídos: `package.json`, `package-lock.json`, `tsconfig.json`, `PROJECT_STRUCTURE_HUELLA.md`, `AGENTS.md`.
+  - Comandos: `git rev-parse --show-toplevel`, `git status --porcelain`, `cat package.json`, `rg -n "reame.txt|Herro-13|Hero-13|readme"`, `rg -n "media/huella/diseno" app components data`, `npm run docs:structure`, `npm run lint`, `npm run build` (falló por fetch de Google Fonts sin red).
+  - Archivos leídos: `package.json`, `tsconfig.json`, `PROJECT_STRUCTURE_HUELLA.md`, `AGENTS.md`, `data/altText.ts`.
