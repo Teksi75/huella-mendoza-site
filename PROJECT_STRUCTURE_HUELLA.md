@@ -11,10 +11,40 @@
 
 ## Estructura de carpetas (real)
 (AUTO-GENERADO) — No editar a mano. Regenerar cuando cambie la estructura.
+Comando canónico (preferido si existe `tree`):
+- `tree -L 6 -a -I 'node_modules|.next|.git|dist|build|coverage|.turbo|.vercel'`
+Alternativa sin `tree` (mismo depth y excludes):
+```
+python - <<'PY'
+import os
+from pathlib import Path
+
+root = Path('.')
+excludes = {"node_modules", ".next", ".git", "dist", "build", "coverage", ".turbo", ".vercel"}
+max_depth = 6
+
+def walk(dir_path, prefix="", depth=0):
+    if depth > max_depth:
+        return
+    entries = [p for p in sorted(dir_path.iterdir(), key=lambda p: p.name) if p.name not in excludes]
+    for idx, path in enumerate(entries):
+        connector = "└── " if idx == len(entries) - 1 else "├── "
+        print(prefix + connector + path.name)
+        if path.is_dir():
+            extension = "    " if idx == len(entries) - 1 else "│   "
+            if depth + 1 <= max_depth:
+                walk(path, prefix + extension, depth + 1)
+
+print(".")
+walk(root, depth=0)
+PY
+```
+Profundidad L=6: cubre estructura de `app/`, `components/`, `data/` y `public/` sin expandir en exceso media pesada.
 ```
 .
 ├── .gitattributes
 ├── .gitignore
+├── AGENTS.md
 ├── PROJECT_STRUCTURE_HUELLA.md
 ├── README.md
 ├── app
@@ -51,6 +81,7 @@
 │   ├── modelosListos.ts
 │   └── proyectos.ts
 ├── eslint.config.mjs
+├── next-env.d.ts
 ├── next.config.ts
 ├── package-lock.json
 ├── package.json
@@ -161,7 +192,12 @@
 ```
 
 ## Cambios detectados
-- El árbol anterior incluía `next-env.d.ts`, pero el archivo no está versionado en el repo actual (aunque `tsconfig.json` lo referencia).
+- Se detectó que `tsconfig.json` referencia `next-env.d.ts`; se decidió versionar el archivo con el contenido estándar de Next.js (ver sección siguiente).
+- Posibles typos en assets: `public/images/proyectos/reame.txt` y `public/media/huella/diseno/Herro-13.png` (no se modifican, sólo se documentan).
+
+## Estado de next-env.d.ts (decisión)
+- **Decisión tomada:** versionar `next-env.d.ts` en la raíz, porque `tsconfig.json` lo incluye y es parte del flujo estándar de Next.js para typings.
+- **Alternativa descartada:** remover `next-env.d.ts` de `tsconfig.json` (no recomendado, rompe el patrón estándar de Next.js).
 
 ## Qué se modifica dónde
 - Navegación global: `components/Navbar.tsx` (estado de scroll y menú mobile).
@@ -234,3 +270,12 @@
 ## Nota final para asistentes de código
 - Antes de cambiar estilos o layout, verifica que Navbar, `ImageCarouselModal`, ProjectsGrid, Footer y el CTA de WhatsApp mantengan la UX responsive actual.
 - Si se ajustan grillas, modales o el CTA flotante, actualiza este documento para evitar desalineaciones con el comportamiento real.
+
+## Log de cambios (auditoría)
+- **Qué cambió y por qué**
+  - Se documentó el comando canónico para regenerar el árbol (con fallback sin `tree`) y el criterio de profundidad/excludes para evitar regeneraciones costosas.
+  - Se actualizó el árbol para incluir `next-env.d.ts` y mantenerlo alineado con el repo actual.
+  - Se aclaró el estado/decisión sobre `next-env.d.ts` y se documentaron typos aparentes en assets sin modificarlos.
+- **Qué validé (comandos/archivos)**
+  - Comandos: `git status --porcelain`, `cat package.json`, `cat package-lock.json`, script Python de árbol con excludes/`-L 6`.
+  - Archivos leídos: `package.json`, `package-lock.json`, `tsconfig.json`, `PROJECT_STRUCTURE_HUELLA.md`, `AGENTS.md`.
