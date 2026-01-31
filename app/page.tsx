@@ -125,9 +125,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
-              <div className="min-h-[200px]">
+          {/* Pin button to bottom + equal height cards */}
+          <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
+              <div className="flex min-h-[200px] flex-1 flex-col">
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="invisible inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
                 <div className="flex items-center gap-3">
                   <Layers className="h-5 w-5 text-tierra-600/80" aria-hidden />
                   <h3 className="text-2xl">HUELLA Base</h3>
@@ -141,12 +148,20 @@ export default function Home() {
                   <li>Una base real para vivir, no una solución transitoria</li>
                 </ul>
               </div>
-              <Link href="/base" className="btn-primary mt-6 inline-flex w-full items-center justify-center text-sm">
-                Ver HUELLA Base
-              </Link>
+              <div className="mt-auto pt-6">
+                <Link href="/base" className="btn-secondary inline-flex w-full items-center justify-center text-sm">
+                  Ver HUELLA Base
+                </Link>
+              </div>
             </div>
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-9 shadow-md ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg">
-              <div className="min-h-[200px]">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-9 shadow-md ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="flex min-h-[200px] flex-1 flex-col">
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="invisible inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
                 <div className="flex items-center gap-2">
                   <Compass className="h-[22px] w-[22px] text-tierra-600" aria-hidden />
                   <h3 className="text-2xl">HUELLA Diseño</h3>
@@ -160,15 +175,23 @@ export default function Home() {
                   <li>Acompañamiento en cada decisión</li>
                 </ul>
               </div>
-              <Link
-                href="/diseno"
-                className="btn-primary mt-6 inline-flex w-full items-center justify-center text-sm shadow-md transition-all duration-300 ease-out hover:shadow-lg"
-              >
-                Explorar Diseño
-              </Link>
+              <div className="mt-auto pt-6">
+                <Link
+                  href="/diseno"
+                  className="btn-primary inline-flex w-full items-center justify-center text-sm shadow-md transition-all duration-300 ease-out hover:shadow-lg"
+                >
+                  Explorar Diseño
+                </Link>
+              </div>
             </div>
-            <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
-              <div className="min-h-[200px]">
+            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
+              <div className="flex min-h-[200px] flex-1 flex-col">
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
                 <div className="flex items-center gap-3">
                   <Leaf className="h-5 w-5 text-tierra-600/80" aria-hidden />
                   <h3 className="text-2xl">HUELLA Refugios</h3>
@@ -181,10 +204,15 @@ export default function Home() {
                   <li>Integración con el entorno natural</li>
                   <li>Soluciones simples, robustas y habitables</li>
                 </ul>
+                <p className="mt-4 text-sm text-gray-600">
+                  Tomamos consultas (sin disponibilidad por el momento).
+                </p>
               </div>
-              <Link href="/refugios" className="btn-secondary mt-6 inline-flex w-full items-center justify-center text-sm">
-                Ver Refugios
-              </Link>
+              <div className="mt-auto pt-6">
+                <Link href="/refugios" className="btn-secondary inline-flex w-full items-center justify-center text-sm">
+                  Ver Refugios
+                </Link>
+              </div>
             </div>
           </div>
         </div>
