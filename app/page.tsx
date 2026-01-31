@@ -141,7 +141,7 @@ export default function Home() {
                   <li>Una base real para vivir, no una solución transitoria</li>
                 </ul>
               </div>
-              <Link href="/base" className="btn-primary mt-6 inline-flex w-full items-center justify-center text-sm">
+              <Link href="/base" className="btn-secondary mt-6 inline-flex w-full items-center justify-center text-sm">
                 Ver HUELLA Base
               </Link>
             </div>
@@ -169,7 +169,10 @@ export default function Home() {
             </div>
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
               <div className="min-h-[200px]">
-                <div className="flex items-center gap-3">
+                <span className="inline-flex items-center rounded-full border border-tierra-200 bg-tierra-100 px-3 py-1 text-xs font-medium text-tierra-700">
+                  En preparación
+                </span>
+                <div className="mt-3 flex items-center gap-3">
                   <Leaf className="h-5 w-5 text-tierra-600/80" aria-hidden />
                   <h3 className="text-2xl">HUELLA Refugios</h3>
                 </div>
@@ -181,6 +184,9 @@ export default function Home() {
                   <li>Integración con el entorno natural</li>
                   <li>Soluciones simples, robustas y habitables</li>
                 </ul>
+                <p className="mt-4 text-sm text-gray-600">
+                  Tomamos consultas (sin disponibilidad por el momento).
+                </p>
               </div>
               <Link href="/refugios" className="btn-secondary mt-6 inline-flex w-full items-center justify-center text-sm">
                 Ver Refugios
