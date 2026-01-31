@@ -128,6 +128,12 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
               <div className="min-h-[200px]">
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="invisible inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
                 <div className="flex items-center gap-3">
                   <Layers className="h-5 w-5 text-tierra-600/80" aria-hidden />
                   <h3 className="text-2xl">HUELLA Base</h3>
@@ -147,6 +153,12 @@ export default function Home() {
             </div>
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-9 shadow-md ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg">
               <div className="min-h-[200px]">
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="invisible inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
                 <div className="flex items-center gap-2">
                   <Compass className="h-[22px] w-[22px] text-tierra-600" aria-hidden />
                   <h3 className="text-2xl">HUELLA Diseño</h3>
@@ -169,14 +181,15 @@ export default function Home() {
             </div>
             <div className="flex flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
               <div className="min-h-[200px]">
-                <div className="flex items-start gap-3">
-                  <Leaf className="mt-1 h-5 w-5 text-tierra-600/80" aria-hidden />
-                  <div>
-                    <span className="mb-2 inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
-                      En preparación
-                    </span>
-                    <h3 className="text-2xl">HUELLA Refugios</h3>
-                  </div>
+                {/* Badge slot fijo para alinear botones */}
+                <div className="min-h-[28px]">
+                  <span className="inline-flex items-center rounded-full border border-tierra-200 bg-tierra-50 px-2.5 py-0.5 text-[11px] font-medium text-tierra-700">
+                    En preparación
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Leaf className="h-5 w-5 text-tierra-600/80" aria-hidden />
+                  <h3 className="text-2xl">HUELLA Refugios</h3>
                 </div>
                 <p className="mt-3 text-sm text-gray-600">
                   Espacios pensados para la experiencia.
