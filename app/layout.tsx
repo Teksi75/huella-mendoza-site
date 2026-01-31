@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = localFont({
+  src: [
+    {
+      path: "./fonts/inter-latin-wght-normal.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
 
 const siteUrl = "https://huella-mendoza-site.vercel.app";
 const title = "HUELLA";

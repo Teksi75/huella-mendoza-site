@@ -8,7 +8,7 @@ Fuente de verdad: `package.json` (lockfile: `package-lock.json`).
 - Tailwind CSS ^4 con `@tailwindcss/postcss` ^4 (configs: `postcss.config.mjs`, `tailwind.config.ts`).
 - ESLint ^9 con `eslint-config-next` 16.1.0 (`eslint.config.mjs`).
 - Framer Motion ^12.23.26 y Lucide React ^0.562.0.
-- Tipografía base: `next/font/google` (Inter) en `app/layout.tsx`.
+- Tipografía base: `next/font/local` (Inter) en `app/layout.tsx`.
 
 ## Estructura de carpetas (real)
 No editar a mano; regenerar con: `npm run docs:structure`.

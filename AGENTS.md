@@ -50,6 +50,7 @@
 - No romper UX/responsive actual; preservar accesibilidad mínima.
 - No agregar dependencias sin justificarlo y sin actualizar `package-lock.json`.
 - No tocar configuraciones base (Next/TS/ESLint/Tailwind) sin dejarlo explicitado en el resumen de cambios.
+- Entornos sin red: usar `next/font/local` y evitar `next/font/google`.
 - Navbar: transparencia al hacer scroll + menú mobile.
 - ImageCarouselModal: bloqueo de scroll del body, snap horizontal y focus trap; botones prev/next en `md+`.
 - WhatsAppCTA: mensaje cambia por ruta (`usePathname`) y se arma en `data/contact.ts`.
