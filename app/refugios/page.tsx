@@ -15,7 +15,14 @@ export default function RefugiosPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>HUELLA Refugios</h2>
+            <div
+              className="rounded-2xl border border-tierra-200 bg-white p-4 text-sm text-gray-600 shadow-sm"
+              role="note"
+            >
+              Hoy no hay disponibilidad porque el primer módulo aún no está instalado. Si te interesa, dejá tu
+              consulta y te avisamos apenas haya fecha.
+            </div>
+            <h2 className="mt-6">HUELLA Refugios</h2>
             <p className="mt-4 text-base text-gray-600">
               Refugios de uso temporal diseñados para descansar con luz suave, silencio y vistas abiertas.
               <br />
