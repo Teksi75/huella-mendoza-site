@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docs:structure": "node scripts/docs-structure.mjs",
+    "docs:check": "node scripts/docs-structure.mjs --check"
   },
   "dependencies": {
     "framer-motion": "^12.23.26",
