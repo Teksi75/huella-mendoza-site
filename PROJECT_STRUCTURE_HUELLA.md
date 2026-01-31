@@ -1,162 +1,167 @@
-﻿# Project Structure: Huella Web
+# Project Structure: Huella Web
 
 ## Resumen de stack
 - Next.js ^16.1.1 con App Router (carpeta `app/`).
-- React ^19.2.3 + TypeScript ^5.
-- Tailwind CSS ^4 (PostCSS: `postcss.config.mjs`, `tailwind.config.ts`, `@tailwindcss/postcss`).
-- ESLint ^9 (`eslint.config.mjs`, `eslint-config-next` 16.1.0).
+- React ^19.2.3 + React DOM ^19.2.3.
+- TypeScript ^5 (strict en `tsconfig.json`).
+- Tailwind CSS ^4 con `@tailwindcss/postcss` ^4 (configs: `postcss.config.mjs`, `tailwind.config.ts`).
+- ESLint ^9 con `eslint-config-next` 16.1.0 (`eslint.config.mjs`).
 - Framer Motion ^12.23.26 y Lucide React ^0.562.0.
 - Tipografía base: `next/font/google` (Inter) en `app/layout.tsx`.
 
 ## Estructura de carpetas (real)
+(AUTO-GENERADO) — No editar a mano. Regenerar cuando cambie la estructura.
 ```
 .
-|-- app/
-|   |-- base/
-|   |   |-- page.tsx
-|   |-- contacto/
-|   |   |-- page.tsx
-|   |-- diseno/
-|   |   |-- modelos/
-|   |   |   |-- ModelosListosClient.tsx
-|   |   |   |-- page.tsx
-|   |   |-- page.tsx
-|   |-- huella/
-|   |   |-- page.tsx
-|   |-- proyectos/
-|   |   |-- page.tsx
-|   |   |-- ProjectsGrid.tsx
-|   |-- refugios/
-|   |   |-- page.tsx
-|   |-- favicon.ico
-|   |-- globals.css
-|   |-- layout.tsx
-|   |-- page.tsx
-|-- components/
-|   |-- Footer.tsx
-|   |-- HomeContactForm.tsx
-|   |-- ImageCarouselModal.tsx
-|   |-- Navbar.tsx
-|   |-- UsosPosiblesGallery.tsx
-|   |-- WhatsAppCTA.tsx
-|-- data/
-|   |-- altText.ts
-|   |-- contact.ts
-|   |-- modelosListos.ts
-|   |-- proyectos.ts
-|-- public/
-|   |-- .well-known/
-|   |   |-- security.txt
-|   |-- images/
-|   |   |-- proyectos/
-|   |   |   |-- diseno-5.jpeg
-|   |   |   |-- diseno-6.jpeg
-|   |   |   |-- diseno-7.jpeg
-|   |   |   |-- diseno-8.jpeg
-|   |   |   |-- diseño-4.jpeg
-|   |   |   |-- milzoe-01-old.jpeg
-|   |   |   |-- milzoe-01.jpeg
-|   |   |   |-- milzoe-02-old.jpeg
-|   |   |   |-- milzoe-02.jpeg
-|   |   |   |-- milzoe-03-old.jpeg
-|   |   |   |-- milzoe-03.jpeg
-|   |   |   |-- planta_1_dor.png
-|   |   |   |-- planta_2_dor_1.png
-|   |   |   |-- planta_2_dor_2.png
-|   |   |   |-- planta_3_dor.png
-|   |   |   |-- proyecto-externo-30.jpg
-|   |   |   |-- proyecto-externo-30_frente.jpg
-|   |   |   |-- proyecto-externo-30_frente_izq.jpg
-|   |   |   |-- proyecto-externo-72.jpg
-|   |   |   |-- proyecto-interior-30-1.jpg
-|   |   |   |-- proyecto-interior-30-2.jpg
-|   |   |   |-- proyecto-interior-30-3.jpg
-|   |   |   |-- proyecto-interior-72.jpg
-|   |   |   |-- proyecto-interior-comedor-72.png
-|   |   |   |-- reame.txt
-|   |-- media/
-|   |   |-- huella/
-|   |   |   |-- base/
-|   |   |   |   |-- huella-base-campamento.webp
-|   |   |   |   |-- huella-base-logistica.webp
-|   |   |   |   |-- huella-base-modulo-simple.webp
-|   |   |   |   |-- huella-base-modulo-simple_old.webp
-|   |   |   |   |-- huella-base-plegado.webp
-|   |   |   |   |-- pan-huella-base-modulo-simple.mp4
-|   |   |   |-- diseno/
-|   |   |   |   |-- usos/
-|   |   |   |   |   |-- Oficina_concept_1.png
-|   |   |   |   |   |-- Oficina_concept_2.png
-|   |   |   |   |-- diseno-croquis-1.PNG
-|   |   |   |   |-- diseno-croquis-10.png
-|   |   |   |   |-- diseno-croquis-10.webp
-|   |   |   |   |-- diseno-croquis-2.PNG
-|   |   |   |   |-- diseno-croquis-3.png
-|   |   |   |   |-- diseno-croquis-4.png
-|   |   |   |   |-- diseno-croquis-5.png
-|   |   |   |   |-- diseno-croquis-6.png
-|   |   |   |   |-- diseno-croquis-7.png
-|   |   |   |   |-- diseno-croquis-8.png
-|   |   |   |   |-- diseno-croquis-9.png
-|   |   |   |   |-- diseno-interior-1.png
-|   |   |   |   |-- diseno-interior-2.png
-|   |   |   |   |-- diseno-interior-3.png
-|   |   |   |   |-- diseno-interior-4.png
-|   |   |   |   |-- diseno-interior-5.png
-|   |   |   |   |-- Hero-16.png
-|   |   |   |   |-- Hero-2.png
-|   |   |   |   |-- Hero-3.png
-|   |   |   |   |-- Hero-8.png
-|   |   |   |   |-- Herro-13.png
-|   |   |   |-- home/
-|   |   |   |   |-- home-protrerillos-embalse-1.png
-|   |   |   |   |-- home-protrerillos-embalse-2.png
-|   |   |   |   |-- home-protrerillos-embalse-3.png
-|   |   |   |-- refugios/
-|   |   |   |   |-- experiencia-1.png
-|   |   |   |   |-- experiencia-2.png
-|   |   |   |   |-- experiencia-3.png
-|   |   |   |   |-- experiencia-4.png
-|   |   |   |-- 1.png
-|   |   |   |-- 10.png
-|   |   |   |-- 11.png
-|   |   |   |-- 12.png
-|   |   |   |-- 13.png
-|   |   |   |-- 14.png
-|   |   |   |-- 15.png
-|   |   |   |-- 16.png
-|   |   |   |-- 2.png
-|   |   |   |-- 3.png
-|   |   |   |-- 4.png
-|   |   |   |-- 5.png
-|   |   |   |-- 6.png
-|   |   |   |-- 7.png
-|   |   |   |-- 8.png
-|   |   |   |-- 9.png
-|   |-- og/
-|   |   |-- og-huella.png
-|   |-- favicon.svg
-|   |-- file.svg
-|   |-- globe.svg
-|   |-- llms.txt
-|   |-- next.svg
-|   |-- robots.txt
-|   |-- security.txt
-|   |-- sitemap.xml
-|   |-- vercel.svg
-|   |-- window.svg
-|-- .gitattributes
-|-- .gitignore
-|-- eslint.config.mjs
-|-- next-env.d.ts
-|-- next.config.ts
-|-- package-lock.json
-|-- package.json
-|-- postcss.config.mjs
-|-- README.md
-|-- tailwind.config.ts
-|-- tsconfig.json
+├── .gitattributes
+├── .gitignore
+├── PROJECT_STRUCTURE_HUELLA.md
+├── README.md
+├── app
+│   ├── base
+│   │   └── page.tsx
+│   ├── contacto
+│   │   └── page.tsx
+│   ├── diseno
+│   │   ├── modelos
+│   │   │   ├── ModelosListosClient.tsx
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── huella
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── proyectos
+│   │   ├── ProjectsGrid.tsx
+│   │   └── page.tsx
+│   └── refugios
+│       └── page.tsx
+├── components
+│   ├── Footer.tsx
+│   ├── HomeContactForm.tsx
+│   ├── ImageCarouselModal.tsx
+│   ├── Navbar.tsx
+│   ├── UsosPosiblesGallery.tsx
+│   └── WhatsAppCTA.tsx
+├── data
+│   ├── altText.ts
+│   ├── contact.ts
+│   ├── modelosListos.ts
+│   └── proyectos.ts
+├── eslint.config.mjs
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── .well-known
+│   │   └── security.txt
+│   ├── favicon.svg
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   │   └── proyectos
+│   │       ├── diseno-5.jpeg
+│   │       ├── diseno-6.jpeg
+│   │       ├── diseno-7.jpeg
+│   │       ├── diseno-8.jpeg
+│   │       ├── diseño-4.jpeg
+│   │       ├── milzoe-01-old.jpeg
+│   │       ├── milzoe-01.jpeg
+│   │       ├── milzoe-02-old.jpeg
+│   │       ├── milzoe-02.jpeg
+│   │       ├── milzoe-03-old.jpeg
+│   │       ├── milzoe-03.jpeg
+│   │       ├── planta_1_dor.png
+│   │       ├── planta_2_dor_1.png
+│   │       ├── planta_2_dor_2.png
+│   │       ├── planta_3_dor.png
+│   │       ├── proyecto-externo-30.jpg
+│   │       ├── proyecto-externo-30_frente.jpg
+│   │       ├── proyecto-externo-30_frente_izq.jpg
+│   │       ├── proyecto-externo-72.jpg
+│   │       ├── proyecto-interior-30-1.jpg
+│   │       ├── proyecto-interior-30-2.jpg
+│   │       ├── proyecto-interior-30-3.jpg
+│   │       ├── proyecto-interior-72.jpg
+│   │       ├── proyecto-interior-comedor-72.png
+│   │       └── reame.txt
+│   ├── llms.txt
+│   ├── media
+│   │   └── huella
+│   │       ├── 1.png
+│   │       ├── 10.png
+│   │       ├── 11.png
+│   │       ├── 12.png
+│   │       ├── 13.png
+│   │       ├── 14.png
+│   │       ├── 15.png
+│   │       ├── 16.png
+│   │       ├── 2.png
+│   │       ├── 3.png
+│   │       ├── 4.png
+│   │       ├── 5.png
+│   │       ├── 6.png
+│   │       ├── 7.png
+│   │       ├── 8.png
+│   │       ├── 9.png
+│   │       ├── base
+│   │       │   ├── huella-base-campamento.webp
+│   │       │   ├── huella-base-logistica.webp
+│   │       │   ├── huella-base-modulo-simple.webp
+│   │       │   ├── huella-base-modulo-simple_old.webp
+│   │       │   ├── huella-base-plegado.webp
+│   │       │   └── pan-huella-base-modulo-simple.mp4
+│   │       ├── diseno
+│   │       │   ├── Hero-16.png
+│   │       │   ├── Hero-2.png
+│   │       │   ├── Hero-3.png
+│   │       │   ├── Hero-8.png
+│   │       │   ├── Herro-13.png
+│   │       │   ├── diseno-croquis-1.PNG
+│   │       │   ├── diseno-croquis-10.png
+│   │       │   ├── diseno-croquis-10.webp
+│   │       │   ├── diseno-croquis-2.PNG
+│   │       │   ├── diseno-croquis-3.png
+│   │       │   ├── diseno-croquis-4.png
+│   │       │   ├── diseno-croquis-5.png
+│   │       │   ├── diseno-croquis-6.png
+│   │       │   ├── diseno-croquis-7.png
+│   │       │   ├── diseno-croquis-8.png
+│   │       │   ├── diseno-croquis-9.png
+│   │       │   ├── diseno-interior-1.png
+│   │       │   ├── diseno-interior-2.png
+│   │       │   ├── diseno-interior-3.png
+│   │       │   ├── diseno-interior-4.png
+│   │       │   ├── diseno-interior-5.png
+│   │       │   └── usos
+│   │       │       ├── Oficina_concept_1.png
+│   │       │       └── Oficina_concept_2.png
+│   │       ├── home
+│   │       │   ├── home-protrerillos-embalse-1.png
+│   │       │   ├── home-protrerillos-embalse-2.png
+│   │       │   └── home-protrerillos-embalse-3.png
+│   │       └── refugios
+│   │           ├── experiencia-1.png
+│   │           ├── experiencia-2.png
+│   │           ├── experiencia-3.png
+│   │           └── experiencia-4.png
+│   ├── next.svg
+│   ├── og
+│   │   └── og-huella.png
+│   ├── robots.txt
+│   ├── security.txt
+│   ├── sitemap.xml
+│   ├── vercel.svg
+│   └── window.svg
+├── tailwind.config.ts
+└── tsconfig.json
 ```
+
+## Cambios detectados
+- El árbol anterior incluía `next-env.d.ts`, pero el archivo no está versionado en el repo actual (aunque `tsconfig.json` lo referencia).
 
 ## Qué se modifica dónde
 - Navegación global: `components/Navbar.tsx` (estado de scroll y menú mobile).
@@ -204,6 +209,7 @@
 - Metadata global en `app/layout.tsx` (OpenGraph, Twitter, iconos) y metadata específica en `app/base/page.tsx`, `app/diseno/page.tsx`, `app/diseno/modelos/page.tsx`, `app/refugios/page.tsx`.
 - SEO estático: `public/robots.txt` referencia `public/sitemap.xml` (lista `/`, `/base`, `/diseno`, `/huella`, `/proyectos`, `/refugios`, `/contacto`).
 - Datos tipados en `data/*.ts` (proyectos, modelos listos, textos de contacto, alt text).
+- Alias de imports: `@/*` apunta a la raíz del repo (`tsconfig.json`).
 - Rutas de imágenes apuntan a paths bajo `public/`.
 
 ## Layouts y grupos de rutas
