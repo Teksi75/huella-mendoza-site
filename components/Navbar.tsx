@@ -10,7 +10,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = pathname === '/';
-  const isTransparent = isHome && !isScrolled;
+  const isTop = isHome && !isScrolled;
+  const logoClassTop = 'text-white';
+  const logoClassScrolled = 'text-tierra-700';
+  const menuClassTop = 'text-white hover:text-tierra-200';
+  const menuClassScrolled = 'text-gray-700 hover:text-tierra-600';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +34,13 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed z-50 w-full u-ease ${
-        isTransparent ? 'border-b border-white/10 bg-transparent' : 'u-glass'
+        isTop ? 'border-b border-white/10 bg-transparent' : 'u-glass'
       }`}
     >
       <div className="container-custom">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className={`text-2xl font-bold ${isTransparent ? 'text-white' : 'text-tierra-700'}`}>
+            <div className={`text-2xl font-bold u-ease ${isTop ? logoClassTop : logoClassScrolled}`}>
               HUELLA
             </div>
           </Link>
@@ -47,7 +51,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-medium u-ease ${
-                  isTransparent ? 'text-white hover:text-tierra-200' : 'text-gray-700 hover:text-tierra-600'
+                  isTop ? menuClassTop : menuClassScrolled
                 }`}
               >
                 {item.name}
@@ -65,9 +69,9 @@ export default function Navbar() {
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <X className={isTop ? 'text-white' : 'text-gray-800'} />
             ) : (
-              <Menu className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <Menu className={isTop ? 'text-white' : 'text-gray-800'} />
             )}
           </button>
         </div>
