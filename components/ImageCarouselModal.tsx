@@ -52,7 +52,8 @@ export default function ImageCarouselModal({
     const container = carouselRef.current;
     if (!container) return;
     const slide = container.children[index] as HTMLElement | undefined;
-    slide?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    slide?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', inline: 'start' });
   };
 
   const showPrevious = () => {
@@ -153,7 +154,7 @@ export default function ImageCarouselModal({
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          className="absolute right-3 top-3 z-50 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-sm text-gray-700 shadow-sm backdrop-blur transition hover:bg-white"
+          className="u-focus u-ease absolute right-3 top-3 z-50 inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-sm text-gray-700 shadow-[var(--shadow-soft)] backdrop-blur hover:bg-white"
           aria-label="Cerrar"
         >
           Cerrar
@@ -196,7 +197,8 @@ export default function ImageCarouselModal({
                 <button
                   type="button"
                   onClick={showPrevious}
-                  className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                  className="u-focus u-ease hidden items-center rounded-full border border-tierra-200 bg-white px-4 py-1.5 text-tierra-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-tierra-300 hover:bg-tierra-50 hover:shadow-[var(--shadow-med)] md:inline-flex"
+                  aria-label="Imagen anterior"
                 >
                   Anterior
                 </button>
@@ -206,10 +208,33 @@ export default function ImageCarouselModal({
                 <button
                   type="button"
                   onClick={showNext}
-                  className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                  className="u-focus u-ease hidden items-center rounded-full border border-tierra-200 bg-white px-4 py-1.5 text-tierra-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-tierra-300 hover:bg-tierra-50 hover:shadow-[var(--shadow-med)] md:inline-flex"
+                  aria-label="Imagen siguiente"
                 >
                   Siguiente
                 </button>
+              </div>
+              <div className="mt-3 flex items-center justify-center gap-2">
+                {images.map((image, index) => {
+                  const isActive = index === activeIndex;
+                  return (
+                    <button
+                      key={image.src}
+                      type="button"
+                      onClick={() => {
+                        setActiveIndex(index);
+                        scrollToIndex(index);
+                      }}
+                      aria-label={`Ir a imagen ${index + 1}`}
+                      aria-current={isActive ? 'true' : undefined}
+                      className={`u-focus u-ease h-2.5 rounded-full border ${
+                        isActive
+                          ? 'w-6 border-tierra-500 bg-tierra-500'
+                          : 'w-2.5 border-tierra-300 bg-white hover:border-tierra-400 hover:bg-tierra-100'
+                      }`}
+                    />
+                  );
+                })}
               </div>
             </div>
             <div className="flex flex-col">
@@ -234,7 +259,7 @@ export default function ImageCarouselModal({
               {cta && (
                 <Link
                   href={cta.href}
-                  className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
+                  className="u-btn-primary u-ease u-focus mt-6 inline-flex w-full items-center justify-center sm:w-auto"
                 >
                   {cta.label}
                 </Link>

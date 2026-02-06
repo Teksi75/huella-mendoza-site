@@ -37,7 +37,7 @@ export default function UsosPosiblesGallery() {
           type="button"
           onClick={() => handleOpen(0)}
           aria-label="Abrir galería de usos posibles"
-          className="group inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-tierra-700 underline decoration-tierra-300 underline-offset-4 transition-colors duration-200 hover:text-tierra-900 hover:decoration-tierra-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          className="group u-btn-secondary u-ease u-focus inline-flex items-center gap-2 text-sm"
         >
           <Images className="h-4 w-4 text-muted-foreground/80" aria-hidden="true" />
           Ver galería

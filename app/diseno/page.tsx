@@ -74,7 +74,7 @@ export default function DisenoPage() {
               <li>Dirección y seguimiento cercano para sostener decisiones de inicio a fin.</li>
             </ul>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <div className="u-card p-6">
                 <h3 className="text-xl">Modelos listos</h3>
                 <p className="mt-3 text-sm text-gray-600">
                   Alternativas probadas que combinan diseño y funcionalidad.
@@ -89,12 +89,12 @@ export default function DisenoPage() {
                 </p>
                 <Link
                   href="/diseno/modelos"
-                  className="mt-5 inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-tierra-700 underline decoration-tierra-300 underline-offset-4 transition-colors hover:text-tierra-900 hover:decoration-tierra-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tierra-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                  className="u-btn-secondary u-ease u-focus mt-5 inline-flex items-center gap-2 text-sm"
                 >
                   Explorar modelos disponibles
                 </Link>
               </div>
-              <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <div className="u-card p-6">
                 <h3 className="text-xl">Proyectos personalizados</h3>
                 <p className="mt-3 text-sm text-gray-600">
                   Experiencias diseñadas a partir del lugar y de tu forma de habitar.
@@ -109,7 +109,7 @@ export default function DisenoPage() {
                 </p>
                 <UsosPosiblesGallery />
               </div>
-              <div className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm">
+              <div className="u-card p-6">
                 <h3 className="text-xl">Ampliaciones</h3>
                 <p className="mt-3 text-sm text-gray-600">
                   Crecer sin romper la coherencia arquitectónica y el paisaje.
@@ -137,7 +137,7 @@ export default function DisenoPage() {
               href={buildWhatsAppUrl(whatsappMessages.diseno)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
             >
               Hacer una consulta
             </Link>
@@ -155,7 +155,7 @@ export default function DisenoPage() {
           </div>
 
           <div className="mt-10 space-y-6">
-            <div className="rounded-2xl border border-tierra-200 bg-white shadow-sm">
+            <div className="u-card">
               <div className={`relative overflow-hidden ${croquisDestacado.aspectClass}`}>
                 <Image
                   src={croquisDestacado.src}
@@ -174,7 +174,7 @@ export default function DisenoPage() {
 
             <div className="grid gap-6 md:grid-cols-3">
               {croquis.map((item) => (
-                <div key={item.src} className="rounded-2xl border border-tierra-200 bg-white shadow-sm">
+                <div key={item.src} className="u-card">
                   <div className={`relative overflow-hidden ${item.aspectClass}`}>
                     <Image
                       src={item.src}
@@ -208,7 +208,7 @@ export default function DisenoPage() {
             {interiores.map((item) => (
               <div
                 key={item.src}
-                className="flex flex-col rounded-2xl border border-tierra-200 bg-tierra-50 shadow-sm"
+                className="u-card flex flex-col bg-tierra-50"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl rounded-b-none">
                   <Image
@@ -244,7 +244,7 @@ export default function DisenoPage() {
               .map((item) => (
                 <div
                   key={item.src}
-                  className="rounded-2xl border border-tierra-200 bg-white shadow-sm overflow-hidden"
+                  className="u-card overflow-hidden"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
@@ -269,7 +269,7 @@ export default function DisenoPage() {
                 .map((item) => (
                   <div
                     key={item.src}
-                    className="rounded-2xl border border-tierra-200 bg-white shadow-sm overflow-hidden"
+                    className="u-card overflow-hidden"
                   >
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image
