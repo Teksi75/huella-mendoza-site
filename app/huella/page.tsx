@@ -52,7 +52,7 @@ export default function HuellaPage() {
               <div
                 key={pathway.title}
                 id={pathway.id}
-                className="flex flex-col justify-between rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm scroll-mt-28 md:scroll-mt-32"
+                className="u-card flex scroll-mt-28 flex-col justify-between p-6 md:scroll-mt-32"
               >
                 <div>
                   <div className="relative mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
@@ -76,7 +76,7 @@ export default function HuellaPage() {
                 </div>
                 <Link
                   href={pathway.href}
-                  className="mt-6 inline-flex items-center text-sm font-semibold text-tierra-700 hover:text-tierra-900"
+                  className="u-btn-secondary u-ease u-focus mt-6 inline-flex items-center text-sm"
                 >
                   {pathway.ctaLabel}
                 </Link>

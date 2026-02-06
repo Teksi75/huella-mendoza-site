@@ -5,11 +5,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
-export default function Navbar() {
+type NavbarProps = {
+  variant?: 'hero' | 'solid';
+};
+
+export default function Navbar({ variant }: NavbarProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = pathname === '/';
+  const navbarVariant = variant ?? (isHome ? 'hero' : 'solid');
+  const isHero = navbarVariant === 'hero';
   const isTransparent = isHome && !isScrolled;
   const logoClassTop = 'text-white';
   const logoClassScrolled = 'text-tierra-700';
@@ -32,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed z-50 w-full u-ease ${
-        isTransparent ? 'border-b border-white/10 bg-transparent' : 'u-glass'
+        isHero && isTransparent ? 'border-b border-white/10 bg-transparent' : 'u-glass'
       }`}
     >
       <div className="container-custom">
@@ -40,7 +46,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2">
             <div
               className={`text-2xl font-bold transition-colors duration-300 ${
-                isTransparent ? logoClassTop : logoClassScrolled
+                isHero && isTransparent ? logoClassTop : logoClassScrolled
               }`}
             >
               HUELLA
@@ -53,7 +59,9 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-medium u-ease ${
-                  isTransparent ? 'text-white hover:text-tierra-200' : 'text-gray-700 hover:text-tierra-600'
+                  isHero && isTransparent
+                    ? 'text-white hover:text-tierra-200'
+                    : 'text-gray-700 hover:text-tierra-600'
                 }`}
               >
                 {item.name}
@@ -71,16 +79,16 @@ export default function Navbar() {
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <X className={isHero && isTransparent ? 'text-white' : 'text-gray-800'} />
             ) : (
-              <Menu className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <Menu className={isHero && isTransparent ? 'text-white' : 'text-gray-800'} />
             )}
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="u-ease border-t border-tierra-200/80 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-sm lg:hidden">
+        <div className="u-card u-ease mx-4 mb-3 border-t border-tierra-200/80 bg-white/95 p-0 shadow-[var(--shadow-med)] backdrop-blur-sm lg:hidden">
           <div className="container-custom space-y-3 py-4">
             {menuItems.map((item) => (
               <Link
