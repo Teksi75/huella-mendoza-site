@@ -30,7 +30,7 @@ export default function BasePage() {
       >
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
+            <div className="u-card relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/media/huella/base/huella-base-modulo-simple.webp"
                 alt={altText['/media/huella/base/huella-base-modulo-simple.webp']}
@@ -79,7 +79,7 @@ export default function BasePage() {
             {logisticaCards.map((item) => (
               <div
                 key={item.src}
-                className="flex flex-col rounded-2xl border border-tierra-200 bg-white shadow-sm"
+                className="u-card flex flex-col"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl rounded-b-none">
                   <Image
@@ -117,7 +117,7 @@ export default function BasePage() {
       <section className="section-padding bg-tierra-50">
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
+            <div className="u-card relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/media/huella/base/huella-base-campamento.webp"
                 alt={altText['/media/huella/base/huella-base-campamento.webp']}
@@ -159,7 +159,7 @@ export default function BasePage() {
                   href={buildWhatsAppUrl(whatsappMessages.basePresupuesto)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 bg-primary text-white font-semibold text-center rounded-md text-lg mb-4 inline-flex justify-center"
+                  className="u-btn-primary u-ease u-focus mb-4 inline-flex w-full justify-center text-lg"
                 >
                   Solicitar presupuesto
                 </Link>
@@ -167,7 +167,7 @@ export default function BasePage() {
                   href={buildWhatsAppUrl(whatsappMessages.baseOpciones)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 border border-primary text-primary font-semibold text-center rounded-md text-lg inline-flex justify-center"
+                  className="u-btn-secondary u-ease u-focus inline-flex w-full justify-center text-lg"
                 >
                   Explorar opciones
                 </Link>

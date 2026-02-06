@@ -5,12 +5,19 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
-export default function Navbar() {
+type NavbarVariant = 'auto' | 'hero' | 'solid';
+
+type NavbarProps = {
+  variant?: NavbarVariant;
+};
+
+export default function Navbar({ variant = 'auto' }: NavbarProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = pathname === '/';
-  const isTransparent = isHome && !isScrolled;
+  const resolvedVariant = variant === 'auto' ? (isHome ? 'hero' : 'solid') : variant;
+  const isTransparent = resolvedVariant === 'hero' && !isScrolled;
   const logoClassTop = 'text-white';
   const logoClassScrolled = 'text-tierra-700';
 
@@ -52,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium u-ease ${
+                className={`u-focus text-sm font-medium u-ease ${
                   isTransparent ? 'text-white hover:text-tierra-200' : 'text-gray-700 hover:text-tierra-600'
                 }`}
               >
@@ -80,13 +87,13 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="u-ease border-t border-tierra-200/80 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-sm lg:hidden">
+        <div className="u-card u-ease mx-4 mb-4 border-tierra-200/80 bg-white/95 shadow-[var(--shadow-med)] backdrop-blur-sm lg:hidden">
           <div className="container-custom space-y-3 py-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="u-ease block rounded-md py-2 text-gray-700 hover:text-tierra-600 focus-visible:outline-none focus-visible:text-tierra-700"
+                className="u-focus u-ease block rounded-md py-2 text-gray-700 hover:text-tierra-600 focus-visible:text-tierra-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
