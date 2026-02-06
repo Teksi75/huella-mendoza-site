@@ -46,7 +46,7 @@ export default function HomeContactForm() {
   const statusColor = status.type === 'error' ? 'text-red-600' : 'text-green-700';
 
   return (
-    <form className="rounded-2xl bg-white p-6 text-gray-800 shadow-sm" onSubmit={handleSubmit}>
+    <form className="u-card rounded-2xl bg-white p-6 text-gray-800" onSubmit={handleSubmit}>
       <div className="grid gap-4">
         <div>
           <label htmlFor="nombre" className="text-sm font-medium">
@@ -56,7 +56,7 @@ export default function HomeContactForm() {
             id="nombre"
             name="nombre"
             type="text"
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
+            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
             placeholder="Tu nombre"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -70,7 +70,7 @@ export default function HomeContactForm() {
             id="email"
             name="email"
             type="email"
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
+            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
             placeholder="tu@email.com"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
@@ -84,7 +84,7 @@ export default function HomeContactForm() {
             id="mensaje"
             name="mensaje"
             rows={4}
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-200"
+            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
             placeholder="Contanos sobre tu proyecto"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
@@ -96,7 +96,7 @@ export default function HomeContactForm() {
           {status.message}
         </p>
       ) : null}
-      <button type="submit" className="btn-primary mt-6 w-full">
+      <button type="submit" className="u-btn-primary u-ease u-focus mt-6 w-full">
         Enviar consulta
       </button>
     </form>

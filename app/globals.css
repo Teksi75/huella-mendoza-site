@@ -1,6 +1,14 @@
 @config "../tailwind.config.ts";
 @import "tailwindcss";
 
+:root {
+  --shadow-soft: 0 8px 24px -16px rgb(15 23 42 / 0.28);
+  --shadow-med: 0 16px 38px -20px rgb(15 23 42 / 0.35);
+  --ring: 0 0 0 3px rgb(217 119 87 / 0.28);
+  --radius-card: 1rem;
+  --radius-btn: 9999px;
+}
+
 @layer base {
   html {
     scroll-padding-top: 96px;
@@ -50,12 +58,116 @@
 }
 
 @layer components {
+  .u-ease {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .u-focus {
+    @apply focus-visible:outline-none;
+    box-shadow: var(--ring);
+  }
+
+  .u-card {
+    border-radius: var(--radius-card);
+    @apply border border-tierra-200 bg-white;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-glass {
+    @apply border-b border-gray-200/80 bg-white/90 backdrop-blur-md;
+    box-shadow: 0 8px 24px -20px rgb(15 23 42 / 0.45);
+  }
+
+  .u-btn-primary {
+    border-radius: var(--radius-btn);
+    @apply inline-flex items-center justify-center border border-tierra-700 bg-tierra-600 px-6 py-3 font-medium text-white;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-primary:hover {
+    @apply -translate-y-px bg-tierra-700;
+    box-shadow: var(--shadow-med);
+  }
+
+  .u-btn-primary:active {
+    @apply translate-y-0;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-primary:focus-visible {
+    @apply outline-none;
+    box-shadow: var(--shadow-soft), var(--ring);
+  }
+
+  .u-btn-primary:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  .u-btn-secondary {
+    border-radius: var(--radius-btn);
+    @apply inline-flex items-center justify-center border-2 border-tierra-600 bg-white px-6 py-3 font-medium text-tierra-700;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-secondary:hover {
+    @apply -translate-y-px border-tierra-700 bg-tierra-50;
+    box-shadow: var(--shadow-med);
+  }
+
+  .u-btn-secondary:active {
+    @apply translate-y-0;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-secondary:focus-visible {
+    @apply outline-none;
+    box-shadow: var(--shadow-soft), var(--ring);
+  }
+
+  .u-btn-secondary:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
   .btn-primary {
-    @apply px-6 py-3 bg-tierra-600 text-white rounded-lg border border-tierra-700 shadow-sm hover:bg-tierra-700 transition-all duration-300 font-medium;
+    border-radius: var(--radius-btn);
+    @apply inline-flex items-center justify-center border border-tierra-700 bg-tierra-600 px-6 py-3 font-medium text-white transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-px bg-tierra-700;
+    box-shadow: var(--shadow-med);
+  }
+
+  .btn-primary:active {
+    @apply translate-y-0;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-primary:focus-visible {
+    @apply outline-none;
+    box-shadow: var(--shadow-soft), var(--ring);
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-tierra-700 border-2 border-tierra-600 rounded-lg shadow-sm hover:bg-tierra-50 transition-all duration-300 font-medium;
+    border-radius: var(--radius-btn);
+    @apply inline-flex items-center justify-center border-2 border-tierra-600 bg-white px-6 py-3 font-medium text-tierra-700 transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-secondary:hover {
+    @apply -translate-y-px border-tierra-700 bg-tierra-50;
+    box-shadow: var(--shadow-med);
+  }
+
+  .btn-secondary:active {
+    @apply translate-y-0;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-secondary:focus-visible {
+    @apply outline-none;
+    box-shadow: var(--shadow-soft), var(--ring);
   }
 
   .section-padding {
@@ -86,5 +198,23 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u-ease,
+  .u-btn-primary,
+  .u-btn-secondary,
+  .u-card,
+  .u-glass {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+
+  .u-btn-primary:hover,
+  .u-btn-secondary:hover,
+  .u-card:hover,
+  .group:hover .hero-cta-icon {
+    transform: none !important;
   }
 }
