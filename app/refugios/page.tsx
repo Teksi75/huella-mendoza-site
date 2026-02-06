@@ -15,7 +15,7 @@ export default function RefugiosPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="mb-6 rounded-2xl border border-tierra-200 bg-white p-4 text-sm text-tierra-700 shadow-sm">
+            <div className="u-card mb-6 p-4 text-sm text-tierra-700">
               Hoy no hay disponibilidad porque el primer módulo aún no está instalado. Si te interesa,
               dejá tu consulta y te avisamos apenas haya fecha.
             </div>
@@ -29,7 +29,7 @@ export default function RefugiosPage() {
               href={buildWhatsAppUrl(whatsappMessages.refugios)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
             >
               Consultar disponibilidad
             </Link>
@@ -63,7 +63,7 @@ export default function RefugiosPage() {
               href={buildWhatsAppUrl(whatsappMessages.refugiosReserva)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
             >
               Confirmar disponibilidad
             </Link>

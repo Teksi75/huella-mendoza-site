@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -52,7 +53,8 @@ export default function ImageCarouselModal({
     const container = carouselRef.current;
     if (!container) return;
     const slide = container.children[index] as HTMLElement | undefined;
-    slide?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    slide?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', inline: 'start' });
   };
 
   const showPrevious = () => {
@@ -147,13 +149,13 @@ export default function ImageCarouselModal({
         aria-modal="true"
         aria-labelledby={heading ? titleId : undefined}
         aria-describedby={subheading ? subtitleId : undefined}
-        className="relative z-10 w-full max-w-4xl rounded-2xl bg-white shadow-xl"
+        className="u-card relative z-10 w-full max-w-4xl bg-white"
       >
         <button
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          className="absolute right-3 top-3 z-50 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-sm text-gray-700 shadow-sm backdrop-blur transition hover:bg-white"
+          className="u-focus u-ease absolute right-3 top-3 z-50 inline-flex rounded-full border border-white/70 bg-white/90 px-3 py-1 text-sm text-gray-700 shadow-[var(--shadow-soft)] backdrop-blur hover:bg-white"
           aria-label="Cerrar"
         >
           Cerrar
@@ -172,7 +174,7 @@ export default function ImageCarouselModal({
                     current === nextIndex ? current : nextIndex,
                   );
                 }}
-                className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
+                className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth motion-reduce:scroll-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
               >
                 {images.map((image) => (
                   <div
@@ -192,25 +194,51 @@ export default function ImageCarouselModal({
                   </div>
                 ))}
               </div>
-              <div className="mt-3 flex items-center justify-center text-sm text-gray-600 md:justify-between">
+              <div className="mt-3 flex items-center justify-center gap-3 text-sm text-gray-600 md:justify-between">
                 <button
                   type="button"
                   onClick={showPrevious}
-                  className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                  aria-label="Imagen anterior"
+                  className="u-focus u-ease hidden items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-3 py-1.5 text-gray-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:shadow-[var(--shadow-med)] md:inline-flex"
                 >
+                  <ChevronLeft className="h-4 w-4" aria-hidden="true" />
                   Anterior
                 </button>
-                <span>
-                  {activeIndex + 1} / {images.length}
-                </span>
+                <div className="flex items-center gap-2">
+                  {images.map((image, index) => {
+                    const isActive = activeIndex === index;
+                    return (
+                      <button
+                        key={`${image.src}-dot`}
+                        type="button"
+                        aria-label={`Ir a imagen ${index + 1}`}
+                        aria-current={isActive ? 'true' : undefined}
+                        className={`u-focus u-ease h-2.5 w-2.5 rounded-full border ${
+                          isActive
+                            ? 'border-tierra-600 bg-tierra-600 shadow-[var(--shadow-soft)]'
+                            : 'border-tierra-300 bg-white hover:border-tierra-400'
+                        }`}
+                        onClick={() => {
+                          setActiveIndex(index);
+                          scrollToIndex(index);
+                        }}
+                      />
+                    );
+                  })}
+                </div>
                 <button
                   type="button"
                   onClick={showNext}
-                  className="hidden rounded-full border border-gray-200 px-3 py-1 transition hover:bg-gray-100 md:inline-flex"
+                  aria-label="Imagen siguiente"
+                  className="u-focus u-ease hidden items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-3 py-1.5 text-gray-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:shadow-[var(--shadow-med)] md:inline-flex"
                 >
                   Siguiente
+                  <ChevronRight className="h-4 w-4" aria-hidden="true" />
                 </button>
               </div>
+              <p className="mt-2 text-center text-xs text-gray-500 md:text-right">
+                {activeIndex + 1} / {images.length}
+              </p>
             </div>
             <div className="flex flex-col">
               {eyebrow && (
@@ -234,7 +262,7 @@ export default function ImageCarouselModal({
               {cta && (
                 <Link
                   href={cta.href}
-                  className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
+                  className="u-btn-primary u-ease u-focus mt-6 inline-flex w-full items-center justify-center sm:w-auto"
                 >
                   {cta.label}
                 </Link>
