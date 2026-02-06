@@ -234,7 +234,7 @@ export default function ImageCarouselModal({
               {cta && (
                 <Link
                   href={cta.href}
-                  className="btn-primary mt-6 inline-flex w-full items-center justify-center sm:w-auto"
+                  className="u-btn-primary u-ease mt-6 inline-flex w-full items-center justify-center sm:w-auto"
                 >
                   {cta.label}
                 </Link>

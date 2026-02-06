@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -29,10 +29,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isTransparent
-          ? 'bg-transparent border-b border-white/10'
-          : 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200'
+      className={`fixed z-50 w-full u-ease ${
+        isTransparent ? 'border-b border-white/15 bg-transparent' : 'u-glass'
       }`}
     >
       <div className="container-custom">
@@ -48,7 +46,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`u-focus u-ease rounded-full px-1.5 py-1 text-sm font-medium ${
                   isTransparent
                     ? 'text-white hover:text-tierra-200'
                     : 'text-gray-700 hover:text-tierra-600'
@@ -57,7 +55,7 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link href="/#contacto" className="btn-primary text-sm">
+            <Link href="/#contacto" className="u-btn-primary u-ease text-sm">
               Consultar
             </Link>
           </div>
@@ -65,14 +63,18 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden"
+            className={`u-focus u-ease rounded-full p-1.5 ${
+              isTransparent
+                ? 'text-white hover:bg-white/10'
+                : 'text-gray-800 hover:bg-gray-100'
+            }`}
             aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className={isTransparent ? 'text-white' : 'text-gray-800'} />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
@@ -80,13 +82,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t">
-          <div className="container-custom py-4 space-y-3">
+        <div className="u-ease u-glass lg:hidden border-t border-gray-200/70">
+          <div className="container-custom space-y-3 py-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-tierra-600"
+                className="u-focus u-ease block rounded-lg px-2 py-2 text-gray-700 hover:bg-tierra-50 hover:text-tierra-600"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -94,7 +96,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/#contacto"
-              className="btn-primary block text-center"
+              className="u-btn-primary u-ease block text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Consultar

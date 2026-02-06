@@ -29,7 +29,7 @@ export default function RefugiosPage() {
               href={buildWhatsAppUrl(whatsappMessages.refugios)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease mt-8 inline-flex"
             >
               Consultar disponibilidad
             </Link>
@@ -63,7 +63,7 @@ export default function RefugiosPage() {
               href={buildWhatsAppUrl(whatsappMessages.refugiosReserva)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease mt-8 inline-flex"
             >
               Confirmar disponibilidad
             </Link>

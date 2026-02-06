@@ -1,6 +1,14 @@
 @config "../tailwind.config.ts";
 @import "tailwindcss";
 
+:root {
+  --shadow-soft: 0 8px 24px -12px rgba(15, 23, 42, 0.24);
+  --shadow-med: 0 16px 34px -18px rgba(15, 23, 42, 0.34);
+  --ring: 0 0 0 3px rgba(176, 104, 69, 0.24);
+  --radius-card: 1rem;
+  --radius-btn: 9999px;
+}
+
 @layer base {
   html {
     scroll-padding-top: 96px;
@@ -50,12 +58,105 @@
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-tierra-600 text-white rounded-lg border border-tierra-700 shadow-sm hover:bg-tierra-700 transition-all duration-300 font-medium;
+  .u-ease {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
+  .u-focus {
+    @apply focus-visible:outline-none;
+    box-shadow: none;
+  }
+
+  .u-focus:focus-visible {
+    box-shadow: var(--ring);
+  }
+
+  .u-card {
+    border-radius: var(--radius-card);
+    border: 1px solid rgb(226 232 240 / 0.88);
+    box-shadow: var(--shadow-soft);
+    @apply bg-white;
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .u-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-med);
+    border-color: rgb(203 213 225 / 0.95);
+  }
+
+  .u-btn-primary,
+  .btn-primary {
+    border-radius: var(--radius-btn);
+    box-shadow: var(--shadow-soft);
+    @apply border border-tierra-700 bg-tierra-600 px-6 py-3 font-medium text-white focus-visible:outline-none;
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+
+  .u-btn-primary:focus-visible,
+  .btn-primary:focus-visible,
+  .u-btn-secondary:focus-visible,
+  .btn-secondary:focus-visible {
+    box-shadow: var(--ring), var(--shadow-soft);
+  }
+
+  .u-btn-primary:hover,
+  .btn-primary:hover {
+    @apply bg-tierra-700;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-med);
+  }
+
+  .u-btn-primary:active,
+  .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-primary:disabled,
+  .btn-primary:disabled {
+    @apply cursor-not-allowed opacity-55;
+  }
+
+  .u-btn-secondary,
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-tierra-700 border-2 border-tierra-600 rounded-lg shadow-sm hover:bg-tierra-50 transition-all duration-300 font-medium;
+    border-radius: var(--radius-btn);
+    box-shadow: var(--shadow-soft);
+    @apply border-2 border-tierra-600 bg-white px-6 py-3 font-medium text-tierra-700 focus-visible:outline-none;
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .u-btn-secondary:hover,
+  .btn-secondary:hover {
+    @apply border-tierra-700 bg-tierra-50;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-med);
+  }
+
+  .u-btn-secondary:active,
+  .btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .u-btn-secondary:disabled,
+  .btn-secondary:disabled {
+    @apply cursor-not-allowed opacity-55;
+  }
+
+  .u-glass {
+    @apply border-b border-gray-200/80 bg-white/85;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px -18px rgba(15, 23, 42, 0.45);
   }
 
   .section-padding {
@@ -63,14 +164,14 @@
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply mx-auto max-w-7xl;
   }
 }
 
 @media (min-width: 768px) {
   @layer components {
     .section-padding {
-      @apply py-24 px-12;
+      @apply px-12 py-24;
     }
   }
 }
@@ -86,5 +187,24 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u-ease,
+  .u-card,
+  .u-btn-primary,
+  .u-btn-secondary,
+  .btn-primary,
+  .btn-secondary {
+    transition-duration: 1ms !important;
+  }
+
+  .u-card:hover,
+  .u-btn-primary:hover,
+  .u-btn-secondary:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none !important;
   }
 }
