@@ -137,7 +137,7 @@ export default function DisenoPage() {
               href={buildWhatsAppUrl(whatsappMessages.diseno)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-8 inline-flex"
+              className="u-btn-secondary u-ease mt-8 inline-flex"
             >
               Hacer una consulta
             </Link>

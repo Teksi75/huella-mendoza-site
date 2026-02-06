@@ -30,11 +30,11 @@ export default function ProjectsGrid() {
         {proyectos.map((proyecto) => (
           <div
             key={proyecto.title}
-            className="overflow-hidden rounded-2xl bg-white shadow-sm"
+            className="u-card overflow-hidden"
           >
             <button
               type="button"
-              className="w-full text-left"
+              className="u-focus u-ease w-full text-left"
               onClick={() => setSelectedProject(proyecto)}
               aria-label={`Ver detalles de ${proyecto.title}`}
             >

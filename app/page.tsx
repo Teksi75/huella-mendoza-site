@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Compass, Layers, Leaf } from 'lucide-react';
+import { ArrowRight, Compass, Layers, Leaf } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import HomeContactForm from '@/components/HomeContactForm';
@@ -80,13 +80,17 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/#servicios"
-              className="btn-primary flex h-12 w-full items-center justify-center rounded-full px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
+              className="u-btn-primary u-ease group flex h-12 w-full items-center justify-center rounded-full px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
-              Explorar soluciones
+              <span>Explorar soluciones</span>
+              <ArrowRight
+                className="ml-2 h-4 w-4 translate-y-px opacity-0 u-ease motion-reduce:translate-y-0 motion-reduce:opacity-100 group-hover:translate-x-0.5 group-hover:opacity-100"
+                aria-hidden
+              />
             </Link>
             <Link
               href="/proyectos"
-              className="flex h-12 w-full items-center justify-center rounded-full border border-white/40 px-8 text-sm font-medium text-white transition hover:border-white/70 hover:bg-white/10 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
+              className="u-btn-secondary u-ease flex h-12 w-full items-center justify-center border-white/50 bg-transparent px-8 text-sm text-white sm:h-14 sm:w-auto sm:px-12 sm:text-lg hover:border-white/80 hover:bg-white/10 hover:text-white"
             >
               Ver proyectos
             </Link>
@@ -127,7 +131,7 @@ export default function Home() {
 
           {/* Pin button to bottom + equal height cards */}
           <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
-            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
+            <div className="u-card flex h-full flex-col p-8">
               <div className="flex min-h-[200px] flex-1 flex-col">
                 {/* Badge slot fijo para alinear botones */}
                 <div className="min-h-[28px]">
@@ -149,7 +153,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/base" className="btn-secondary inline-flex w-full items-center justify-center text-sm">
+                <Link href="/base" className="u-btn-secondary u-ease inline-flex w-full items-center justify-center text-sm">
                   Ver HUELLA Base
                 </Link>
               </div>
@@ -178,13 +182,13 @@ export default function Home() {
               <div className="mt-auto pt-6">
                 <Link
                   href="/diseno"
-                  className="btn-primary inline-flex w-full items-center justify-center text-sm shadow-md transition-all duration-300 ease-out hover:shadow-lg"
+                  className="u-btn-primary u-ease inline-flex w-full items-center justify-center text-sm"
                 >
                   Explorar Diseño
                 </Link>
               </div>
             </div>
-            <div className="flex h-full flex-col rounded-2xl border border-tierra-200 bg-white p-8 shadow-sm transition-all duration-300 ease-out hover:shadow-md">
+            <div className="u-card flex h-full flex-col p-8">
               <div className="flex min-h-[200px] flex-1 flex-col">
                 {/* Badge slot fijo para alinear botones */}
                 <div className="min-h-[28px]">
@@ -209,7 +213,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/refugios" className="btn-secondary inline-flex w-full items-center justify-center text-sm">
+                <Link href="/refugios" className="u-btn-secondary u-ease inline-flex w-full items-center justify-center text-sm">
                   Ver Refugios
                 </Link>
               </div>
@@ -234,7 +238,7 @@ export default function Home() {
             {reasons.map((reason) => (
               <div
                 key={reason.title}
-                className="rounded-2xl border border-tierra-200 bg-tierra-50 p-6 shadow-sm"
+                className="u-card border-tierra-200 bg-tierra-50 p-6"
               >
                 <h3 className="text-xl text-tierra-700">{reason.title}</h3>
                 <p className="mt-3 text-sm text-gray-600">{reason.description}</p>
@@ -258,7 +262,7 @@ export default function Home() {
                 Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
             </div>
-            <Link href="/proyectos" className="btn-secondary px-6 py-3">
+            <Link href="/proyectos" className="u-btn-secondary u-ease px-6 py-3">
               Ver todos los proyectos
             </Link>
           </div>
@@ -267,7 +271,7 @@ export default function Home() {
             {projectModels.map((project) => (
               <div
                 key={project.title}
-                className="rounded-2xl border border-tierra-200 bg-white p-6 shadow-sm"
+                className="u-card p-6"
               >
                 <h3 className="text-lg text-tierra-700">{project.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">{project.detail}</p>
@@ -292,7 +296,7 @@ export default function Home() {
                 return (
                   <div
                     key={step.title}
-                    className={`group rounded-2xl border p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md ${
+                    className={`u-card group p-6 ${
                       isHighlighted
                         ? "border-tierra-300 bg-tierra-50/60 ring-1 ring-tierra-200/60"
                         : "border-tierra-200 bg-white"
@@ -326,7 +330,7 @@ export default function Home() {
               href={buildWhatsAppUrl(whatsappMessages.home)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary mt-6 inline-flex bg-white text-tierra-700"
+              className="u-btn-secondary u-ease mt-6 inline-flex bg-white text-tierra-700"
             >
               Hacer una consulta
             </Link>

@@ -27,7 +27,7 @@ export default function ContactoPage() {
               href={buildWhatsAppUrl(whatsappMessages.contacto)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary mt-6 inline-flex"
+              className="u-btn-primary u-ease mt-6 inline-flex"
             >
               Hacer una consulta
             </Link>
