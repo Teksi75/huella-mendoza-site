@@ -1,6 +1,6 @@
-﻿'use client';
+'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -11,6 +11,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = pathname === '/';
   const isTransparent = isHome && !isScrolled;
+  const logoClassTop = 'text-white';
+  const logoClassScrolled = 'text-tierra-700';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,43 +31,42 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isTransparent
-          ? 'bg-transparent border-b border-white/10'
-          : 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200'
+      className={`fixed z-50 w-full u-ease ${
+        isTransparent ? 'border-b border-white/10 bg-transparent' : 'u-glass'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-tierra-700">HUELLA</div>
+            <div
+              className={`text-2xl font-bold transition-colors duration-300 ${
+                isTransparent ? logoClassTop : logoClassScrolled
+              }`}
+            >
+              HUELLA
+            </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 lg:flex">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  isTransparent
-                    ? 'text-white hover:text-tierra-200'
-                    : 'text-gray-700 hover:text-tierra-600'
+                className={`text-sm font-medium u-ease ${
+                  isTransparent ? 'text-white hover:text-tierra-200' : 'text-gray-700 hover:text-tierra-600'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Link href="/#contacto" className="btn-primary text-sm">
+            <Link href="/#contacto" className="u-btn-primary u-ease u-focus text-sm">
               Consultar
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden"
+            className="u-focus u-ease rounded-md p-1 lg:hidden"
             aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={isMobileMenuOpen}
           >
@@ -78,15 +79,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t">
-          <div className="container-custom py-4 space-y-3">
+        <div className="u-ease border-t border-tierra-200/80 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-sm lg:hidden">
+          <div className="container-custom space-y-3 py-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-tierra-600"
+                className="u-ease block rounded-md py-2 text-gray-700 hover:text-tierra-600 focus-visible:outline-none focus-visible:text-tierra-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -94,7 +94,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/#contacto"
-              className="btn-primary block text-center"
+              className="u-btn-primary u-ease u-focus block text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Consultar

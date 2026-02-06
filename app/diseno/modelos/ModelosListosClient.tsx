@@ -24,7 +24,7 @@ export default function ModelosListosClient() {
               key={modelo.id}
               type="button"
               onClick={() => setActiveId(modelo.id)}
-              className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+              className={`u-ease u-focus rounded-full border px-4 py-2 text-sm font-semibold ${
                 isActive
                   ? 'border-tierra-600 bg-tierra-600 text-white'
                   : 'border-tierra-200 bg-white text-tierra-700 hover:border-tierra-400'
@@ -37,7 +37,7 @@ export default function ModelosListosClient() {
       </div>
 
       {floorplan ? (
-        <div className="rounded-2xl border border-tierra-200 bg-white p-4 shadow-sm">
+        <div className="u-card p-4">
           <div className="relative overflow-hidden rounded-2xl bg-tierra-50">
             <div className="absolute left-3 top-3 z-10 rounded-full border border-tierra-200 bg-white/90 px-3 py-1 text-xs font-semibold text-tierra-700 shadow-sm">
               {activeModel.label}
@@ -74,7 +74,7 @@ export default function ModelosListosClient() {
         {renderImages.map((image) => (
           <div
             key={image.src}
-            className="relative overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm"
+            className="u-card u-ease relative overflow-hidden hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]"
           >
             <div className="relative aspect-[4/3]">
               <Image
