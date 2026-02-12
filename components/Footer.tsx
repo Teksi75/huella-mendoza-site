@@ -48,8 +48,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-12 border-t border-white/10 pt-6 text-xs text-gray-400">
-            (c) {new Date().getFullYear()} HUELLA. Todos los derechos
-            reservados.
+            (c) 2026 HUELLA. Todos los derechos reservados.
           </div>
           <a
             href="/llms.txt"

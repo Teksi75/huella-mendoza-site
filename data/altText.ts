@@ -66,7 +66,7 @@ export const altText: Record<string, string> = {
   '/media/huella/diseno/Hero-13.png':
     'Refugio con iluminación cálida y vista al lago y montañas',
   '/media/huella/8.png': 'Sendero principal con vistas al paisaje',
-  '/images/proyectos/milzoe-01.jpeg': 'Milzoe 01, render exterior',
+  '/images/proyectos/milzoe-01.jpeg': 'Modelo 550 – render exterior',
   '/images/proyectos/proyecto-externo-30.jpg': 'Modelo 300 – vista exterior principal',
   '/images/proyectos/proyecto-externo-30_frente.jpg': 'Modelo 300 – vista exterior frente',
   '/images/proyectos/proyecto-externo-30_frente_izq.jpg':
