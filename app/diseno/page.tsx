@@ -85,7 +85,7 @@ export default function DisenoPage() {
                   Proceso
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Eleccion - Ajuste al sitio - Inicio de obra
+                  Elección - Ajuste al sitio - Inicio de obra
                 </p>
                 <Link
                   href="/diseno/modelos"
