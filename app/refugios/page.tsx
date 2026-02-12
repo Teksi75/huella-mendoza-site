@@ -15,9 +15,8 @@ export default function RefugiosPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="u-card mb-6 p-4 text-sm text-tierra-700">
-              Hoy no hay disponibilidad porque el primer módulo aún no está instalado.
-              Si te interesa vivir la experiencia HUELLA Refugios, sumate a la lista de espera y te avisamos apenas abramos fechas.
+            <div className="u-card mb-6 border border-red-200/60 p-4 text-sm text-tierra-700">
+              Hoy no hay disponibilidad. Si te interesa vivir la experiencia HUELLA Refugios, sumate a la lista de espera y te avisamos apenas abramos fechas.
             </div>
             <h2>HUELLA Refugios</h2>
             <p className="mt-4 text-base text-gray-600">
