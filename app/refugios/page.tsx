@@ -15,9 +15,8 @@ export default function RefugiosPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="u-card mb-6 p-4 text-sm text-tierra-700">
-              Hoy no hay disponibilidad porque el primer módulo aún no está instalado. Si te interesa,
-              dejá tu consulta y te avisamos apenas haya fecha.
+            <div className="u-card mb-6 border border-red-200/60 p-4 text-sm text-tierra-700">
+              Hoy no hay disponibilidad. Si te interesa vivir la experiencia HUELLA Refugios, sumate a la lista de espera y te avisamos apenas abramos fechas.
             </div>
             <h2>HUELLA Refugios</h2>
             <p className="mt-4 text-base text-gray-600">
@@ -31,7 +30,7 @@ export default function RefugiosPage() {
               rel="noopener noreferrer"
               className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
             >
-              Consultar disponibilidad
+              Sumarme a la lista de espera
             </Link>
           </div>
         </div>
@@ -56,7 +55,7 @@ export default function RefugiosPage() {
             <h2>Cómo reservar</h2>
             <ol className="mt-6 grid gap-3 text-sm text-gray-600 list-decimal list-inside">
               <li>Contanos fechas, cantidad de personas y necesidades especiales.</li>
-              <li>Confirmamos disponibilidad, servicios y detalles de acceso.</li>
+              <li>Te avisamos apenas haya fechas, junto con servicios y detalles de acceso.</li>
               <li>Coordinamos la reserva y el ingreso de forma simple.</li>
             </ol>
             <Link
@@ -65,7 +64,7 @@ export default function RefugiosPage() {
               rel="noopener noreferrer"
               className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
             >
-              Confirmar disponibilidad
+              Avisame cuando haya fechas
             </Link>
           </div>
         </div>
