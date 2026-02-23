@@ -70,11 +70,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 mx-auto max-w-5xl px-6 text-center text-white">
-          <p className="section-eyebrow text-[#f6dfc9]">Arquitectura modular</p>
-          <h1 className="relative mt-4 mb-6 -top-4 text-[clamp(2.1rem,4.8vw,4.4rem)] font-medium leading-[1.02] text-[#fff8ef] sm:-top-3 md:top-0">
-            Arquitectura modular para habitar el paisaje
+          <p className="section-eyebrow text-[#f6dfc9]/85">HUELLA</p>
+          <h1 className="mx-auto mt-4 mb-6 max-w-[14ch] font-sans text-[clamp(2rem,6vw,4.35rem)] font-semibold leading-[1.04] tracking-[-0.015em] text-[#fff8ef] sm:max-w-[17ch] sm:text-[clamp(2.3rem,5.8vw,4.35rem)] md:mb-7 md:max-w-[16ch] md:leading-[1.02]">
+            <span className="block">Arquitectura modular</span>
+            <span className="mt-1 block sm:mt-2">para habitar el paisaje</span>
           </h1>
-          <p className="mx-auto mb-10 mt-2 max-w-[38ch] text-balance text-[0.96rem] leading-relaxed text-[#f2e7db] sm:max-w-[44ch] sm:text-[clamp(1rem,2.2vw,1.25rem)] md:mt-0 md:max-w-[60ch]">
+          <p className="mx-auto mb-10 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:max-w-[48ch] md:text-[1.1rem]">
             Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
           </p>
 
