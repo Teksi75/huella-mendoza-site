@@ -70,12 +70,14 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 mx-auto max-w-5xl px-6 text-center text-white">
-          <p className="section-eyebrow text-[#f6dfc9]/85">HUELLA</p>
-          <h1 className="mx-auto mt-4 mb-6 max-w-[14ch] font-sans text-[clamp(2rem,6vw,4.35rem)] font-semibold leading-[1.04] tracking-[-0.015em] text-[#fff8ef] sm:max-w-[17ch] sm:text-[clamp(2.3rem,5.8vw,4.35rem)] md:mb-7 md:max-w-[16ch] md:leading-[1.02]">
+          <p className="mx-auto mb-3 inline-flex items-center rounded-full border border-white/20 bg-black/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/70 backdrop-blur-[2px] sm:mb-4 sm:text-xs">
+            BASE · DISEÑO · REFUGIOS
+          </p>
+          <h1 className="mx-auto mb-5 max-w-2xl font-sans text-2xl font-semibold leading-tight tracking-[-0.015em] text-[#fff8ef] sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl xl:text-5xl">
             <span className="block">Arquitectura modular</span>
             <span className="mt-1 block sm:mt-2">para habitar el paisaje</span>
           </h1>
-          <p className="mx-auto mb-10 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:max-w-[48ch] md:text-[1.1rem]">
+          <p className="mx-auto mb-8 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:mb-9 md:max-w-[48ch] md:text-[1.1rem]">
             Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
           </p>
 
@@ -141,7 +143,9 @@ export default function Home() {
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-3">
                   <Layers className="h-5 w-5 text-[#7f4f31]/90" aria-hidden />
-                  <h3 className="text-2xl">HUELLA Base</h3>
+                  <h3 className="text-2xl font-normal">
+                    <span className="font-semibold tracking-wide">HUELLA</span> Base
+                  </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
                   Sistema habitacional modular, claro y previsible.
@@ -162,7 +166,9 @@ export default function Home() {
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-2">
                   <Compass className="h-[22px] w-[22px] text-[#7f4f31]" aria-hidden />
-                  <h3 className="text-2xl">HUELLA Diseño</h3>
+                  <h3 className="text-2xl font-normal">
+                    <span className="font-semibold tracking-wide">HUELLA</span> Diseño
+                  </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
                   Arquitectura pensada para vos y para el lugar.
@@ -186,7 +192,9 @@ export default function Home() {
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-3">
                   <Leaf className="h-5 w-5 text-[#7f4f31]/90" aria-hidden />
-                  <h3 className="text-2xl">HUELLA Refugios</h3>
+                  <h3 className="text-2xl font-normal">
+                    <span className="font-semibold tracking-wide">HUELLA</span> Refugios
+                  </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
                   Espacios pensados para la experiencia.
@@ -313,7 +321,9 @@ export default function Home() {
         <div className="container-custom grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="section-eyebrow text-[#d8ba97]">Contacto</p>
-            <h2>¿Hablamos de tu proyecto?</h2>
+            <h2 className="max-w-[16ch] text-3xl leading-tight text-[#fff6e8] sm:text-4xl md:text-5xl">
+              ¿Hablamos de tu proyecto?
+            </h2>
             <p className="mt-3 max-w-2xl text-[#ede1d4]">
               Te ayudamos a encontrar la mejor solución según tu terreno y tu forma de habitar. Sin
               compromisos, sin apuro.

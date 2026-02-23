@@ -12,25 +12,29 @@ type NavbarProps = {
 export default function Navbar({ variant }: NavbarProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLogoCompact, setIsLogoCompact] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = pathname === '/';
   const navbarVariant = variant ?? (isHome ? 'hero' : 'solid');
   const isHero = navbarVariant === 'hero';
   const isTransparent = isHome && !isScrolled;
+  const isHeroTop = isHero && !isLogoCompact;
   const logoClassTop = 'text-white';
-  const logoClassScrolled = 'text-[#2f2a23]';
+  const logoClassScrolled = isHero && isTransparent ? 'text-white/92' : 'text-[#2f2a23]';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setIsLogoCompact(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const menuItems = [
     { name: 'Servicios', href: '/#servicios' },
-    { name: 'Por qué HUELLA', href: '/#por-que-huella' },
+    { name: 'Por qué Huella', href: '/#por-que-huella' },
     { name: 'Proyectos', href: '/proyectos' },
     { name: 'Contacto', href: '/#contacto' },
   ];
@@ -45,8 +49,12 @@ export default function Navbar({ variant }: NavbarProps) {
         <div className="flex h-20 items-center justify-between md:h-[5.5rem]">
           <Link href="/" className="u-focus rounded-md px-1 py-0.5">
             <div
-              className={`font-display text-[1.7rem] font-medium tracking-[0.22em] transition-colors duration-300 md:text-[1.9rem] ${
-                isHero && isTransparent ? logoClassTop : logoClassScrolled
+              className={`brand-wordmark rounded-full px-2.5 py-1 transition-all duration-300 ease-out ${
+                isHeroTop
+                  ? 'border border-white/35 text-base md:text-lg'
+                  : 'text-sm md:text-base'
+              } ${isHeroTop ? logoClassTop : logoClassScrolled} ${
+                !isHeroTop && isHero && isTransparent ? 'border border-white/20' : ''
               }`}
             >
               HUELLA
@@ -58,7 +66,7 @@ export default function Navbar({ variant }: NavbarProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`u-focus rounded-md px-1 py-1 text-sm font-semibold uppercase tracking-[0.12em] u-ease ${
+                className={`u-focus rounded-md px-1 py-1 text-xs font-medium tracking-[0.04em] u-ease md:text-sm ${
                   isHero && isTransparent
                     ? 'text-white/92 hover:text-white'
                     : 'text-[#4b443a] hover:text-[#7f4f31]'

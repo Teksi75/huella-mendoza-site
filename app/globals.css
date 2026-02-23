@@ -206,6 +206,14 @@
     color: color-mix(in srgb, var(--brand-strong) 74%, black 26%);
     @apply text-xs font-semibold uppercase tracking-[0.18em];
   }
+
+  .brand-wordmark {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {

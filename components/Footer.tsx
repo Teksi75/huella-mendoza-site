@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="container-custom relative">
           <div className="grid gap-10 md:grid-cols-3">
             <div>
-              <div className="font-display text-2xl tracking-[0.2em]">HUELLA</div>
+              <div className="brand-wordmark text-xl md:text-2xl">HUELLA</div>
               <p className="mt-4 max-w-sm text-sm text-[#e2d2c1]">
                 Arquitectura y sistemas habitables, pensados para acompañar
                 distintas formas de vivir el territorio.
