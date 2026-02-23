@@ -60,15 +60,16 @@ export default function DisenoPage() {
     <main>
       <section
         id="diseno"
-        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+        className="section-padding scroll-mt-28 bg-[#f8f2e8] pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
+            <p className="section-eyebrow">Diseño</p>
             <h2>HUELLA Diseño</h2>
-            <p className="mt-3">
+            <p className="mt-3 text-[#5a6662]">
               Proyectos arquitectónicos a medida con acompañamiento profesional para integrar diseño, funcionalidad y territorio.
             </p>
-            <ul className="mt-6 grid gap-3 text-sm text-gray-600">
+            <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
               <li>Relevamiento del sitio y de tus rutinas para definir el programa.</li>
               <li>Propuestas comparables que equilibran materialidad, paisaje y uso diario.</li>
               <li>Dirección y seguimiento cercano para sostener decisiones de inicio a fin.</li>
@@ -76,7 +77,7 @@ export default function DisenoPage() {
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="u-card p-6">
                 <h3 className="text-xl">Modelos listos</h3>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5a6662]">
                   Alternativas probadas que combinan diseño y funcionalidad.
                   <br />
                   Elegís el ritmo, el nivel de terminación y acompañamiento.
@@ -84,7 +85,7 @@ export default function DisenoPage() {
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 text-sm text-[#5a6662]">
                   Elección - Ajuste al sitio - Inicio de obra
                 </p>
                 <Link
@@ -96,7 +97,7 @@ export default function DisenoPage() {
               </div>
               <div className="u-card p-6">
                 <h3 className="text-xl">Proyectos personalizados</h3>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5a6662]">
                   Experiencias diseñadas a partir del lugar y de tu forma de habitar.
                   <br />
                   Decisiones claras para una solución adaptada a tu situación.
@@ -104,14 +105,14 @@ export default function DisenoPage() {
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 text-sm text-[#5a6662]">
                   Relevamiento - Propuesta - Desarrollo ejecutivo
                 </p>
                 <UsosPosiblesGallery />
               </div>
               <div className="u-card p-6">
                 <h3 className="text-xl">Ampliaciones</h3>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5a6662]">
                   Crecer sin romper la coherencia arquitectónica y el paisaje.
                   <br />
                   Soluciones simples que suman uso y valor.
@@ -119,7 +120,7 @@ export default function DisenoPage() {
                 <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                   Proceso
                 </p>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 text-sm text-[#5a6662]">
                   Diagnóstico - Propuesta - Obra liviana
                 </p>
                 <div
@@ -145,11 +146,11 @@ export default function DisenoPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="max-w-4xl">
             <h2>Galería de croquis y maquetas</h2>
-            <p className="mt-3 text-base text-gray-700">
+            <p className="mt-3 text-base text-[#5a6662]">
               Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseño, uso y territorio.
             </p>
           </div>
@@ -195,11 +196,11 @@ export default function DisenoPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>Diseño interior</h2>
-            <p className="mt-3 text-base text-gray-700">
+            <p className="mt-3 text-base text-[#5a6662]">
               Materiales honestos, luz dirigida y conexiones claras con el exterior para un habitar cotidiano y sin exceso.
             </p>
           </div>
@@ -208,7 +209,7 @@ export default function DisenoPage() {
             {interiores.map((item) => (
               <div
                 key={item.src}
-                className="u-card flex flex-col bg-tierra-50"
+                className="u-card flex flex-col bg-[#fff9ef]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl rounded-b-none">
                   <Image
@@ -220,8 +221,8 @@ export default function DisenoPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-tierra-900">{item.title}</h3>
-                  <p className="mt-2 text-sm text-gray-700">{item.copy}</p>
+                  <h3 className="text-lg font-semibold text-[#7f4f31]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[#5a6662]">{item.copy}</p>
                 </div>
               </div>
             ))}
@@ -229,11 +230,11 @@ export default function DisenoPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>Estructura integrada al entorno</h2>
-            <p className="mt-3 text-base text-gray-700">
+            <p className="mt-3 text-base text-[#5a6662]">
               Vistas largas, plataformas ligeras y recorridos que siguen la pendiente para integrar estructura, funcionalidad y paisaje.
             </p>
           </div>
@@ -257,8 +258,8 @@ export default function DisenoPage() {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-semibold text-tierra-900">{item.title}</h3>
-                    <p className="mt-2 text-sm text-gray-700">{item.copy}</p>
+                    <h3 className="text-lg font-semibold text-[#7f4f31]">{item.title}</h3>
+                    <p className="mt-2 text-sm text-[#5a6662]">{item.copy}</p>
                   </div>
                 </div>
               ))}
@@ -281,8 +282,8 @@ export default function DisenoPage() {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="text-base font-semibold text-tierra-900">{item.title}</h3>
-                      <p className="mt-2 text-sm text-gray-700">{item.copy}</p>
+                      <h3 className="text-base font-semibold text-[#7f4f31]">{item.title}</h3>
+                      <p className="mt-2 text-sm text-[#5a6662]">{item.copy}</p>
                     </div>
                   </div>
                 ))}

@@ -5,11 +5,12 @@ export default function ProyectosPage() {
     <main>
       <section
         id="proyectos"
-        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+        className="section-padding scroll-mt-28 bg-[#f8f2e8] pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
+          <p className="section-eyebrow">Proyectos</p>
           <h1>Proyectos</h1>
-          <p className="mt-4 max-w-3xl">
+          <p className="mt-4 max-w-3xl text-[#5a6662]">
             Proyectos construidos y en proceso que muestran cómo cada decisión
             de diseño, eficiencia y relación con el paisaje se traduce en una
             experiencia concreta.
@@ -17,7 +18,7 @@ export default function ProyectosPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <ProjectsGrid />
       </section>
     </main>

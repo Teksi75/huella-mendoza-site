@@ -26,7 +26,7 @@ export default function BasePage() {
     <main>
       <section
         id="base"
-        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+        className="section-padding scroll-mt-28 bg-[#ece1d3] pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -41,14 +41,15 @@ export default function BasePage() {
               />
             </div>
             <div className="max-w-xl">
-              <h1 className="text-3xl font-bold uppercase tracking-widest text-tierra-600 text-center md:text-left md:text-4xl mb-4">
+              <p className="section-eyebrow text-center md:text-left">Sistema modular</p>
+              <h1 className="mb-4 text-center text-3xl font-medium uppercase tracking-[0.2em] text-[#7f4f31] md:text-left md:text-4xl">
                 HUELLA Base
               </h1>
               <h2 className="text-xl font-semibold text-center mb-6 md:text-left">
                 Bases modulares: previsibilidad, orden y escalabilidad desde el inicio.
               </h2>
               <div className="mb-6">
-                <p className="text-base leading-relaxed text-gray-700 text-center md:text-left">
+                <p className="text-center text-base leading-relaxed text-[#5a6662] md:text-left">
                   Base es el módulo estructural del sistema HUELLA. Cada proyecto se define a
                   partir de una cantidad de módulos base que funcionan como la pieza fundamental
                   para organizar costos, tiempos y posibilidades futuras. Esto permite planificar
@@ -61,12 +62,12 @@ export default function BasePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2>Logística y obra</h2>
             <div className="mb-6">
-              <p className="text-base leading-relaxed text-gray-700">
+              <p className="text-base leading-relaxed text-[#5a6662]">
                 La lógica modular hace que las unidades encajen entre sí y en el transporte, la
                 obra en sitio se coordine con menos imprevistos y los tiempos de montaje se
                 optimicen. Definir la cantidad de módulos base desde el principio permite
@@ -91,8 +92,8 @@ export default function BasePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-tierra-900">{item.title}</h3>
-                  <p className="mt-2 text-sm text-gray-700">{item.copy}</p>
+                <h3 className="text-lg font-semibold text-[#7f4f31]">{item.title}</h3>
+                <p className="mt-2 text-sm text-[#5a6662]">{item.copy}</p>
                 </div>
               </div>
             ))}
@@ -100,12 +101,12 @@ export default function BasePage() {
 
           <div className="mt-10 max-w-3xl">
             <div className="mb-6">
-              <h2 className="text-lg font-semibold mb-2">Confort y uso real</h2>
-              <p className="text-base leading-relaxed text-gray-700">
+              <h2 className="mb-2 text-lg font-semibold">Confort y uso real</h2>
+              <p className="text-base leading-relaxed text-[#5a6662]">
                 Aunque parten de una estructura modular simple, las unidades cuentan con
                 tratamiento térmico para un uso confortable y continuo.
               </p>
-              <p className="mt-3 text-base leading-relaxed text-gray-700">
+              <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
                 Pensamos los materiales y aislamientos para acompañar el clima y el entorno, tanto
                 en una unidad como en varias combinadas.
               </p>
@@ -114,7 +115,7 @@ export default function BasePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-tierra-200 bg-white shadow-sm">
@@ -128,26 +129,26 @@ export default function BasePage() {
             </div>
             <div className="max-w-xl">
               <div className="mb-6">
-                <h2 className="text-lg font-semibold mb-2">Escalabilidad</h2>
-                <p className="text-base leading-relaxed text-gray-700">
+                <h2 className="mb-2 text-lg font-semibold">Escalabilidad</h2>
+                <p className="text-base leading-relaxed text-[#5a6662]">
                   HUELLA Base no es un producto cerrado. Es un sistema que permite crecer,
                   reconfigurar y ampliar tu proyecto según tus necesidades.
                 </p>
-                <p className="mt-3 text-base leading-relaxed text-gray-700">
+                <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
                   Podés empezar con una sola unidad, sumar módulos base, combinar configuraciones
                   para diferentes usos y pensar un conjunto de módulos como un sistema mayor que se
                   adapta con el tiempo.
                 </p>
-                <p className="mt-3 text-base leading-relaxed text-gray-700">
+                <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
                   Este enfoque por cantidad de módulos organiza mejor la logística y la obra desde
                   el inicio, facilita cotizaciones claras y permite proyectar espacios que crecen
                   sin perder coherencia.
                 </p>
-                <p className="mt-3 text-base font-semibold text-gray-700">
+                <p className="mt-3 text-base font-semibold text-[#4f5c58]">
                   Un sistema base que crece con tu proyecto.
                 </p>
               </div>
-              <div className="mb-4 text-base leading-relaxed text-gray-700">
+              <div className="mb-4 text-base leading-relaxed text-[#5a6662]">
                 <p>Analizamos tu idea y la cantidad de módulos.</p>
                 <p className="mt-2">
                   Contanos tu proyecto para ver cuántos módulos base tiene sentido planificar y

@@ -37,9 +37,9 @@ const reasons = [
 ];
 
 const HomeLandscapeBreak = () => (
-  <section className="section-padding bg-tierra-50">
+  <section className="section-padding bg-[#efe5d7]">
     <div className="container-custom">
-      <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-sm md:aspect-[21/9]">
+      <div className="u-card relative aspect-[16/9] overflow-hidden rounded-2xl md:aspect-[21/9]">
         <Image
           src="/media/huella/home/home-protrerillos-embalse-2.png"
           alt="Paisaje de Potrerillos junto al embalse con una vivienda HUELLA integrada al entorno"
@@ -58,7 +58,7 @@ export default function Home() {
     <main>
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/55 via-black/25 to-black/65" />
           <Image
             src="/media/huella/home/home-protrerillos-embalse-1.png"
             alt={altText['/media/huella/home/home-protrerillos-embalse-1.png']}
@@ -69,11 +69,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
-          <h1 className="relative -top-10 mb-6 font-bold tracking-tight text-[clamp(1.9rem,4.6vw,3.2rem)] sm:-top-8 md:top-0">
+        <div className="relative z-20 mx-auto max-w-5xl px-6 text-center text-white">
+          <p className="section-eyebrow text-[#f6dfc9]">Arquitectura modular</p>
+          <h1 className="relative mt-4 mb-6 -top-4 text-[clamp(2.1rem,4.8vw,4.4rem)] font-medium leading-[1.02] text-[#fff8ef] sm:-top-3 md:top-0">
             Arquitectura modular para habitar el paisaje
           </h1>
-          <p className="mb-8 mt-2 font-light leading-snug md:leading-normal text-[0.9rem] sm:text-[clamp(1rem,2.2vw,1.25rem)] max-w-[38ch] sm:max-w-[44ch] md:max-w-[60ch] mx-auto text-balance md:mt-0">
+          <p className="mx-auto mb-10 mt-2 max-w-[38ch] text-balance text-[0.96rem] leading-relaxed text-[#f2e7db] sm:max-w-[44ch] sm:text-[clamp(1rem,2.2vw,1.25rem)] md:mt-0 md:max-w-[60ch]">
             Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
           </p>
 
@@ -90,7 +91,7 @@ export default function Home() {
             </Link>
             <Link
               href="/proyectos"
-              className="group u-btn-secondary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 border-white/45 bg-white/5 px-8 text-sm text-white hover:border-white/70 hover:bg-white/10 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
+              className="group u-btn-secondary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 border-[#f1ddc8]/70 bg-[#f7e8d6]/10 px-8 text-sm text-white hover:border-[#f3e2cf] hover:bg-[#f7e8d6]/20 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
               Ver proyectos
               <ArrowRight
@@ -123,28 +124,28 @@ export default function Home() {
 
       <section
         id="servicios"
-        className="section-padding bg-tierra-50 scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+        className="section-padding scroll-mt-28 bg-[#ece1d3] pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
+            <p className="section-eyebrow">Servicios</p>
             <h2>Tres formas de habitar con HUELLA</h2>
-            <p className="mt-4 text-base text-gray-600">
+            <p className="mt-4 text-base text-[#5a6662]">
               Una misma mirada, distintos caminos según tu necesidad, tu uso y tu proyecto.
             </p>
           </div>
 
-          {/* Pin button to bottom + equal height cards */}
           <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
-            <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]">
+            <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]">
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-3">
-                  <Layers className="h-5 w-5 text-tierra-600/80" aria-hidden />
+                  <Layers className="h-5 w-5 text-[#7f4f31]/90" aria-hidden />
                   <h3 className="text-2xl">HUELLA Base</h3>
                 </div>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5c6662]">
                   Sistema habitacional modular, claro y previsible.
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
                   <li>Niveles de terminación definidos desde el inicio</li>
                   <li>Posibilidad de crecer o adaptarse en el tiempo</li>
                   <li>Una base real para vivir, no una solución transitoria</li>
@@ -156,16 +157,16 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="u-card u-ease flex h-full flex-col p-9 ring-1 ring-black/5 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]">
+            <div className="u-card-accent u-ease flex h-full flex-col p-9 hover:-translate-y-0.5">
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-2">
-                  <Compass className="h-[22px] w-[22px] text-tierra-600" aria-hidden />
+                  <Compass className="h-[22px] w-[22px] text-[#7f4f31]" aria-hidden />
                   <h3 className="text-2xl">HUELLA Diseño</h3>
                 </div>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5c6662]">
                   Arquitectura pensada para vos y para el lugar.
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
                   <li>Modelos listos y proyectos personalizados</li>
                   <li>Lectura del sitio y modo de habitar</li>
                   <li>Acompañamiento en cada decisión</li>
@@ -180,21 +181,21 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]">
+            <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]">
               <div className="flex min-h-[200px] flex-1 flex-col">
                 <div className="flex items-center gap-3">
-                  <Leaf className="h-5 w-5 text-tierra-600/80" aria-hidden />
+                  <Leaf className="h-5 w-5 text-[#7f4f31]/90" aria-hidden />
                   <h3 className="text-2xl">HUELLA Refugios</h3>
                 </div>
-                <p className="mt-3 text-sm text-gray-600">
+                <p className="mt-3 text-sm text-[#5c6662]">
                   Espacios pensados para la experiencia.
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
                   <li>Uso recreativo o turístico</li>
                   <li>Integración con el entorno natural</li>
                   <li>Soluciones simples, robustas y habitables</li>
                 </ul>
-                <p className="mt-4 text-sm text-gray-600">
+                <p className="mt-4 text-sm text-[#5c6662]">
                   Tomamos consultas (sin disponibilidad por el momento).
                 </p>
               </div>
@@ -210,12 +211,13 @@ export default function Home() {
 
       <section
         id="por-que-huella"
-        className="section-padding bg-white scroll-mt-28 md:scroll-mt-32"
+        className="section-padding scroll-mt-28 bg-[#f8f2e8] md:scroll-mt-32"
       >
         <div className="container-custom">
           <div className="max-w-3xl">
+            <p className="section-eyebrow">Valor</p>
             <h2>Por qué elegir HUELLA</h2>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-[#5a6662]">
               Diseñamos soluciones habitables con foco en el paisaje, el uso real y un proceso claro.
             </p>
           </div>
@@ -224,10 +226,10 @@ export default function Home() {
             {reasons.map((reason) => (
               <div
                 key={reason.title}
-                className="u-card u-ease bg-tierra-50 p-6 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]"
+                className="u-card u-ease bg-[#fffaf2] p-6 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]"
               >
-                <h3 className="text-xl text-tierra-700">{reason.title}</h3>
-                <p className="mt-3 text-sm text-gray-600">{reason.description}</p>
+                <h3 className="text-xl text-[#7f4f31]">{reason.title}</h3>
+                <p className="mt-3 text-sm text-[#5c6662]">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -238,13 +240,14 @@ export default function Home() {
 
       <section
         id="proyectos"
-        className="section-padding bg-tierra-50 scroll-mt-28 md:scroll-mt-32"
+        className="section-padding scroll-mt-28 bg-[#ece1d3] md:scroll-mt-32"
       >
         <div className="container-custom">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
+              <p className="section-eyebrow">Obras</p>
               <h2>Proyectos reales</h2>
-              <p className="mt-3 max-w-2xl text-gray-600">
+              <p className="mt-3 max-w-2xl text-[#5a6662]">
                 Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
             </div>
@@ -257,19 +260,20 @@ export default function Home() {
             {projectModels.map((project) => (
               <div
                 key={project.title}
-                className="u-card u-ease p-6 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]"
+                className="u-card u-ease p-6 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]"
               >
-                <h3 className="text-lg text-tierra-700">{project.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{project.detail}</p>
+                <h3 className="text-lg text-[#7f4f31]">{project.title}</h3>
+                <p className="mt-2 text-sm text-[#5c6662]">{project.detail}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
+            <p className="section-eyebrow">Proceso</p>
             <h2>Cómo trabajamos</h2>
           </div>
 
@@ -282,17 +286,17 @@ export default function Home() {
                 return (
                   <div
                     key={step.title}
-                    className={`u-card u-ease group p-6 hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)] ${
+                    className={`u-card u-ease group p-6 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)] ${
                       isHighlighted
-                        ? "border-tierra-300 bg-tierra-50/60 ring-1 ring-tierra-200/60"
-                        : "border-tierra-200 bg-white"
+                        ? "border-[#bea788] bg-[#fff7ea]"
+                        : "border-[#d8cab4] bg-[#fffdf8]"
                     }`}
                   >
-                    <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-tierra-300 bg-tierra-50 text-sm font-semibold text-tierra-600 shadow-sm">
+                    <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#ccb799] bg-[#fff0df] text-sm font-semibold text-[#7f4f31] shadow-sm">
                       {index + 1}
                     </div>
                     <h3 className="mt-4 text-xl">{step.title}</h3>
-                    <p className="mt-3 text-sm text-gray-600">{step.description}</p>
+                    <p className="mt-3 text-sm text-[#5c6662]">{step.description}</p>
                   </div>
                 );
               })}
@@ -303,12 +307,13 @@ export default function Home() {
 
       <section
         id="contacto"
-        className="section-padding bg-tierra-700 text-white scroll-mt-28 md:scroll-mt-32"
+        className="section-padding scroll-mt-28 bg-[#2a241d] text-white md:scroll-mt-32"
       >
         <div className="container-custom grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
+            <p className="section-eyebrow text-[#d8ba97]">Contacto</p>
             <h2>¿Hablamos de tu proyecto?</h2>
-            <p className="mt-3 max-w-2xl text-white/80">
+            <p className="mt-3 max-w-2xl text-[#ede1d4]">
               Te ayudamos a encontrar la mejor solución según tu terreno y tu forma de habitar. Sin
               compromisos, sin apuro.
             </p>
@@ -316,7 +321,7 @@ export default function Home() {
               href={buildWhatsAppUrl(whatsappMessages.home)}
               target="_blank"
               rel="noopener noreferrer"
-              className="u-btn-secondary u-ease u-focus mt-6 inline-flex bg-white text-tierra-700"
+              className="u-btn-secondary u-ease u-focus mt-6 inline-flex bg-[#fff8ed] text-[#7f4f31]"
             >
               Hacer una consulta
             </Link>
