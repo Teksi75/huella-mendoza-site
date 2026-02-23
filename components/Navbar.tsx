@@ -18,7 +18,7 @@ export default function Navbar({ variant }: NavbarProps) {
   const isHero = navbarVariant === 'hero';
   const isTransparent = isHome && !isScrolled;
   const logoClassTop = 'text-white';
-  const logoClassScrolled = 'text-tierra-700';
+  const logoClassScrolled = 'text-[#2f2a23]';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,10 +42,10 @@ export default function Navbar({ variant }: NavbarProps) {
       }`}
     >
       <div className="container-custom">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+        <div className="flex h-20 items-center justify-between md:h-[5.5rem]">
+          <Link href="/" className="u-focus rounded-md px-1 py-0.5">
             <div
-              className={`text-2xl font-bold transition-colors duration-300 ${
+              className={`font-display text-[1.7rem] font-medium tracking-[0.22em] transition-colors duration-300 md:text-[1.9rem] ${
                 isHero && isTransparent ? logoClassTop : logoClassScrolled
               }`}
             >
@@ -58,10 +58,10 @@ export default function Navbar({ variant }: NavbarProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium u-ease ${
+                className={`u-focus rounded-md px-1 py-1 text-sm font-semibold uppercase tracking-[0.12em] u-ease ${
                   isHero && isTransparent
-                    ? 'text-white hover:text-tierra-200'
-                    : 'text-gray-700 hover:text-tierra-600'
+                    ? 'text-white/92 hover:text-white'
+                    : 'text-[#4b443a] hover:text-[#7f4f31]'
                 }`}
               >
                 {item.name}
@@ -79,22 +79,22 @@ export default function Navbar({ variant }: NavbarProps) {
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className={isHero && isTransparent ? 'text-white' : 'text-gray-800'} />
+              <X className={isHero && isTransparent ? 'text-white' : 'text-[#332d25]'} />
             ) : (
-              <Menu className={isHero && isTransparent ? 'text-white' : 'text-gray-800'} />
+              <Menu className={isHero && isTransparent ? 'text-white' : 'text-[#332d25]'} />
             )}
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="u-card u-ease mx-4 mb-3 border-t border-tierra-200/80 bg-white/95 p-0 shadow-[var(--shadow-med)] backdrop-blur-sm lg:hidden">
+        <div className="u-card u-ease mx-4 mb-3 border-t border-[#d9ccb8] bg-[#fff9f0]/95 p-0 shadow-[var(--shadow-med)] backdrop-blur-sm lg:hidden">
           <div className="container-custom space-y-3 py-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="u-ease block rounded-md py-2 text-gray-700 hover:text-tierra-600 focus-visible:outline-none focus-visible:text-tierra-700"
+                className="u-focus u-ease block rounded-md py-2 text-sm font-semibold uppercase tracking-[0.1em] text-[#4b443a] hover:text-[#7f4f31] focus-visible:text-[#7f4f31]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

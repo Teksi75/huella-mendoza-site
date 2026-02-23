@@ -33,7 +33,7 @@ const WhatsAppCTA = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="u-btn-primary u-ease u-focus fixed bottom-4 right-4 z-50 inline-flex items-center justify-center px-4 py-3 text-sm shadow-[var(--shadow-soft)] hover:-translate-y-0.5"
+      className="u-btn-primary u-ease u-focus fixed bottom-4 right-4 z-50 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold shadow-[var(--shadow-soft)] hover:-translate-y-0.5"
     >
       WhatsApp
     </a>

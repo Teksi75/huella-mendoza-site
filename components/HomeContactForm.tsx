@@ -43,48 +43,48 @@ export default function HomeContactForm() {
     setStatus({ type: 'success', message: '¡Listo! Abrimos WhatsApp para que envíes tu consulta.' });
   };
 
-  const statusColor = status.type === 'error' ? 'text-red-600' : 'text-green-700';
+  const statusColor = status.type === 'error' ? 'text-[#9f2f2f]' : 'text-[#236648]';
 
   return (
-    <form className="u-card rounded-2xl bg-white p-6 text-gray-800" onSubmit={handleSubmit}>
+    <form className="u-card rounded-2xl bg-[#fffbf4] p-6 text-[#26302d] md:p-8" onSubmit={handleSubmit}>
       <div className="grid gap-4">
         <div>
-          <label htmlFor="nombre" className="text-sm font-medium">
+          <label htmlFor="nombre" className="text-sm font-semibold tracking-[0.04em] text-[#3a352e]">
             Nombre
           </label>
           <input
             id="nombre"
             name="nombre"
             type="text"
-            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
+            className="u-input u-ease u-focus mt-2"
             placeholder="Tu nombre"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div>
-          <label htmlFor="email" className="text-sm font-medium">
+          <label htmlFor="email" className="text-sm font-semibold tracking-[0.04em] text-[#3a352e]">
             Email
           </label>
           <input
             id="email"
             name="email"
             type="email"
-            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
+            className="u-input u-ease u-focus mt-2"
             placeholder="tu@email.com"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
         </div>
         <div>
-          <label htmlFor="mensaje" className="text-sm font-medium">
+          <label htmlFor="mensaje" className="text-sm font-semibold tracking-[0.04em] text-[#3a352e]">
             Mensaje
           </label>
           <textarea
             id="mensaje"
             name="mensaje"
             rows={4}
-            className="u-ease u-focus mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:border-tierra-500 focus-visible:shadow-[var(--shadow-soft)]"
+            className="u-input u-ease u-focus mt-2 min-h-28 resize-y"
             placeholder="Contanos sobre tu proyecto"
             value={message}
             onChange={(event) => setMessage(event.target.value)}

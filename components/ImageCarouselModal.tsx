@@ -135,7 +135,7 @@ export default function ImageCarouselModal({
   const subheading = activeImage?.subtitle ?? subtitle;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 p-4">
       <button
         type="button"
         className="absolute inset-0 cursor-default"
@@ -148,13 +148,13 @@ export default function ImageCarouselModal({
         aria-modal="true"
         aria-labelledby={heading ? titleId : undefined}
         aria-describedby={subheading ? subtitleId : undefined}
-        className="relative z-10 w-full max-w-4xl rounded-2xl bg-white shadow-xl"
+        className="u-card relative z-10 w-full max-w-4xl rounded-2xl bg-[#fff9f2] shadow-xl"
       >
         <button
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          className="u-focus u-ease absolute right-3 top-3 z-50 inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-sm text-gray-700 shadow-[var(--shadow-soft)] backdrop-blur hover:bg-white"
+          className="u-focus u-ease absolute right-3 top-3 z-50 inline-flex items-center rounded-full border border-[#d9ccb8] bg-[#fffbf5] px-3 py-1 text-sm text-[#5a4a39] shadow-[var(--shadow-soft)] backdrop-blur hover:bg-white"
           aria-label="Cerrar"
         >
           Cerrar
@@ -173,7 +173,7 @@ export default function ImageCarouselModal({
                     current === nextIndex ? current : nextIndex,
                   );
                 }}
-                className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tierra-50 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
+                className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-[#f1e7d9] scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden"
               >
                 {images.map((image) => (
                   <div
@@ -193,11 +193,11 @@ export default function ImageCarouselModal({
                   </div>
                 ))}
               </div>
-              <div className="mt-3 flex items-center justify-center text-sm text-gray-600 md:justify-between">
+              <div className="mt-3 flex items-center justify-center text-sm text-[#5f5750] md:justify-between">
                 <button
                   type="button"
                   onClick={showPrevious}
-                  className="u-focus u-ease hidden items-center rounded-full border border-tierra-200 bg-white px-4 py-1.5 text-tierra-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-tierra-300 hover:bg-tierra-50 hover:shadow-[var(--shadow-med)] md:inline-flex"
+                  className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
                   aria-label="Imagen anterior"
                 >
                   Anterior
@@ -208,7 +208,7 @@ export default function ImageCarouselModal({
                 <button
                   type="button"
                   onClick={showNext}
-                  className="u-focus u-ease hidden items-center rounded-full border border-tierra-200 bg-white px-4 py-1.5 text-tierra-700 shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-tierra-300 hover:bg-tierra-50 hover:shadow-[var(--shadow-med)] md:inline-flex"
+                  className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
                   aria-label="Imagen siguiente"
                 >
                   Siguiente
@@ -230,7 +230,7 @@ export default function ImageCarouselModal({
                       className={`u-focus u-ease h-2.5 rounded-full border ${
                         isActive
                           ? 'w-6 border-tierra-500 bg-tierra-500'
-                          : 'w-2.5 border-tierra-300 bg-white hover:border-tierra-400 hover:bg-tierra-100'
+                          : 'w-2.5 border-[#c9b89f] bg-white hover:border-[#af9674] hover:bg-[#f7eedf]'
                       }`}
                     />
                   );
@@ -239,7 +239,7 @@ export default function ImageCarouselModal({
             </div>
             <div className="flex flex-col">
               {eyebrow && (
-                <p className="text-xs uppercase tracking-[0.2em] text-tierra-600">
+                <p className="section-eyebrow">
                   {eyebrow}
                 </p>
               )}
@@ -249,12 +249,12 @@ export default function ImageCarouselModal({
                 </h2>
               )}
               {subheading && (
-                <p id={subtitleId} className="mt-2 text-sm text-gray-600">
+                <p id={subtitleId} className="mt-2 text-sm text-[#5f5750]">
                   {subheading}
                 </p>
               )}
               {description && (
-                <p className="mt-4 text-sm text-gray-600">{description}</p>
+                <p className="mt-4 text-sm text-[#5f5750]">{description}</p>
               )}
               {cta && (
                 <Link
