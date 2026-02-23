@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowDown } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import UsosPosiblesGallery from '@/components/UsosPosiblesGallery';
@@ -74,79 +75,90 @@ export default function DisenoPage() {
               <li>Propuestas comparables que equilibran materialidad, paisaje y uso diario.</li>
               <li>Dirección y seguimiento cercano para sostener decisiones de inicio a fin.</li>
             </ul>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <div className="u-card p-6">
-                <h3 className="text-xl">Modelos listos</h3>
-                <p className="mt-3 text-sm text-[#5a6662]">
-                  Alternativas probadas que combinan diseño y funcionalidad.
-                  <br />
-                  Elegís el ritmo, el nivel de terminación y acompañamiento.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
-                  Proceso
-                </p>
-                <p className="mt-2 text-sm text-[#5a6662]">
-                  Elección - Ajuste al sitio - Inicio de obra
-                </p>
-                <Link
-                  href="/diseno/modelos"
-                  className="u-btn-secondary u-ease u-focus mt-5 inline-flex items-center gap-2 text-sm"
-                >
-                  Explorar modelos disponibles
-                </Link>
-              </div>
-              <div className="u-card p-6">
-                <h3 className="text-xl">Proyectos personalizados</h3>
-                <p className="mt-3 text-sm text-[#5a6662]">
-                  Experiencias diseñadas a partir del lugar y de tu forma de habitar.
-                  <br />
-                  Decisiones claras para una solución adaptada a tu situación.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
-                  Proceso
-                </p>
-                <p className="mt-2 text-sm text-[#5a6662]">
-                  Relevamiento - Propuesta - Desarrollo ejecutivo
-                </p>
-                <UsosPosiblesGallery />
-              </div>
-              <div className="u-card p-6">
-                <h3 className="text-xl">Ampliaciones</h3>
-                <p className="mt-3 text-sm text-[#5a6662]">
-                  Crecer sin romper la coherencia arquitectónica y el paisaje.
-                  <br />
-                  Soluciones simples que suman uso y valor.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
-                  Proceso
-                </p>
-                <p className="mt-2 text-sm text-[#5a6662]">
-                  Diagnóstico - Propuesta - Obra liviana
-                </p>
-                <div
-                  aria-disabled="true"
-                  className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
-                >
-                  <span>Ver más</span>
-                  <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                    Disponible próximamente
-                  </span>
-                </div>
+          </div>
+
+          <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3 xl:gap-8">
+            <div className="u-card flex h-full flex-col p-6 xl:p-7">
+              <h3 className="text-xl">Modelos listos</h3>
+              <p className="mt-3 text-sm text-[#5a6662]">
+                Alternativas probadas que combinan diseño y funcionalidad.
+                <br />
+                Elegís el ritmo, el nivel de terminación y acompañamiento.
+              </p>
+              <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
+                Proceso
+              </p>
+              <p className="mt-2 text-sm text-[#5a6662]">
+                Elección - Ajuste al sitio - Inicio de obra
+              </p>
+              <Link
+                href="/diseno/modelos"
+                className="u-btn-secondary u-ease u-focus mt-5 inline-flex items-center gap-2 text-sm"
+              >
+                Explorar modelos disponibles
+              </Link>
+            </div>
+            <div className="u-card flex h-full flex-col p-6 xl:p-7">
+              <h3 className="text-xl">Proyectos personalizados</h3>
+              <p className="mt-3 text-sm text-[#5a6662]">
+                Experiencias diseñadas a partir del lugar y de tu forma de habitar.
+                <br />
+                Decisiones claras para una solución adaptada a tu situación.
+              </p>
+              <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
+                Proceso
+              </p>
+              <p className="mt-2 text-sm text-[#5a6662]">
+                Relevamiento - Propuesta - Desarrollo ejecutivo
+              </p>
+              <UsosPosiblesGallery />
+            </div>
+            <div className="u-card flex h-full flex-col p-6 xl:p-7">
+              <h3 className="text-xl">Ampliaciones</h3>
+              <p className="mt-3 text-sm text-[#5a6662]">
+                Crecer sin romper la coherencia arquitectónica y el paisaje.
+                <br />
+                Soluciones simples que suman uso y valor.
+              </p>
+              <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
+                Proceso
+              </p>
+              <p className="mt-2 text-sm text-[#5a6662]">
+                Diagnóstico - Propuesta - Obra liviana
+              </p>
+              <div
+                aria-disabled="true"
+                className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
+              >
+                <span>Ver más</span>
+                <span className="text-xs font-normal tracking-wide text-tierra-700/70">
+                  Disponible próximamente
+                </span>
               </div>
             </div>
+          </div>
+
+          <Link
+            href={buildWhatsAppUrl(whatsappMessages.diseno)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
+          >
+            Hacer una consulta
+          </Link>
+          <div className="mt-8 flex justify-center">
             <Link
-              href={buildWhatsAppUrl(whatsappMessages.diseno)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
+              href="#croquis-gallery"
+              aria-label="Ir a la sección Galería de croquis y maquetas"
+              className="u-ease u-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#c9b79f] bg-[#fff7ec]/85 text-[#7f4f31] hover:-translate-y-0.5 hover:border-[#b79d7f] hover:bg-[#fff2df]"
             >
-              Hacer una consulta
+              <ArrowDown className="h-5 w-5 motion-safe:animate-bounce" aria-hidden />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-[#ece1d3]">
+      <section id="croquis-gallery" className="section-padding scroll-mt-28 bg-[#ece1d3] md:scroll-mt-32">
         <div className="container-custom">
           <div className="max-w-4xl">
             <h2>Galería de croquis y maquetas</h2>
