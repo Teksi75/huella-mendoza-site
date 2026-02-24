@@ -6,21 +6,22 @@ export default function ContactoPage() {
     <main>
       <section
         id="contacto"
-        className="section-padding bg-white scroll-mt-28 pt-20 md:scroll-mt-32 md:pt-24"
+        className="section-padding scroll-mt-28 bg-[#f8f2e8] pt-20 md:scroll-mt-32 md:pt-24"
       >
         <div className="container-custom">
+          <p className="section-eyebrow">Contacto</p>
           <h1>Contacto</h1>
-          <p className="mt-4 max-w-3xl">
+          <p className="mt-4 max-w-3xl text-[#5a6662]">
             Respondemos personalmente por WhatsApp. Tiempo de respuesta habitual: dentro del día.
           </p>
         </div>
       </section>
 
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom grid gap-10 md:grid-cols-2">
-          <div className="u-card p-6">
-            <h2 className="text-2xl">Consulta por WhatsApp</h2>
-            <p className="mt-3 text-sm text-gray-600">
+          <div className="u-card p-6 md:p-8">
+            <h3 className="text-2xl">Consulta por WhatsApp</h3>
+            <p className="mt-3 text-sm text-[#5c6662]">
               Contanos qué necesitás y te orientamos sobre próximos pasos.
             </p>
             <Link
@@ -33,9 +34,9 @@ export default function ContactoPage() {
             </Link>
           </div>
 
-          <div className="u-card p-6">
-            <h2 className="text-2xl">WhatsApp directo</h2>
-            <p className="mt-3 text-sm text-gray-600">
+          <div className="u-card p-6 md:p-8">
+            <h3 className="text-2xl">WhatsApp directo</h3>
+            <p className="mt-3 text-sm text-[#5c6662]">
               Si preferís, escribinos y coordinamos la respuesta que necesitás.
             </p>
             <Link

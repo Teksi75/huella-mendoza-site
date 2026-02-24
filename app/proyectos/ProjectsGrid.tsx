@@ -30,7 +30,7 @@ export default function ProjectsGrid() {
         {proyectos.map((proyecto) => (
           <div
             key={proyecto.title}
-            className="u-card u-ease overflow-hidden hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]"
+            className="u-card u-ease overflow-hidden hover:-translate-y-0.5 hover:border-[#c7b49a] hover:shadow-[var(--shadow-med)]"
           >
             <button
               type="button"
@@ -47,9 +47,9 @@ export default function ProjectsGrid() {
                 quality={90}
                 className="h-52 w-full object-cover"
               />
-              <div className="p-5">
+              <div className="space-y-2 p-5">
                 <h3 className="text-lg">{proyecto.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="text-sm text-[#5a6662]">
                   {proyecto.subtitle}
                 </p>
               </div>

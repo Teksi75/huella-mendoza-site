@@ -26,8 +26,8 @@ export default function ModelosListosClient() {
               onClick={() => setActiveId(modelo.id)}
               className={`u-ease u-focus rounded-full border px-4 py-2 text-sm font-semibold ${
                 isActive
-                  ? 'border-tierra-600 bg-tierra-600 text-white'
-                  : 'border-tierra-200 bg-white text-tierra-700 hover:border-tierra-400'
+                  ? 'border-[#8b5738] bg-[#8b5738] text-[#fff8ef]'
+                  : 'border-[#d0bea5] bg-[#fff9ef] text-[#7f4f31] hover:border-[#b29979]'
               }`}
             >
               {modelo.label}
@@ -38,8 +38,8 @@ export default function ModelosListosClient() {
 
       {floorplan ? (
         <div className="u-card p-4">
-          <div className="relative overflow-hidden rounded-2xl bg-tierra-50">
-            <div className="absolute left-3 top-3 z-10 rounded-full border border-tierra-200 bg-white/90 px-3 py-1 text-xs font-semibold text-tierra-700 shadow-sm">
+          <div className="relative overflow-hidden rounded-2xl bg-[#f2e8da]">
+            <div className="absolute left-3 top-3 z-10 rounded-full border border-[#d0bea5] bg-white/90 px-3 py-1 text-xs font-semibold text-[#7f4f31] shadow-sm">
               {activeModel.label}
             </div>
             <div className="relative aspect-[4/3]">
@@ -55,13 +55,13 @@ export default function ModelosListosClient() {
           </div>
           <div className="mt-5 space-y-3">
             <div>
-              <p className="text-sm uppercase tracking-widest text-tierra-600">{activeModel.title}</p>
-              <p className="text-xl font-semibold text-tierra-900">{activeModel.label}</p>
+              <p className="section-eyebrow">{activeModel.title}</p>
+              <p className="text-xl font-semibold text-[#7f4f31]">{activeModel.label}</p>
             </div>
-            <ul className="grid gap-2 text-sm text-gray-600">
+            <ul className="grid gap-2 text-sm text-[#5a6662]">
               {activeModel.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-tierra-500" aria-hidden="true" />
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#8b5738]" aria-hidden="true" />
                   <span>{bullet}</span>
                 </li>
               ))}
@@ -74,7 +74,7 @@ export default function ModelosListosClient() {
         {renderImages.map((image) => (
           <div
             key={image.src}
-            className="u-card u-ease relative overflow-hidden hover:-translate-y-0.5 hover:border-tierra-300 hover:shadow-[var(--shadow-med)]"
+            className="u-card u-ease relative overflow-hidden hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]"
           >
             <div className="relative aspect-[4/3]">
               <Image

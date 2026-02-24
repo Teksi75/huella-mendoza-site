@@ -35,12 +35,12 @@ const pathways = [
 export default function HuellaPage() {
   return (
     <main>
-      <section className="section-padding bg-tierra-50">
+      <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm uppercase tracking-widest text-tierra-600">HUELLA</p>
-            <h1 className="mt-4 text-3xl md:text-4xl">Tres formas de habitar el territorio</h1>
-            <p className="mt-4 text-base text-gray-700">
+            <p className="section-eyebrow">HUELLA</p>
+            <h1 className="mt-4">Tres formas de habitar el territorio</h1>
+            <p className="mt-4 text-base text-[#5a6662]">
               Te presentamos los caminos para explorar HUELLA con calma. Elegí el
               ritmo, la escala y el acompañamiento que mejor dialoguen con tu forma de
               vivir.
@@ -55,7 +55,7 @@ export default function HuellaPage() {
                 className="u-card flex scroll-mt-28 flex-col justify-between p-6 md:scroll-mt-32"
               >
                 <div>
-                  <div className="relative mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl border border-tierra-200 bg-tierra-50">
+                  <div className="relative mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl border border-[#d7c8b2] bg-[#f6ecdf]">
                     {pathway.image ? (
                       <Image
                         src={pathway.image}
@@ -66,13 +66,13 @@ export default function HuellaPage() {
                       />
                     ) : null}
                     {pathway.comingSoon ? (
-                      <span className="relative rounded-full border border-tierra-200 bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-tierra-600 backdrop-blur">
+                      <span className="relative rounded-full border border-[#d9ccb8] bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-[#7f4f31] backdrop-blur">
                         {pathway.comingSoon}
                       </span>
                     ) : null}
                   </div>
-                  <h2 className="text-xl">{pathway.title}</h2>
-                  <p className="mt-3 text-sm text-gray-600">{pathway.description}</p>
+                  <h3 className="text-xl">{pathway.title}</h3>
+                  <p className="mt-3 text-sm text-[#5a6662]">{pathway.description}</p>
                 </div>
                 <Link
                   href={pathway.href}
@@ -84,7 +84,7 @@ export default function HuellaPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center text-sm text-gray-600">
+          <div className="mt-12 text-center text-sm text-[#5a6662]">
             Elegí por dónde empezar o consultanos para acompañarte en el proceso.
           </div>
         </div>

@@ -28,20 +28,20 @@ export default function UsosPosiblesGallery() {
 
   return (
     <div className="mt-6">
-      <p className="text-sm font-semibold text-tierra-900">Usos posibles</p>
-      <p className="mt-2 text-sm text-gray-600">
+      <p className="text-sm font-semibold tracking-[0.04em] text-[#2f2a23]">Usos posibles</p>
+      <p className="mt-2 text-sm text-[#5c6662]">
         Oficinas, estudios y espacios de trabajo que se adaptan al uso, al entorno y a la escala del proyecto.
       </p>
-      <div className="mt-3 border-t border-black/5 pt-3">
+      <div className="mt-3 border-t border-[#dccfb9] pt-3">
         <button
           type="button"
           onClick={() => handleOpen(0)}
           aria-label="Abrir galería de usos posibles"
           className="group u-btn-secondary u-ease u-focus inline-flex items-center gap-2 text-sm"
         >
-          <Images className="h-4 w-4 text-muted-foreground/80" aria-hidden="true" />
+          <Images className="h-4 w-4 text-[#75563f]" aria-hidden="true" />
           Ver galería
-          <ArrowRight className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:translate-x-[2px]" aria-hidden="true" />
+          <ArrowRight className="h-4 w-4 text-[#75563f] transition-transform duration-200 group-hover:translate-x-[2px]" aria-hidden="true" />
         </button>
       </div>
       <ImageCarouselModal
