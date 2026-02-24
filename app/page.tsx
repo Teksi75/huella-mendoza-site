@@ -321,7 +321,7 @@ export default function Home() {
         <div className="container-custom grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="section-eyebrow text-[#d8ba97]">Contacto</p>
-            <h2 className="max-w-[16ch] text-3xl leading-tight text-[#fff6e8] sm:text-4xl md:text-5xl">
+            <h2 className="max-w-[16ch] text-2xl leading-tight text-[#fff6e8] sm:text-3xl md:text-4xl">
               ¿Hablamos de tu proyecto?
             </h2>
             <p className="mt-3 max-w-2xl text-[#ede1d4]">

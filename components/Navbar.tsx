@@ -51,7 +51,7 @@ export default function Navbar({ variant }: NavbarProps) {
             <div
               className={`brand-wordmark rounded-full px-2.5 py-1 transition-all duration-300 ease-out ${
                 isHeroTop
-                  ? 'border border-white/35 text-base md:text-lg'
+                  ? 'text-base md:text-lg'
                   : 'text-sm md:text-base'
               } ${isHeroTop ? logoClassTop : logoClassScrolled} ${
                 !isHeroTop && isHero && isTransparent ? 'border border-white/20' : ''

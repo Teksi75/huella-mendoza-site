@@ -45,9 +45,9 @@ export default function BasePage() {
               <h1 className="mb-4 text-center text-3xl font-medium uppercase tracking-[0.2em] text-[#7f4f31] md:text-left md:text-4xl">
                 HUELLA Base
               </h1>
-              <h2 className="text-xl font-semibold text-center mb-6 md:text-left">
+              <p className="mb-6 text-center text-xl font-semibold text-[#2f2a23] md:text-left">
                 Bases modulares: previsibilidad, orden y escalabilidad desde el inicio.
-              </h2>
+              </p>
               <div className="mb-6">
                 <p className="text-center text-base leading-relaxed text-[#5a6662] md:text-left">
                   Base es el módulo estructural del sistema HUELLA. Cada proyecto se define a
@@ -101,7 +101,7 @@ export default function BasePage() {
 
           <div className="mt-10 max-w-3xl">
             <div className="mb-6">
-              <h2 className="mb-2 text-lg font-semibold">Confort y uso real</h2>
+              <h3 className="mb-2 text-lg font-semibold">Confort y uso real</h3>
               <p className="text-base leading-relaxed text-[#5a6662]">
                 Aunque parten de una estructura modular simple, las unidades cuentan con
                 tratamiento térmico para un uso confortable y continuo.
@@ -129,7 +129,7 @@ export default function BasePage() {
             </div>
             <div className="max-w-xl">
               <div className="mb-6">
-                <h2 className="mb-2 text-lg font-semibold">Escalabilidad</h2>
+                <h3 className="mb-2 text-lg font-semibold">Escalabilidad</h3>
                 <p className="text-base leading-relaxed text-[#5a6662]">
                   HUELLA Base no es un producto cerrado. Es un sistema que permite crecer,
                   reconfigurar y ampliar tu proyecto según tus necesidades.

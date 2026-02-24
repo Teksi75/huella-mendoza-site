@@ -71,7 +71,7 @@ export default function HuellaPage() {
                       </span>
                     ) : null}
                   </div>
-                  <h2 className="text-xl">{pathway.title}</h2>
+                  <h3 className="text-xl">{pathway.title}</h3>
                   <p className="mt-3 text-sm text-[#5a6662]">{pathway.description}</p>
                 </div>
                 <Link

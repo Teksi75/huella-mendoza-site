@@ -20,7 +20,7 @@ export default function ContactoPage() {
       <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom grid gap-10 md:grid-cols-2">
           <div className="u-card p-6 md:p-8">
-            <h2 className="text-2xl">Consulta por WhatsApp</h2>
+            <h3 className="text-2xl">Consulta por WhatsApp</h3>
             <p className="mt-3 text-sm text-[#5c6662]">
               Contanos qué necesitás y te orientamos sobre próximos pasos.
             </p>
@@ -35,7 +35,7 @@ export default function ContactoPage() {
           </div>
 
           <div className="u-card p-6 md:p-8">
-            <h2 className="text-2xl">WhatsApp directo</h2>
+            <h3 className="text-2xl">WhatsApp directo</h3>
             <p className="mt-3 text-sm text-[#5c6662]">
               Si preferís, escribinos y coordinamos la respuesta que necesitás.
             </p>
