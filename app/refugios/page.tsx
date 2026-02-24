@@ -19,7 +19,7 @@ export default function RefugiosPage() {
               Hoy no hay disponibilidad. Si te interesa vivir la experiencia HUELLA Refugios, sumate a la lista de espera y te avisamos apenas abramos fechas.
             </div>
             <p className="section-eyebrow">Refugios</p>
-            <h2>HUELLA Refugios</h2>
+            <h2 className="section-title section-title-section">HUELLA Refugios</h2>
             <p className="mt-4 text-base text-[#5a6662]">
               Refugios de uso temporal diseñados para descansar con luz suave, silencio y vistas abiertas.
               <br />
@@ -40,7 +40,7 @@ export default function RefugiosPage() {
       <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>La experiencia</h2>
+            <h2 className="section-title section-title-section">La experiencia</h2>
             <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
               <li>Luz cálida y abrigo resueltos para acompañar el ritmo del día.</li>
               <li>Silencio y privacidad para desconectar sin esfuerzos.</li>
@@ -53,7 +53,7 @@ export default function RefugiosPage() {
       <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Cómo reservar</h2>
+            <h2 className="section-title section-title-section">Cómo reservar</h2>
             <ol className="mt-6 grid list-decimal list-inside gap-3 text-sm text-[#5a6662]">
               <li>Contanos fechas, cantidad de personas y necesidades especiales.</li>
               <li>Te avisamos apenas haya fechas, junto con servicios y detalles de acceso.</li>

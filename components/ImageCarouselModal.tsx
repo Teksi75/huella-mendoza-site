@@ -244,7 +244,7 @@ export default function ImageCarouselModal({
                 </p>
               )}
               {heading && (
-                <h2 id={titleId} className="mt-2 text-2xl">
+                <h2 id={titleId} className="section-title section-title-subsection text-2xl">
                   {heading}
                 </h2>
               )}

@@ -132,7 +132,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <p className="section-eyebrow">Servicios</p>
-            <h2>Tres formas de habitar con HUELLA</h2>
+            <h2 className="section-title section-title-section">Tres formas de habitar con HUELLA</h2>
             <p className="mt-4 text-base text-[#5a6662]">
               Una misma mirada, distintos caminos según tu necesidad, tu uso y tu proyecto.
             </p>
@@ -225,7 +225,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <p className="section-eyebrow">Valor</p>
-            <h2>Por qué elegir HUELLA</h2>
+            <h2 className="section-title section-title-section">Por qué elegir HUELLA</h2>
             <p className="mt-4 text-[#5a6662]">
               Diseñamos soluciones habitables con foco en el paisaje, el uso real y un proceso claro.
             </p>
@@ -255,7 +255,7 @@ export default function Home() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="section-eyebrow">Obras</p>
-              <h2>Proyectos reales</h2>
+              <h2 className="section-title section-title-section">Proyectos reales</h2>
               <p className="mt-3 max-w-2xl text-[#5a6662]">
                 Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
@@ -283,7 +283,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <p className="section-eyebrow">Proceso</p>
-            <h2>Cómo trabajamos</h2>
+            <h2 className="section-title section-title-section">Cómo trabajamos</h2>
           </div>
 
           <div className="relative mt-8">
@@ -321,7 +321,7 @@ export default function Home() {
         <div className="container-custom grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="section-eyebrow text-[#d8ba97]">Contacto</p>
-            <h2 className="max-w-[16ch] text-2xl leading-tight text-[#fff6e8] sm:text-3xl md:text-4xl">
+            <h2 className="section-title section-title-hero max-w-[16ch] text-2xl leading-tight text-[#fff6e8] sm:text-3xl md:text-4xl">
               ¿Hablamos de tu proyecto?
             </h2>
             <p className="mt-3 max-w-2xl text-[#ede1d4]">

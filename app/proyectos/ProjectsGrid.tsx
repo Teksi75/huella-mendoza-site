@@ -48,7 +48,6 @@ export default function ProjectsGrid() {
                 className="h-52 w-full object-cover"
               />
               <div className="space-y-2 p-5">
-                <p className="section-eyebrow text-[0.65rem]">Proyecto</p>
                 <h3 className="text-lg">{proyecto.title}</h3>
                 <p className="text-sm text-[#5a6662]">
                   {proyecto.subtitle}

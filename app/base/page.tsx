@@ -65,7 +65,7 @@ export default function BasePage() {
       <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Logística y obra</h2>
+            <h2 className="section-title section-title-section">Logística y obra</h2>
             <div className="mb-6">
               <p className="text-base leading-relaxed text-[#5a6662]">
                 La lógica modular hace que las unidades encajen entre sí y en el transporte, la
@@ -101,7 +101,7 @@ export default function BasePage() {
 
           <div className="mt-10 max-w-3xl">
             <div className="mb-6">
-              <h3 className="mb-2 text-lg font-semibold">Confort y uso real</h3>
+              <h3 className="mb-2 text-xl font-semibold md:text-2xl">Confort y uso real</h3>
               <p className="text-base leading-relaxed text-[#5a6662]">
                 Aunque parten de una estructura modular simple, las unidades cuentan con
                 tratamiento térmico para un uso confortable y continuo.
@@ -129,7 +129,7 @@ export default function BasePage() {
             </div>
             <div className="max-w-xl">
               <div className="mb-6">
-                <h3 className="mb-2 text-lg font-semibold">Escalabilidad</h3>
+                <h3 className="mb-2 text-xl font-semibold md:text-2xl">Escalabilidad</h3>
                 <p className="text-base leading-relaxed text-[#5a6662]">
                   HUELLA Base no es un producto cerrado. Es un sistema que permite crecer,
                   reconfigurar y ampliar tu proyecto según tus necesidades.

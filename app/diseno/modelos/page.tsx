@@ -12,7 +12,7 @@ export default function ModelosListosPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <p className="section-eyebrow">Diseño</p>
-            <h1>Modelos listos</h1>
+            <h1 className="mt-2 text-4xl md:text-5xl">Modelos listos</h1>
             <p className="mt-3 text-base text-[#5a6662]">
               Elegí la variante que mejor se ajusta a tu forma de habitar. Compará plantas y explorá
               distintas atmósferas para tomar una decisión con tranquilidad.

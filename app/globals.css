@@ -207,6 +207,22 @@
     @apply text-xs font-semibold uppercase tracking-[0.18em];
   }
 
+  .section-title {
+    @apply mt-2 mb-0;
+  }
+
+  .section-title-hero {
+    @apply mt-3 mb-1 md:mt-4 md:mb-2;
+  }
+
+  .section-title-section {
+    @apply mt-2 mb-0 md:mt-3;
+  }
+
+  .section-title-subsection {
+    @apply mt-1 mb-0;
+  }
+
   .brand-wordmark {
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
     font-weight: 600;

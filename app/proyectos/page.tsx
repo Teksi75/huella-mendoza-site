@@ -1,4 +1,5 @@
 import ProjectsGrid from './ProjectsGrid';
+import ProjectsMicroCTA from './ProjectsMicroCTA';
 
 export default function ProyectosPage() {
   return (
@@ -20,6 +21,7 @@ export default function ProyectosPage() {
 
       <section className="section-padding bg-[#ece1d3]">
         <ProjectsGrid />
+        <ProjectsMicroCTA />
       </section>
     </main>
   );

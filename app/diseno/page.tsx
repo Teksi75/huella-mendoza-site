@@ -66,7 +66,7 @@ export default function DisenoPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <p className="section-eyebrow">Diseño</p>
-            <h2>HUELLA Diseño</h2>
+            <h2 className="section-title section-title-section">HUELLA Diseño</h2>
             <p className="mt-3 text-[#5a6662]">
               Proyectos arquitectónicos a medida con acompañamiento profesional para integrar diseño, funcionalidad y territorio.
             </p>
@@ -161,7 +161,7 @@ export default function DisenoPage() {
       <section id="croquis-gallery" className="section-padding scroll-mt-28 bg-[#ece1d3] md:scroll-mt-32">
         <div className="container-custom">
           <div className="max-w-4xl">
-            <h2>Galería de croquis y maquetas</h2>
+            <h2 className="section-title section-title-section">Galería de croquis y maquetas</h2>
             <p className="mt-3 text-base text-[#5a6662]">
               Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseño, uso y territorio.
             </p>
@@ -211,7 +211,7 @@ export default function DisenoPage() {
       <section className="section-padding bg-[#f8f2e8]">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Diseño interior</h2>
+            <h2 className="section-title section-title-section">Diseño interior</h2>
             <p className="mt-3 text-base text-[#5a6662]">
               Materiales honestos, luz dirigida y conexiones claras con el exterior para un habitar cotidiano y sin exceso.
             </p>
@@ -245,7 +245,7 @@ export default function DisenoPage() {
       <section className="section-padding bg-[#ece1d3]">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h2>Estructura integrada al entorno</h2>
+            <h2 className="section-title section-title-section">Estructura integrada al entorno</h2>
             <p className="mt-3 text-base text-[#5a6662]">
               Vistas largas, plataformas ligeras y recorridos que siguen la pendiente para integrar estructura, funcionalidad y paisaje.
             </p>
