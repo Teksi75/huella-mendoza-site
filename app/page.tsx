@@ -12,10 +12,10 @@ const projectModels = [
 ];
 
 const workSteps = [
-  { title: 'Consulta', description: 'Entendemos tu necesidad, el uso y el lugar.' },
-  { title: 'Diseño', description: 'Propuesta clara y comparable según tu proyecto.' },
-  { title: 'Fabricación', description: 'Construcción bajo control, con procesos definidos.' },
-  { title: 'Entrega', description: 'Instalación y acompañamiento final.' },
+  { title: 'Consulta', description: 'Aterrizamos uso, terreno y alcance con preguntas simples.' },
+  { title: 'Diseño', description: 'Definimos una propuesta clara, con opciones comparables.' },
+  { title: 'Fabricación', description: 'Fabricación con control de proceso y terminaciones definidas.' },
+  { title: 'Entrega', description: 'Instalación en sitio y cierre con revisión final.' },
 ];
 
 const reasons = [
