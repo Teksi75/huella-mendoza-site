@@ -1,0 +1,592 @@
+{
+  "siteUrl": "https://huella-mendoza-site.vercel.app",
+  "generatedAt": "2026-02-28T15:05:06.140Z",
+  "totalPages": 8,
+  "keyRoutes": [
+    {
+      "route": "/",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/base",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/diseno",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/refugios",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/huella",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/proyectos",
+      "ok": true,
+      "notFound": false
+    },
+    {
+      "route": "/contacto",
+      "ok": true,
+      "notFound": false
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "fileName": "page-home.md",
+      "wordCount": 415,
+      "ctaCount": 8,
+      "topTerms": [
+        [
+          "huella",
+          13
+        ],
+        [
+          "arquitectura",
+          6
+        ],
+        [
+          "habitar",
+          6
+        ],
+        [
+          "contacto",
+          5
+        ],
+        [
+          "habitables",
+          5
+        ],
+        [
+          "potrerillos",
+          5
+        ],
+        [
+          "proyectos",
+          5
+        ],
+        [
+          "base",
+          4
+        ],
+        [
+          "diseño",
+          4
+        ],
+        [
+          "entorno",
+          4
+        ]
+      ]
+    },
+    {
+      "route": "/base",
+      "fileName": "page-base.md",
+      "wordCount": 423,
+      "ctaCount": 2,
+      "topTerms": [
+        [
+          "huella",
+          10
+        ],
+        [
+          "base",
+          9
+        ],
+        [
+          "módulos",
+          8
+        ],
+        [
+          "módulo",
+          5
+        ],
+        [
+          "sistema",
+          5
+        ],
+        [
+          "acompañar",
+          4
+        ],
+        [
+          "cantidad",
+          4
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "logística",
+          4
+        ],
+        [
+          "montaje",
+          4
+        ]
+      ]
+    },
+    {
+      "route": "/diseno",
+      "fileName": "page-diseno.md",
+      "wordCount": 408,
+      "ctaCount": 3,
+      "topTerms": [
+        [
+          "croquis",
+          7
+        ],
+        [
+          "huella",
+          7
+        ],
+        [
+          "diseño",
+          6
+        ],
+        [
+          "paisaje",
+          6
+        ],
+        [
+          "territorio",
+          5
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "proyecto",
+          4
+        ],
+        [
+          "uso",
+          4
+        ],
+        [
+          "acompañar",
+          3
+        ],
+        [
+          "arquitectura",
+          3
+        ]
+      ]
+    },
+    {
+      "route": "/refugios",
+      "fileName": "page-refugios.md",
+      "wordCount": 182,
+      "ctaCount": 2,
+      "topTerms": [
+        [
+          "huella",
+          7
+        ],
+        [
+          "acompañar",
+          4
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "arquitectura",
+          3
+        ],
+        [
+          "babytomba",
+          3
+        ],
+        [
+          "com",
+          3
+        ],
+        [
+          "distintas",
+          3
+        ],
+        [
+          "fechas",
+          3
+        ],
+        [
+          "formas",
+          3
+        ],
+        [
+          "gmail",
+          3
+        ]
+      ]
+    },
+    {
+      "route": "/huella",
+      "fileName": "page-huella.md",
+      "wordCount": 170,
+      "ctaCount": 2,
+      "topTerms": [
+        [
+          "huella",
+          12
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "formas",
+          4
+        ],
+        [
+          "territorio",
+          4
+        ],
+        [
+          "vivir",
+          4
+        ],
+        [
+          "acompañar",
+          3
+        ],
+        [
+          "arquitectura",
+          3
+        ],
+        [
+          "babytomba",
+          3
+        ],
+        [
+          "base",
+          3
+        ],
+        [
+          "com",
+          3
+        ]
+      ]
+    },
+    {
+      "route": "/proyectos",
+      "fileName": "page-proyectos.md",
+      "wordCount": 153,
+      "ctaCount": 5,
+      "topTerms": [
+        [
+          "modelo",
+          8
+        ],
+        [
+          "baño",
+          6
+        ],
+        [
+          "huella",
+          6
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "dormitorios",
+          4
+        ],
+        [
+          "proyectos",
+          4
+        ],
+        [
+          "acompañar",
+          3
+        ],
+        [
+          "arquitectura",
+          3
+        ],
+        [
+          "babytomba",
+          3
+        ],
+        [
+          "com",
+          3
+        ]
+      ]
+    },
+    {
+      "route": "/contacto",
+      "fileName": "page-contacto.md",
+      "wordCount": 125,
+      "ctaCount": 2,
+      "topTerms": [
+        [
+          "contacto",
+          6
+        ],
+        [
+          "huella",
+          6
+        ],
+        [
+          "whatsapp",
+          6
+        ],
+        [
+          "acompañar",
+          3
+        ],
+        [
+          "arquitectura",
+          3
+        ],
+        [
+          "babytomba",
+          3
+        ],
+        [
+          "com",
+          3
+        ],
+        [
+          "distintas",
+          3
+        ],
+        [
+          "formas",
+          3
+        ],
+        [
+          "gmail",
+          3
+        ]
+      ]
+    },
+    {
+      "route": "/diseno/modelos",
+      "fileName": "page-diseno-modelos.md",
+      "wordCount": 140,
+      "ctaCount": 3,
+      "topTerms": [
+        [
+          "huella",
+          6
+        ],
+        [
+          "modelo",
+          5
+        ],
+        [
+          "contacto",
+          4
+        ],
+        [
+          "distintas",
+          4
+        ],
+        [
+          "dormitorios",
+          4
+        ],
+        [
+          "acompañar",
+          3
+        ],
+        [
+          "arquitectura",
+          3
+        ],
+        [
+          "babytomba",
+          3
+        ],
+        [
+          "com",
+          3
+        ],
+        [
+          "formas",
+          3
+        ]
+      ]
+    }
+  ],
+  "globalTopTerms": [
+    [
+      "huella",
+      67
+    ],
+    [
+      "contacto",
+      35
+    ],
+    [
+      "arquitectura",
+      27
+    ],
+    [
+      "territorio",
+      27
+    ],
+    [
+      "whatsapp",
+      27
+    ],
+    [
+      "acompañar",
+      26
+    ],
+    [
+      "formas",
+      26
+    ],
+    [
+      "habitables",
+      26
+    ],
+    [
+      "potrerillos",
+      26
+    ],
+    [
+      "vivir",
+      26
+    ],
+    [
+      "distintas",
+      25
+    ],
+    [
+      "pensados",
+      25
+    ],
+    [
+      "babytomba",
+      24
+    ],
+    [
+      "com",
+      24
+    ],
+    [
+      "gmail",
+      24
+    ],
+    [
+      "instagram",
+      24
+    ],
+    [
+      "mendoza",
+      24
+    ],
+    [
+      "rapido",
+      24
+    ],
+    [
+      "redes",
+      24
+    ],
+    [
+      "sistemas",
+      24
+    ]
+  ],
+  "nonLegalAuthTopTerms": [
+    [
+      "huella",
+      67
+    ],
+    [
+      "contacto",
+      35
+    ],
+    [
+      "arquitectura",
+      27
+    ],
+    [
+      "territorio",
+      27
+    ],
+    [
+      "whatsapp",
+      27
+    ],
+    [
+      "acompañar",
+      26
+    ],
+    [
+      "formas",
+      26
+    ],
+    [
+      "habitables",
+      26
+    ],
+    [
+      "potrerillos",
+      26
+    ],
+    [
+      "vivir",
+      26
+    ],
+    [
+      "distintas",
+      25
+    ],
+    [
+      "pensados",
+      25
+    ],
+    [
+      "babytomba",
+      24
+    ],
+    [
+      "com",
+      24
+    ],
+    [
+      "gmail",
+      24
+    ],
+    [
+      "instagram",
+      24
+    ],
+    [
+      "mendoza",
+      24
+    ],
+    [
+      "rapido",
+      24
+    ],
+    [
+      "redes",
+      24
+    ],
+    [
+      "sistemas",
+      24
+    ]
+  ]
+}
