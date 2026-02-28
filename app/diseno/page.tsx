@@ -68,11 +68,12 @@ export default function DisenoPage() {
             <p className="section-eyebrow">Diseño</p>
             <h2 className="section-title section-title-section">HUELLA Diseño</h2>
             <p className="mt-3 text-[#5a6662]">
-              Proyecto arquitectónico integral, desde el relevamiento hasta la documentación de obra. A diferencia de Base, no parte de un sistema modular: se define según sitio, programa y alcance.
+              Proyecto arquitectónico integral, desde el relevamiento hasta la documentación de obra.
+              A diferencia de Base, no parte de un sistema modular y se define según sitio, programa y alcance.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
               <li>Relevamiento del sitio y programa de uso.</li>
-              <li>Anteproyectos comparables con métricas de superficie, costos y etapas.</li>
+              <li>Anteproyectos comparables con métricas de superficie, alcance y etapas.</li>
               <li>Documentación técnica y seguimiento durante obra.</li>
             </ul>
           </div>
@@ -89,7 +90,7 @@ export default function DisenoPage() {
                 Proceso
               </p>
               <p className="mt-2 text-sm text-[#5a6662]">
-                Selección - Ajuste al sitio - Documentación
+                Selección - Ajuste al sitio - Proyecto ejecutivo
               </p>
               <Link
                 href="/diseno/modelos"
@@ -132,7 +133,7 @@ export default function DisenoPage() {
               >
                 <span>Próximamente</span>
                 <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                  Apertura de cupos en preparación
+                  Sección en preparación
                 </span>
               </div>
             </div>
@@ -213,7 +214,7 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2 className="section-title section-title-section">Diseño interior</h2>
             <p className="mt-3 text-base text-[#5a6662]">
-              Resolución interior con criterios de uso, luz, mantenimiento y desempeño térmico.
+              Resolución interior con criterios de uso, luz, mantenimiento y confort térmico.
             </p>
           </div>
 
