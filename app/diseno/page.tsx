@@ -145,7 +145,7 @@ export default function DisenoPage() {
             rel="noopener noreferrer"
             className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
           >
-            Iniciar consulta
+            Hacer una consulta
           </Link>
           <div className="mt-8 flex justify-center">
             <Link
@@ -182,7 +182,7 @@ export default function DisenoPage() {
               </div>
               <div className="p-4">
                 <p className="text-sm font-semibold text-tierra-800">{croquisDestacado.title}</p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600">Croquis y maquetas</p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600"></p>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export default function DisenoPage() {
                   </div>
                   <div className="p-4">
                     <p className="text-sm font-semibold text-tierra-800">{item.title}</p>
-                    <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600">Croquis y maquetas</p>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600"></p>
                   </div>
                 </div>
               ))}
