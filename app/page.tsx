@@ -75,7 +75,7 @@ export default function Home() {
           </p>
           <h1 className="mx-auto mb-5 max-w-2xl font-sans text-2xl font-semibold leading-tight tracking-[-0.015em] text-[#fff8ef] sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl xl:text-5xl">
             <span className="block">Arquitectura modular</span>
-            <span className="mt-1 block sm:mt-2">, de principio a fin</span>
+            <span className="mt-1 block sm:mt-2"> de principio a fin</span>
           </h1>
           <p className="mx-auto mb-8 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:mb-9 md:max-w-[48ch] md:text-[1.1rem]">
             Diseñada para el lugar. Hecha para vivirla.
