@@ -20,19 +20,19 @@ const workSteps = [
 
 const reasons = [
   {
-    title: 'Sostenibilidad',
+    title: 'Impacto cuidado',
     description:
-      'Construimos con respeto por el entorno, reduciendo el impacto frente a la construcción tradicional y priorizando una relación equilibrada con el paisaje.',
+      'Buscamos intervenir lo mínimo necesario y tomar decisiones que cuiden el lugar donde se implanta.',
   },
   {
     title: 'Previsibilidad',
     description:
-      'Procesos claros, decisiones ordenadas y acompañamiento durante todo el proyecto. Menos incertidumbre, más tranquilidad en cada etapa.',
+      'Proceso ordenado, decisiones comparables y alcance claro. Menos dudas, más control en cada etapa.',
   },
   {
     title: 'Flexibilidad',
     description:
-      'Los espacios pueden crecer, adaptarse o transformarse con el tiempo, acompañando cambios reales en la forma de habitar.',
+      'Los espacios pueden crecer por etapas y ajustarse al uso con el tiempo, sin rehacer todo desde cero.',
   },
 ];
 
@@ -196,8 +196,6 @@ export default function Home() {
                   Unidades para uso turístico o recreativo.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Implantación pensada para el paisaje y la operación.</li>
-                  <li>Soluciones simples y robustas.</li>
                 </ul>
                 <p className="mt-4 text-sm text-[#5c6662]">
                   Tomamos consultas (sin disponibilidad por el momento).
@@ -222,7 +220,7 @@ export default function Home() {
             <p className="section-eyebrow">Valor</p>
             <h2 className="section-title section-title-section">Por qué elegir HUELLA</h2>
             <p className="mt-4 text-[#5a6662]">
-              Diseñamos soluciones habitables con foco en el paisaje, el uso real y un proceso claro.
+              Arquitectura pensada para uso real, con decisiones claras desde el inicio.
             </p>
           </div>
 
