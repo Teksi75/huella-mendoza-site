@@ -12,7 +12,7 @@ const projectModels = [
 ];
 
 const workSteps = [
-  { title: 'Consulta', description: 'Aterrizamos uso, terreno y alcance con preguntas simples.' },
+  { title: 'Consulta', description: 'Definimos uso, terreno y alcance con preguntas simples.' },
   { title: 'Diseño', description: 'Definimos una propuesta clara, con opciones comparables.' },
   { title: 'Fabricación', description: 'Fabricación con control de proceso y terminaciones definidas.' },
   { title: 'Entrega', description: 'Instalación en sitio y cierre con revisión final.' },
