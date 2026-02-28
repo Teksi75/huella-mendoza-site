@@ -148,12 +148,10 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Sistema habitacional modular, claro y previsible.
+                  Sistema modular con niveles definidos desde el inicio.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Niveles de terminación definidos desde el inicio</li>
-                  <li>Posibilidad de crecer o adaptarse en el tiempo</li>
-                  <li>Una base real para vivir, no una solución transitoria</li>
+                  <li>Puede crecer por etapas sin perder coherencia.</li>
                 </ul>
               </div>
               <div className="mt-auto pt-6">
@@ -171,12 +169,10 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Arquitectura pensada para vos y para el lugar.
+                  Proyecto adaptado a tu terreno y programa.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Modelos listos y proyectos personalizados</li>
-                  <li>Lectura del sitio y modo de habitar</li>
-                  <li>Acompañamiento en cada decisión</li>
+                  <li>Modelos listos o desarrollo a medida según el caso.</li>
                 </ul>
               </div>
               <div className="mt-auto pt-6">
@@ -197,12 +193,11 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Espacios pensados para la experiencia.
+                  Unidades para uso turístico o recreativo.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Uso recreativo o turístico</li>
-                  <li>Integración con el entorno natural</li>
-                  <li>Soluciones simples, robustas y habitables</li>
+                  <li>Implantación pensada para el paisaje y la operación.</li>
+                  <li>Soluciones simples y robustas.</li>
                 </ul>
                 <p className="mt-4 text-sm text-[#5c6662]">
                   Tomamos consultas (sin disponibilidad por el momento).
