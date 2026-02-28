@@ -318,8 +318,7 @@ export default function Home() {
               ¿Hablamos de tu proyecto?
             </h2>
             <p className="mt-3 max-w-2xl text-[#ede1d4]">
-              Te ayudamos a encontrar la mejor solución según tu terreno y tu forma de habitar. Sin
-              compromisos, sin apuro.
+              Contanos qué necesitás y dónde. Te respondemos con una propuesta clara.
             </p>
             <Link
               href={buildWhatsAppUrl(whatsappMessages.home)}
