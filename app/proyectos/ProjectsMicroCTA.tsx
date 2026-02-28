@@ -9,7 +9,7 @@ export default function ProjectsMicroCTA() {
           aria-label="Ir al sistema Base"
           className="u-ease inline-flex items-center rounded-full border border-[#ccbba1] bg-[#fff9ef]/80 px-4 py-2 text-sm font-medium text-[#7f4f31] hover:border-[#bca183] hover:bg-[#fff3e4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9f6844]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f6efe4]"
         >
-          Sistema Base
+          
         </Link>
         <Link
           href="/diseno/modelos"
