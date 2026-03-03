@@ -100,8 +100,8 @@ export default function Home() {
             <span className="mt-1 block sm:mt-2">para habitar el paisaje</span>
           </h1>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/#servicios"
+            <a
+              href="#servicios"
               className="group u-btn-primary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
               Explorar soluciones
@@ -109,7 +109,7 @@ export default function Home() {
                 className="hero-cta-icon h-4 w-4 translate-x-0 opacity-0 u-ease group-hover:translate-x-0.5 group-hover:opacity-100"
                 aria-hidden
               />
-            </Link>
+            </a>
             <IntentPrefetchLink
               href="/proyectos"
               className="group u-btn-secondary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 border-[#f1ddc8]/70 bg-[#f7e8d6]/10 px-8 text-sm text-white hover:border-[#f3e2cf] hover:bg-[#f7e8d6]/20 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
