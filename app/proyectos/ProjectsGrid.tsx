@@ -35,7 +35,7 @@ export default function ProjectsGrid() {
         {proyectos.map((proyecto, projectIndex) => (
           <div
             key={proyecto.title}
-            className="u-card u-ease overflow-hidden hover:-translate-y-0.5 hover:border-[#c7b49a] hover:shadow-[var(--shadow-med)]"
+            className="u-card u-ease overflow-hidden [contain-intrinsic-size:320px] [content-visibility:auto] hover:-translate-y-0.5 hover:border-[#c7b49a] hover:shadow-[var(--shadow-med)]"
           >
             <button
               type="button"

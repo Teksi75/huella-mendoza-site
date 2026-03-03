@@ -1,15 +1,14 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { modelosListos } from '@/data/modelosListos';
 
+const defaultModelId =
+  modelosListos.find((modelo) => modelo.dormitorios === 2)?.id ?? modelosListos[0]?.id;
+
 export default function ModelosListosClient() {
-  const defaultModelId = useMemo(
-    () => modelosListos.find((modelo) => modelo.dormitorios === 2)?.id ?? modelosListos[0]?.id,
-    []
-  );
-  const [activeId, setActiveId] = useState(defaultModelId);
+  const [activeId, setActiveId] = useState(() => defaultModelId);
   const activeModel = modelosListos.find((modelo) => modelo.id === activeId) ?? modelosListos[0];
   const floorplan = activeModel.images.find((image) => image.type === 'floorplan');
   const renderImages = activeModel.images.filter((image) => image.type === 'render');
@@ -74,7 +73,7 @@ export default function ModelosListosClient() {
         {renderImages.map((image) => (
           <div
             key={image.src}
-            className="u-card u-ease relative overflow-hidden hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]"
+            className="u-card u-ease relative overflow-hidden [contain-intrinsic-size:320px] [content-visibility:auto] hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]"
           >
             <div className="relative aspect-[4/3]">
               <Image
