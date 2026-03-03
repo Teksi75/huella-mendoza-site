@@ -7,6 +7,9 @@ import { proyectos } from '@/data/proyectos';
 import { altText } from '@/data/altText';
 
 const ImageCarouselModal = dynamic(() => import('@/components/ImageCarouselModal'));
+const preloadImageCarouselModal = () => {
+  void import('@/components/ImageCarouselModal');
+};
 
 const gridImageSizes =
   '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
@@ -41,6 +44,9 @@ export default function ProjectsGrid() {
               type="button"
               className="u-focus u-ease w-full text-left"
               onClick={() => setSelectedProjectIndex(projectIndex)}
+              onMouseEnter={preloadImageCarouselModal}
+              onFocus={preloadImageCarouselModal}
+              onTouchStart={preloadImageCarouselModal}
               aria-label={`Ver detalles de ${proyecto.title}`}
             >
               <Image

@@ -4,6 +4,7 @@ import { ArrowRight, Compass, Layers, Leaf } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import HomeContactForm from '@/components/HomeContactForm';
+import IntentPrefetchLink from '@/components/IntentPrefetchLink';
 
 const projectModels = [
   { title: 'Modelo 300', detail: '30 m² · 1 dormitorio' },
@@ -53,6 +54,27 @@ const HomeLandscapeBreak = () => (
   </section>
 );
 
+const HeroScrollIndicator = () => (
+  <div
+    className="absolute left-1/2 transform -translate-x-1/2 z-20 bottom-[calc(16px+env(safe-area-inset-bottom))] md:bottom-8"
+    aria-hidden
+  >
+    <div className="animate-bounce drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+      <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <main>
@@ -88,7 +110,7 @@ export default function Home() {
                 aria-hidden
               />
             </Link>
-            <Link
+            <IntentPrefetchLink
               href="/proyectos"
               className="group u-btn-secondary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 border-[#f1ddc8]/70 bg-[#f7e8d6]/10 px-8 text-sm text-white hover:border-[#f3e2cf] hover:bg-[#f7e8d6]/20 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
@@ -97,28 +119,11 @@ export default function Home() {
                 className="hero-cta-icon h-4 w-4 translate-x-0 opacity-0 u-ease group-hover:translate-x-0.5 group-hover:opacity-100"
                 aria-hidden
               />
-            </Link>
+            </IntentPrefetchLink>
           </div>
         </div>
 
-        <div
-          className="absolute left-1/2 transform -translate-x-1/2 z-20 bottom-[calc(16px+env(safe-area-inset-bottom))] md:bottom-8"
-          aria-hidden
-        >
-          <div className="animate-bounce drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </div>
+        <HeroScrollIndicator />
       </section>
 
       <section
@@ -151,9 +156,9 @@ export default function Home() {
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/base" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
+                <IntentPrefetchLink href="/base" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
                   Ver HUELLA Base
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
             <div className="u-card-accent u-ease flex h-full flex-col p-9 hover:-translate-y-0.5">
@@ -172,12 +177,12 @@ export default function Home() {
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Link
+                <IntentPrefetchLink
                   href="/diseno"
                   className="u-btn-primary u-ease u-focus inline-flex w-full items-center justify-center text-sm"
                 >
                   Explorar Diseño
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
             <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]">
@@ -198,9 +203,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/refugios" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
+                <IntentPrefetchLink href="/refugios" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
                   Ver Refugios
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
           </div>
@@ -249,9 +254,9 @@ export default function Home() {
                 Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
             </div>
-            <Link href="/proyectos" className="u-btn-secondary u-ease u-focus px-6 py-3">
+            <IntentPrefetchLink href="/proyectos" className="u-btn-secondary u-ease u-focus px-6 py-3">
               Ver todos los proyectos
-            </Link>
+            </IntentPrefetchLink>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
