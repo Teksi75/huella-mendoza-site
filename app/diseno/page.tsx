@@ -71,7 +71,7 @@ export default function DisenoPage() {
               Proyecto arquitectónico integral, desde el relevamiento hasta la documentación de obra.
               A diferencia de Base, no parte de un sistema modular y se define según sitio, programa y alcance.
             </p>
-            <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
+            <ul className="mt-6 grid gap-3 text-base text-[#5a6662]">
               <li>Relevamiento del sitio y programa de uso.</li>
               <li>Anteproyectos comparables con métricas de superficie, alcance y etapas.</li>
               <li>Documentación técnica y seguimiento durante obra.</li>
@@ -82,9 +82,9 @@ export default function DisenoPage() {
             <div className="u-card flex h-full flex-col p-6 xl:p-7">
               <h3 className="text-xl">Modelos listos</h3>
               <p className="mt-3 text-sm text-[#5a6662]">
-                Tipologías predefinidas para acelerar definición y presupuesto.
+                Alternativas probadas que combinan diseño y funcionalidad.
                 <br />
-                Ajustás implantación, terminaciones y alcance de obra.
+                Elegís el ritmo, el nivel de terminación y acompañamiento.
               </p>
               <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                 Proceso

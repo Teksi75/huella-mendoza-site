@@ -46,7 +46,7 @@ export default function BasePage() {
                 HUELLA Base
               </h1>
               <p className="mb-6 text-center text-xl font-semibold text-[#2f2a23] md:text-left">
-                Base define estructura, tiempos y costo desde el primer módulo.
+                Bases modulares: previsibilidad, orden y escalabilidad desde el inicio.
               </p>
               <div className="mb-6">
                 <p className="text-center text-base leading-relaxed text-[#5a6662] md:text-left">

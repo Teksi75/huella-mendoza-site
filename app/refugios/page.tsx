@@ -15,7 +15,7 @@ export default function RefugiosPage() {
       >
         <div className="container-custom">
           <div className="max-w-3xl">
-            <div className="u-card mb-6 border border-[#d5b8b8] bg-[#fff4f4] p-4 text-sm text-[#7f4f31]">
+            <div className="u-card mb-6 border border-[#d5b8b8] bg-[#fff4f4] p-4 text-base text-[#7f4f31]">
               HUELLA Refugios funciona con cupos limitados. Consultanos por próximas fechas disponibles.
             </div>
             <p className="section-eyebrow">Refugios</p>
@@ -42,7 +42,7 @@ export default function RefugiosPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2 className="section-title section-title-section">El proyecto</h2>
-            <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
+            <ul className="mt-6 grid gap-3 text-base text-[#5a6662]">
               <li>Implantación orientada al lago, con aperturas que priorizan visuales largas.</li>
               <li>Arquitectura contemporánea y materialidad cuidada, diferenciada en Potrerillos.</li>
               <li>Distribución compacta y equipamiento completo para operación turística real.</li>
@@ -55,7 +55,7 @@ export default function RefugiosPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h2 className="section-title section-title-section">Cómo reservar</h2>
-            <ol className="mt-6 grid list-decimal list-inside gap-3 text-sm text-[#5a6662]">
+            <ol className="mt-6 grid list-decimal list-inside gap-3 text-base text-[#5a6662]">
               <li>Compartinos fechas y cantidad de huéspedes.</li>
               <li>Confirmamos opciones vigentes según disponibilidad limitada.</li>
               <li>Coordinamos reserva, acceso y condiciones de estadía.</li>
