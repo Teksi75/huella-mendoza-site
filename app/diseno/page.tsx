@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 import { altText } from '@/data/altText';
-import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import UsosPosiblesGallery from '@/components/UsosPosiblesGallery';
 
 export const metadata: Metadata = {
@@ -139,14 +138,6 @@ export default function DisenoPage() {
             </div>
           </div>
 
-          <Link
-            href={buildWhatsAppUrl(whatsappMessages.diseno)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="u-btn-secondary u-ease u-focus mt-8 inline-flex"
-          >
-            Hacer una consulta
-          </Link>
           <div className="mt-8 flex justify-center">
             <Link
               href="#croquis-gallery"
