@@ -23,13 +23,30 @@ export default function Navbar({ variant }: NavbarProps) {
   const logoClassScrolled = isHero && isTransparent ? 'text-white/92' : 'text-[#2f2a23]';
 
   useEffect(() => {
+    let rafId = 0;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      setIsLogoCompact(window.scrollY > 20);
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        const nextIsScrolled = window.scrollY > 50;
+        const nextIsLogoCompact = window.scrollY > 20;
+
+        setIsScrolled((current) => (current === nextIsScrolled ? current : nextIsScrolled));
+        setIsLogoCompact((current) =>
+          current === nextIsLogoCompact ? current : nextIsLogoCompact
+        );
+        rafId = 0;
+      });
     };
+
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
   }, []);
 
   const menuItems = [

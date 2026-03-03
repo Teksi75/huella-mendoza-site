@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { proyectos, type Proyecto } from '@/data/proyectos';
+import { proyectos } from '@/data/proyectos';
 import { altText } from '@/data/altText';
-import ImageCarouselModal from '@/components/ImageCarouselModal';
+
+const ImageCarouselModal = dynamic(() => import('@/components/ImageCarouselModal'));
 
 const gridImageSizes =
   '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
@@ -13,9 +15,12 @@ const getAltText = (src: string, fallback: string) =>
   altText[src] ?? fallback;
 
 export default function ProjectsGrid() {
-  const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null);
 
-  const closeModal = () => setSelectedProject(null);
+  const selectedProject =
+    selectedProjectIndex === null ? null : proyectos[selectedProjectIndex];
+
+  const closeModal = () => setSelectedProjectIndex(null);
 
   const selectedImages = selectedProject
     ? selectedProject.galleryImages.map((image, index) => ({
@@ -27,7 +32,7 @@ export default function ProjectsGrid() {
   return (
     <>
       <div className="container-custom grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {proyectos.map((proyecto) => (
+        {proyectos.map((proyecto, projectIndex) => (
           <div
             key={proyecto.title}
             className="u-card u-ease overflow-hidden hover:-translate-y-0.5 hover:border-[#c7b49a] hover:shadow-[var(--shadow-med)]"
@@ -35,7 +40,7 @@ export default function ProjectsGrid() {
             <button
               type="button"
               className="u-focus u-ease w-full text-left"
-              onClick={() => setSelectedProject(proyecto)}
+              onClick={() => setSelectedProjectIndex(projectIndex)}
               aria-label={`Ver detalles de ${proyecto.title}`}
             >
               <Image
@@ -58,24 +63,22 @@ export default function ProjectsGrid() {
         ))}
       </div>
 
-      <ImageCarouselModal
-        key={selectedProject?.title ?? 'closed'}
-        isOpen={Boolean(selectedProject)}
-        onClose={closeModal}
-        images={selectedImages}
-        eyebrow={selectedProject?.label}
-        title={selectedProject?.title}
-        subtitle={selectedProject?.subtitle}
-        description={selectedProject?.description}
-        cta={
-          selectedProject
-            ? {
-                href: '/contacto',
-                label: 'Contactar',
-              }
-            : undefined
-        }
-      />
+      {selectedProject ? (
+        <ImageCarouselModal
+          key={selectedProject.title}
+          isOpen
+          onClose={closeModal}
+          images={selectedImages}
+          eyebrow={selectedProject.label}
+          title={selectedProject.title}
+          subtitle={selectedProject.subtitle}
+          description={selectedProject.description}
+          cta={{
+            href: '/contacto',
+            label: 'Contactar',
+          }}
+        />
+      ) : null}
     </>
   );
 }
