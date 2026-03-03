@@ -20,11 +20,6 @@ const workSteps = [
 
 const reasons = [
   {
-    title: 'Impacto cuidado',
-    description:
-      'Buscamos intervenir lo mínimo necesario y tomar decisiones que cuiden el lugar donde se implanta.',
-  },
-  {
     title: 'Previsibilidad',
     description:
       'Proceso ordenado, decisiones comparables y alcance claro. Menos dudas, más control en cada etapa.',
@@ -33,6 +28,11 @@ const reasons = [
     title: 'Flexibilidad',
     description:
       'Los espacios pueden crecer por etapas y ajustarse al uso con el tiempo, sin rehacer todo desde cero.',
+  },
+  {
+    title: 'Impacto cuidado',
+    description:
+      'Buscamos intervenir lo mínimo necesario y tomar decisiones que cuiden el lugar donde se implanta.',
   },
 ];
 
@@ -75,12 +75,8 @@ export default function Home() {
           </p>
           <h1 className="mx-auto mb-5 max-w-2xl font-sans text-2xl font-semibold leading-tight tracking-[-0.015em] text-[#fff8ef] sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl xl:text-5xl">
             <span className="block">Arquitectura modular</span>
-            <span className="mt-1 block sm:mt-2"> de principio a fin</span>
+            <span className="mt-1 block sm:mt-2">para habitar el paisaje</span>
           </h1>
-          <p className="mx-auto mb-8 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:mb-9 md:max-w-[48ch] md:text-[1.1rem]">
-            Diseñada para el lugar. Hecha para vivirla.
-          </p>
-
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/#servicios"
@@ -134,7 +130,7 @@ export default function Home() {
             <p className="section-eyebrow">Servicios</p>
             <h2 className="section-title section-title-section">Tres formas de habitar con HUELLA</h2>
             <p className="mt-4 text-base text-[#5a6662]">
-              Una misma mirada, distintos caminos según tu necesidad, tu uso y tu proyecto.
+              Distintos caminos según tu necesidad, tu uso y tu proyecto.
             </p>
           </div>
 
