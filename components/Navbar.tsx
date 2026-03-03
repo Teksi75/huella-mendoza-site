@@ -9,6 +9,13 @@ type NavbarProps = {
   variant?: 'hero' | 'solid';
 };
 
+const menuItems = [
+  { name: 'Servicios', href: '/#servicios' },
+  { name: 'Por qué Huella', href: '/#por-que-huella' },
+  { name: 'Proyectos', href: '/proyectos' },
+  { name: 'Contacto', href: '/#contacto' },
+];
+
 export default function Navbar({ variant }: NavbarProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,13 +55,6 @@ export default function Navbar({ variant }: NavbarProps) {
       }
     };
   }, []);
-
-  const menuItems = [
-    { name: 'Servicios', href: '/#servicios' },
-    { name: 'Por qué Huella', href: '/#por-que-huella' },
-    { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/#contacto' },
-  ];
 
   return (
     <nav
@@ -98,7 +98,7 @@ export default function Navbar({ variant }: NavbarProps) {
           </div>
 
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
             className="u-focus u-ease rounded-md p-1 lg:hidden"
             aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={isMobileMenuOpen}

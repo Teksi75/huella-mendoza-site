@@ -47,6 +47,7 @@ export default function ImageCarouselModal({
   const carouselRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const subtitleId = useId();
+  const hasMultipleImages = images.length > 1;
 
   const scrollToIndex = (index: number) => {
     const container = carouselRef.current;
@@ -57,12 +58,14 @@ export default function ImageCarouselModal({
   };
 
   const showPrevious = () => {
+    if (images.length <= 1) return;
     const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
     scrollToIndex(nextIndex);
   };
 
   const showNext = () => {
+    if (images.length <= 1) return;
     const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
     scrollToIndex(nextIndex);
@@ -128,7 +131,7 @@ export default function ImageCarouselModal({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  if (!isOpen || images.length === 0) return null;
 
   const activeImage = images[activeIndex];
   const heading = activeImage?.title ?? title;
@@ -193,49 +196,53 @@ export default function ImageCarouselModal({
                   </div>
                 ))}
               </div>
-              <div className="mt-3 flex items-center justify-center text-sm text-[#5f5750] md:justify-between">
-                <button
-                  type="button"
-                  onClick={showPrevious}
-                  className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
-                  aria-label="Imagen anterior"
-                >
-                  Anterior
-                </button>
-                <span>
-                  {activeIndex + 1} / {images.length}
-                </span>
-                <button
-                  type="button"
-                  onClick={showNext}
-                  className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
-                  aria-label="Imagen siguiente"
-                >
-                  Siguiente
-                </button>
-              </div>
-              <div className="mt-3 flex items-center justify-center gap-2">
-                {images.map((image, index) => {
-                  const isActive = index === activeIndex;
-                  return (
+              {hasMultipleImages ? (
+                <>
+                  <div className="mt-3 flex items-center justify-center text-sm text-[#5f5750] md:justify-between">
                     <button
-                      key={image.src}
                       type="button"
-                      onClick={() => {
-                        setActiveIndex(index);
-                        scrollToIndex(index);
-                      }}
-                      aria-label={`Ir a imagen ${index + 1}`}
-                      aria-current={isActive ? 'true' : undefined}
-                      className={`u-focus u-ease h-2.5 rounded-full border ${
-                        isActive
-                          ? 'w-6 border-tierra-500 bg-tierra-500'
-                          : 'w-2.5 border-[#c9b89f] bg-white hover:border-[#af9674] hover:bg-[#f7eedf]'
-                      }`}
-                    />
-                  );
-                })}
-              </div>
+                      onClick={showPrevious}
+                      className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
+                      aria-label="Imagen anterior"
+                    >
+                      Anterior
+                    </button>
+                    <span>
+                      {activeIndex + 1} / {images.length}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={showNext}
+                      className="u-focus u-ease hidden items-center rounded-full border border-[#d0bea5] bg-[#fff8ec] px-4 py-1.5 text-[#7f4f31] shadow-[var(--shadow-soft)] hover:-translate-y-px hover:border-[#ba9f7d] hover:bg-[#fff1de] hover:shadow-[var(--shadow-med)] md:inline-flex"
+                      aria-label="Imagen siguiente"
+                    >
+                      Siguiente
+                    </button>
+                  </div>
+                  <div className="mt-3 flex items-center justify-center gap-2">
+                    {images.map((image, index) => {
+                      const isActive = index === activeIndex;
+                      return (
+                        <button
+                          key={image.src}
+                          type="button"
+                          onClick={() => {
+                            setActiveIndex(index);
+                            scrollToIndex(index);
+                          }}
+                          aria-label={`Ir a imagen ${index + 1}`}
+                          aria-current={isActive ? 'true' : undefined}
+                          className={`u-focus u-ease h-2.5 rounded-full border ${
+                            isActive
+                              ? 'w-6 border-tierra-500 bg-tierra-500'
+                              : 'w-2.5 border-[#c9b89f] bg-white hover:border-[#af9674] hover:bg-[#f7eedf]'
+                          }`}
+                        />
+                      );
+                    })}
+                  </div>
+                </>
+              ) : null}
             </div>
             <div className="flex flex-col">
               {eyebrow && (
