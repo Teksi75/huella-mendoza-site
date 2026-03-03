@@ -12,9 +12,8 @@ export default function ProyectosPage() {
           <p className="section-eyebrow">Proyectos</p>
           <h1>Proyectos</h1>
           <p className="mt-4 max-w-3xl text-[#5a6662]">
-            Proyectos construidos y en proceso que muestran cómo cada decisión
-            de diseño, eficiencia y relación con el paisaje se traduce en una
-            experiencia concreta.
+            Proyectos construidos y en obra. Implantación, programa y sistema
+            definidos en cada caso.
           </p>
         </div>
       </section>

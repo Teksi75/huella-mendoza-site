@@ -12,12 +12,12 @@ const logisticaCards = [
   {
     src: '/media/huella/base/huella-base-plegado.webp',
     title: 'Transporte compacto',
-    copy: 'Transporte optimizado con volumen reducido para mover unidades de forma simple.',
+    copy: 'Módulos preparados para traslado eficiente y descarga directa en obra.',
   },
   {
     src: '/media/huella/base/huella-base-logistica.webp',
     title: 'Montaje directo',
-    copy: 'Montaje ordenado en sitio con eficiencia logística para reducir tiempos y coordinar despliegues.',
+    copy: 'Ensamble en sitio con una secuencia simple para reducir tiempos de implementación.',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function BasePage() {
               />
             </div>
             <div className="max-w-xl">
-              <p className="section-eyebrow text-center md:text-left">Sistema modular</p>
+              <p className="section-eyebrow text-center md:text-left">Sistema por etapas</p>
               <h1 className="mb-4 text-center text-3xl font-medium uppercase tracking-[0.2em] text-[#7f4f31] md:text-left md:text-4xl">
                 HUELLA Base
               </h1>
@@ -50,11 +50,9 @@ export default function BasePage() {
               </p>
               <div className="mb-6">
                 <p className="text-center text-base leading-relaxed text-[#5a6662] md:text-left">
-                  Base es el módulo estructural del sistema HUELLA. Cada proyecto se define a
-                  partir de una cantidad de módulos base que funcionan como la pieza fundamental
-                  para organizar costos, tiempos y posibilidades futuras. Esto permite planificar
-                  con claridad, reducir incertidumbres y pensar espacios que crecen sin
-                  improvisaciones.
+                  Base es la unidad constructiva de HUELLA. El proyecto se arma por etapas: elegís
+                  cuántos módulos iniciar, cómo se conectan y cuándo sumar nuevos. Con esa base se
+                  calculan obra, transporte y presupuesto con criterios claros.
                 </p>
               </div>
             </div>
@@ -68,10 +66,8 @@ export default function BasePage() {
             <h2 className="section-title section-title-section">Logística y obra</h2>
             <div className="mb-6">
               <p className="text-base leading-relaxed text-[#5a6662]">
-                La lógica modular hace que las unidades encajen entre sí y en el transporte, la
-                obra en sitio se coordine con menos imprevistos y los tiempos de montaje se
-                optimicen. Definir la cantidad de módulos base desde el principio permite
-                planificar logística y obra de forma ordenada y clara.
+                En Base, la decisión principal es la cantidad de módulos por etapa. Esa definición
+                ordena transporte, montaje y secuencia de obra, con menos ajustes en sitio.
               </p>
             </div>
           </div>
@@ -103,12 +99,10 @@ export default function BasePage() {
             <div className="mb-6">
               <h3 className="mb-2 text-xl font-semibold md:text-2xl">Confort y uso real</h3>
               <p className="text-base leading-relaxed text-[#5a6662]">
-                Aunque parten de una estructura modular simple, las unidades cuentan con
-                tratamiento térmico para un uso confortable y continuo.
+                Cada unidad incorpora aislación y tratamiento térmico para uso continuo.
               </p>
               <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
-                Pensamos los materiales y aislamientos para acompañar el clima y el entorno, tanto
-                en una unidad como en varias combinadas.
+                La envolvente y los materiales se definen según clima, orientación y programa.
               </p>
             </div>
           </div>
@@ -129,30 +123,27 @@ export default function BasePage() {
             </div>
             <div className="max-w-xl">
               <div className="mb-6">
-                <h3 className="mb-2 text-xl font-semibold md:text-2xl">Escalabilidad</h3>
+                <h3 className="mb-2 text-xl font-semibold md:text-2xl">Crecimiento planificado</h3>
                 <p className="text-base leading-relaxed text-[#5a6662]">
-                  HUELLA Base no es un producto cerrado. Es un sistema que permite crecer,
-                  reconfigurar y ampliar tu proyecto según tus necesidades.
+                  Base no es un diseño cerrado: es una estructura modular que se amplía por
+                  etapas.
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
-                  Podés empezar con una sola unidad, sumar módulos base, combinar configuraciones
-                  para diferentes usos y pensar un conjunto de módulos como un sistema mayor que se
-                  adapta con el tiempo.
+                  Podés iniciar con una unidad y sumar nuevas según uso, presupuesto y tiempos de
+                  obra.
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-[#5a6662]">
-                  Este enfoque por cantidad de módulos organiza mejor la logística y la obra desde
-                  el inicio, facilita cotizaciones claras y permite proyectar espacios que crecen
-                  sin perder coherencia.
+                  La lógica por etapas mantiene coherencia técnica y facilita cotizaciones
+                  comparables.
                 </p>
                 <p className="mt-3 text-base font-semibold text-[#4f5c58]">
-                  Un sistema base que crece con tu proyecto.
+                  Una base clara para decidir cada siguiente paso.
                 </p>
               </div>
               <div className="mb-4 text-base leading-relaxed text-[#5a6662]">
-                <p>Analizamos tu idea y la cantidad de módulos.</p>
+                <p>Revisamos tu programa y la etapa inicial.</p>
                 <p className="mt-2">
-                  Contanos tu proyecto para ver cuántos módulos base tiene sentido planificar y
-                  cómo se puede organizar.
+                  Escribinos y definimos cantidad de módulos, implantación y alcance de obra.
                 </p>
               </div>
               <div>
@@ -162,7 +153,7 @@ export default function BasePage() {
                   rel="noopener noreferrer"
                   className="u-btn-primary u-ease u-focus mb-4 inline-flex w-full justify-center text-lg"
                 >
-                  Solicitar presupuesto
+                  Pedir presupuesto
                 </Link>
                 <Link
                   href={buildWhatsAppUrl(whatsappMessages.baseOpciones)}
@@ -170,7 +161,7 @@ export default function BasePage() {
                   rel="noopener noreferrer"
                   className="u-btn-secondary u-ease u-focus inline-flex w-full justify-center text-lg"
                 >
-                  Explorar opciones
+                  Ver configuraciones
                 </Link>
               </div>
             </div>

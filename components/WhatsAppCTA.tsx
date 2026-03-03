@@ -16,11 +16,13 @@ const getMessageForPath = (pathname: string | null) => {
     return whatsappMessages.home;
   }
 
-  const match = routeMessages.find(
-    ({ prefix }) => pathname === prefix || pathname.startsWith(`${prefix}/`)
-  );
+  for (const { prefix, message } of routeMessages) {
+    if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
+      return message;
+    }
+  }
 
-  return match?.message ?? whatsappMessages.home;
+  return whatsappMessages.home;
 };
 
 const WhatsAppCTA = () => {

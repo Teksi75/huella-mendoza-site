@@ -39,12 +39,12 @@ export default function DisenoPage() {
     {
       src: '/media/huella/diseno/diseno-interior-4.png',
       title: 'Madera y luz natural',
-      copy: 'Texturas claras, planos cálidos y luz filtrada que acompaña el habitar diario.',
+      copy: 'Aberturas, luz natural y terminaciones calibradas para uso cotidiano.',
     },
     {
       src: '/media/huella/diseno/diseno-interior-2.png',
       title: 'Materialidad honesta',
-      copy: 'Hormigón visto, madera y metal dialogan en capas coherentes.',
+      copy: 'Hormigón, madera y metal resueltos con encuentros limpios y criterio constructivo.',
     },
   ];
 
@@ -52,7 +52,7 @@ export default function DisenoPage() {
     {
       src: '/media/huella/8.png',
       title: 'Sendero principal',
-      copy: 'Recorrido amplio que abre el paisaje y da bienvenida con calma.',
+      copy: 'Recorrido de acceso que organiza llegada, vistas y circulación.',
       highlight: true,
     },
   ];
@@ -68,12 +68,13 @@ export default function DisenoPage() {
             <p className="section-eyebrow">Diseño</p>
             <h2 className="section-title section-title-section">HUELLA Diseño</h2>
             <p className="mt-3 text-[#5a6662]">
-              Proyectos arquitectónicos a medida con acompañamiento profesional para integrar diseño, funcionalidad y territorio.
+              Proyecto arquitectónico integral, desde el relevamiento hasta la documentación de obra.
+              A diferencia de Base, no parte de un sistema modular y se define según sitio, programa y alcance.
             </p>
-            <ul className="mt-6 grid gap-3 text-sm text-[#5a6662]">
-              <li>Relevamiento del sitio y de tus rutinas para definir el programa.</li>
-              <li>Propuestas comparables que equilibran materialidad, paisaje y uso diario.</li>
-              <li>Dirección y seguimiento cercano para sostener decisiones de inicio a fin.</li>
+            <ul className="mt-6 grid gap-3 text-base text-[#5a6662]">
+              <li>Relevamiento del sitio y programa de uso.</li>
+              <li>Anteproyectos comparables con métricas de superficie, alcance y etapas.</li>
+              <li>Documentación técnica y seguimiento durante obra.</li>
             </ul>
           </div>
 
@@ -89,21 +90,21 @@ export default function DisenoPage() {
                 Proceso
               </p>
               <p className="mt-2 text-sm text-[#5a6662]">
-                Elección - Ajuste al sitio - Inicio de obra
+                Selección - Ajuste al sitio - Proyecto ejecutivo
               </p>
               <Link
                 href="/diseno/modelos"
                 className="u-btn-secondary u-ease u-focus mt-5 inline-flex items-center gap-2 text-sm"
               >
-                Explorar modelos disponibles
+                Ver modelos
               </Link>
             </div>
             <div className="u-card flex h-full flex-col p-6 xl:p-7">
               <h3 className="text-xl">Proyectos personalizados</h3>
               <p className="mt-3 text-sm text-[#5a6662]">
-                Experiencias diseñadas a partir del lugar y de tu forma de habitar.
+                Proyecto a medida con decisiones técnicas según sitio y programa.
                 <br />
-                Decisiones claras para una solución adaptada a tu situación.
+                Incluye esquema espacial, materialidad y definición constructiva.
               </p>
               <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                 Proceso
@@ -116,23 +117,23 @@ export default function DisenoPage() {
             <div className="u-card flex h-full flex-col p-6 xl:p-7">
               <h3 className="text-xl">Ampliaciones</h3>
               <p className="mt-3 text-sm text-[#5a6662]">
-                Crecer sin romper la coherencia arquitectónica y el paisaje.
+                Extensiones sobre obra existente con continuidad funcional y técnica.
                 <br />
-                Soluciones simples que suman uso y valor.
+                Priorizamos etapas ejecutables y compatibilidad constructiva.
               </p>
               <p className="mt-4 text-xs uppercase tracking-widest text-tierra-600">
                 Proceso
               </p>
               <p className="mt-2 text-sm text-[#5a6662]">
-                Diagnóstico - Propuesta - Obra liviana
+                Diagnóstico - Propuesta - Ejecución
               </p>
               <div
                 aria-disabled="true"
                 className="mt-5 inline-flex flex-col items-start text-sm font-semibold text-tierra-700/80 cursor-default"
               >
-                <span>Ver más</span>
+                <span>Próximamente</span>
                 <span className="text-xs font-normal tracking-wide text-tierra-700/70">
-                  Disponible próximamente
+                  Sección en preparación
                 </span>
               </div>
             </div>
@@ -163,7 +164,7 @@ export default function DisenoPage() {
           <div className="max-w-4xl">
             <h2 className="section-title section-title-section">Galería de croquis y maquetas</h2>
             <p className="mt-3 text-base text-[#5a6662]">
-              Iteraciones que explican decisiones tempranas y permiten validar la coherencia entre diseño, uso y territorio.
+              Estudios de implantación, circulaciones y volumetría para validar decisiones antes de obra.
             </p>
           </div>
 
@@ -181,7 +182,7 @@ export default function DisenoPage() {
               </div>
               <div className="p-4">
                 <p className="text-sm font-semibold text-tierra-800">{croquisDestacado.title}</p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600">Croquis y maquetas</p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600"></p>
               </div>
             </div>
 
@@ -199,7 +200,7 @@ export default function DisenoPage() {
                   </div>
                   <div className="p-4">
                     <p className="text-sm font-semibold text-tierra-800">{item.title}</p>
-                    <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600">Croquis y maquetas</p>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-tierra-600"></p>
                   </div>
                 </div>
               ))}
@@ -213,7 +214,7 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2 className="section-title section-title-section">Diseño interior</h2>
             <p className="mt-3 text-base text-[#5a6662]">
-              Materiales honestos, luz dirigida y conexiones claras con el exterior para un habitar cotidiano y sin exceso.
+              Resolución interior con criterios de uso, luz, mantenimiento y confort térmico.
             </p>
           </div>
 
@@ -247,7 +248,7 @@ export default function DisenoPage() {
           <div className="max-w-3xl">
             <h2 className="section-title section-title-section">Estructura integrada al entorno</h2>
             <p className="mt-3 text-base text-[#5a6662]">
-              Vistas largas, plataformas ligeras y recorridos que siguen la pendiente para integrar estructura, funcionalidad y paisaje.
+              Implantación, pendientes y recorridos se resuelven como parte del proyecto arquitectónico y de su sistema constructivo.
             </p>
           </div>
 

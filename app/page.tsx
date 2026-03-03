@@ -4,6 +4,7 @@ import { ArrowRight, Compass, Layers, Leaf } from 'lucide-react';
 import { altText } from '@/data/altText';
 import { buildWhatsAppUrl, whatsappMessages } from '@/data/contact';
 import HomeContactForm from '@/components/HomeContactForm';
+import IntentPrefetchLink from '@/components/IntentPrefetchLink';
 
 const projectModels = [
   { title: 'Modelo 300', detail: '30 m² · 1 dormitorio' },
@@ -12,27 +13,27 @@ const projectModels = [
 ];
 
 const workSteps = [
-  { title: 'Consulta', description: 'Entendemos tu necesidad, el uso y el lugar.' },
-  { title: 'Diseño', description: 'Propuesta clara y comparable según tu proyecto.' },
-  { title: 'Fabricación', description: 'Construcción bajo control, con procesos definidos.' },
-  { title: 'Entrega', description: 'Instalación y acompañamiento final.' },
+  { title: 'Consulta', description: 'Definimos uso, terreno y alcance con preguntas simples.' },
+  { title: 'Diseño', description: 'Definimos una propuesta clara, con opciones comparables.' },
+  { title: 'Fabricación', description: 'Fabricación con control de proceso y terminaciones definidas.' },
+  { title: 'Entrega', description: 'Instalación en sitio y cierre con revisión final.' },
 ];
 
 const reasons = [
   {
-    title: 'Sostenibilidad',
-    description:
-      'Construimos con respeto por el entorno, reduciendo el impacto frente a la construcción tradicional y priorizando una relación equilibrada con el paisaje.',
-  },
-  {
     title: 'Previsibilidad',
     description:
-      'Procesos claros, decisiones ordenadas y acompañamiento durante todo el proyecto. Menos incertidumbre, más tranquilidad en cada etapa.',
+      'Proceso ordenado, decisiones comparables y alcance claro. Menos dudas, más control en cada etapa.',
   },
   {
     title: 'Flexibilidad',
     description:
-      'Los espacios pueden crecer, adaptarse o transformarse con el tiempo, acompañando cambios reales en la forma de habitar.',
+      'Los espacios pueden crecer por etapas y ajustarse al uso con el tiempo, sin rehacer todo desde cero.',
+  },
+  {
+    title: 'Impacto cuidado',
+    description:
+      'Buscamos intervenir lo mínimo necesario y tomar decisiones que cuiden el lugar donde se implanta.',
   },
 ];
 
@@ -51,6 +52,27 @@ const HomeLandscapeBreak = () => (
       </div>
     </div>
   </section>
+);
+
+const HeroScrollIndicator = () => (
+  <div
+    className="absolute left-1/2 transform -translate-x-1/2 z-20 bottom-[calc(16px+env(safe-area-inset-bottom))] md:bottom-8"
+    aria-hidden
+  >
+    <div className="animate-bounce drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+      <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
 );
 
 export default function Home() {
@@ -77,13 +99,9 @@ export default function Home() {
             <span className="block">Arquitectura modular</span>
             <span className="mt-1 block sm:mt-2">para habitar el paisaje</span>
           </h1>
-          <p className="mx-auto mb-8 max-w-[34ch] text-balance text-[0.95rem] leading-relaxed text-[#f2e7db] sm:max-w-[42ch] sm:text-[1.02rem] md:mb-9 md:max-w-[48ch] md:text-[1.1rem]">
-            Soluciones habitacionales flexibles, pensadas para el lugar y la forma de habitar.
-          </p>
-
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/#servicios"
+            <a
+              href="#servicios"
               className="group u-btn-primary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 px-8 text-sm sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
               Explorar soluciones
@@ -91,8 +109,8 @@ export default function Home() {
                 className="hero-cta-icon h-4 w-4 translate-x-0 opacity-0 u-ease group-hover:translate-x-0.5 group-hover:opacity-100"
                 aria-hidden
               />
-            </Link>
-            <Link
+            </a>
+            <IntentPrefetchLink
               href="/proyectos"
               className="group u-btn-secondary u-ease u-focus flex h-12 w-full items-center justify-center gap-2 border-[#f1ddc8]/70 bg-[#f7e8d6]/10 px-8 text-sm text-white hover:border-[#f3e2cf] hover:bg-[#f7e8d6]/20 sm:h-14 sm:w-auto sm:px-12 sm:text-lg"
             >
@@ -101,28 +119,11 @@ export default function Home() {
                 className="hero-cta-icon h-4 w-4 translate-x-0 opacity-0 u-ease group-hover:translate-x-0.5 group-hover:opacity-100"
                 aria-hidden
               />
-            </Link>
+            </IntentPrefetchLink>
           </div>
         </div>
 
-        <div
-          className="absolute left-1/2 transform -translate-x-1/2 z-20 bottom-[calc(16px+env(safe-area-inset-bottom))] md:bottom-8"
-          aria-hidden
-        >
-          <div className="animate-bounce drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </div>
+        <HeroScrollIndicator />
       </section>
 
       <section
@@ -134,7 +135,7 @@ export default function Home() {
             <p className="section-eyebrow">Servicios</p>
             <h2 className="section-title section-title-section">Tres formas de habitar con HUELLA</h2>
             <p className="mt-4 text-base text-[#5a6662]">
-              Una misma mirada, distintos caminos según tu necesidad, tu uso y tu proyecto.
+              Distintos caminos según tu necesidad, tu uso y tu proyecto.
             </p>
           </div>
 
@@ -148,18 +149,16 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Sistema habitacional modular, claro y previsible.
+                  Sistema modular con niveles definidos desde el inicio.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Niveles de terminación definidos desde el inicio</li>
-                  <li>Posibilidad de crecer o adaptarse en el tiempo</li>
-                  <li>Una base real para vivir, no una solución transitoria</li>
+                  <li>Puede crecer por etapas sin perder coherencia.</li>
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/base" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
+                <IntentPrefetchLink href="/base" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
                   Ver HUELLA Base
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
             <div className="u-card-accent u-ease flex h-full flex-col p-9 hover:-translate-y-0.5">
@@ -171,21 +170,19 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Arquitectura pensada para vos y para el lugar.
+                  Proyecto adaptado a tu terreno y programa.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Modelos listos y proyectos personalizados</li>
-                  <li>Lectura del sitio y modo de habitar</li>
-                  <li>Acompañamiento en cada decisión</li>
+                  <li>Modelos listos o desarrollo a medida según el caso.</li>
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Link
+                <IntentPrefetchLink
                   href="/diseno"
                   className="u-btn-primary u-ease u-focus inline-flex w-full items-center justify-center text-sm"
                 >
                   Explorar Diseño
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
             <div className="u-card u-ease flex h-full flex-col p-8 hover:-translate-y-0.5 hover:border-[#bea788] hover:shadow-[var(--shadow-med)]">
@@ -197,21 +194,18 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="mt-3 text-sm text-[#5c6662]">
-                  Espacios pensados para la experiencia.
+                  Unidades para uso turístico o recreativo.
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-[#5c6662]">
-                  <li>Uso recreativo o turístico</li>
-                  <li>Integración con el entorno natural</li>
-                  <li>Soluciones simples, robustas y habitables</li>
                 </ul>
                 <p className="mt-4 text-sm text-[#5c6662]">
                   Tomamos consultas (sin disponibilidad por el momento).
                 </p>
               </div>
               <div className="mt-auto pt-6">
-                <Link href="/refugios" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
+                <IntentPrefetchLink href="/refugios" className="u-btn-secondary u-ease u-focus inline-flex w-full items-center justify-center text-sm">
                   Ver Refugios
-                </Link>
+                </IntentPrefetchLink>
               </div>
             </div>
           </div>
@@ -227,7 +221,7 @@ export default function Home() {
             <p className="section-eyebrow">Valor</p>
             <h2 className="section-title section-title-section">Por qué elegir HUELLA</h2>
             <p className="mt-4 text-[#5a6662]">
-              Diseñamos soluciones habitables con foco en el paisaje, el uso real y un proceso claro.
+              Arquitectura pensada para uso real, con decisiones claras desde el inicio.
             </p>
           </div>
 
@@ -260,9 +254,9 @@ export default function Home() {
                 Arquitectura integrada al entorno, pensada para ser usada y habitada.
               </p>
             </div>
-            <Link href="/proyectos" className="u-btn-secondary u-ease u-focus px-6 py-3">
+            <IntentPrefetchLink href="/proyectos" className="u-btn-secondary u-ease u-focus px-6 py-3">
               Ver todos los proyectos
-            </Link>
+            </IntentPrefetchLink>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -325,8 +319,7 @@ export default function Home() {
               ¿Hablamos de tu proyecto?
             </h2>
             <p className="mt-3 max-w-2xl text-[#ede1d4]">
-              Te ayudamos a encontrar la mejor solución según tu terreno y tu forma de habitar. Sin
-              compromisos, sin apuro.
+              Contanos qué necesitás y dónde. Te respondemos con una propuesta clara.
             </p>
             <Link
               href={buildWhatsAppUrl(whatsappMessages.home)}

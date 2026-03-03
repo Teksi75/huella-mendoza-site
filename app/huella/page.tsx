@@ -25,10 +25,10 @@ const pathways = [
     id: 'refugios',
     title: 'HUELLA Refugios',
     description:
-      'Estadías para descansar en diálogo con el paisaje.',
+      'Alojamiento con vista al lago en Potrerillos, en funcionamiento y con disponibilidad limitada.',
     href: '/refugios',
     ctaLabel: 'Conocer más',
-    comingSoon: 'PRÓXIMAMENTE',
+    comingSoon: 'DISPONIBILIDAD LIMITADA',
   },
 ];
 
@@ -39,11 +39,10 @@ export default function HuellaPage() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
             <p className="section-eyebrow">HUELLA</p>
-            <h1 className="mt-4">Tres formas de habitar el territorio</h1>
+            <h1 className="mt-4">Tres líneas de trabajo dentro de HUELLA.</h1>
             <p className="mt-4 text-base text-[#5a6662]">
-              Te presentamos los caminos para explorar HUELLA con calma. Elegí el
-              ritmo, la escala y el acompañamiento que mejor dialoguen con tu forma de
-              vivir.
+              Base, Diseño y Refugios responden a escalas y usos distintos. Elegí por
+              sistema, por proyecto o por estadía.
             </p>
           </div>
 

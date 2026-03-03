@@ -9,6 +9,13 @@ type NavbarProps = {
   variant?: 'hero' | 'solid';
 };
 
+const menuItems = [
+  { name: 'Servicios', href: '/#servicios' },
+  { name: 'Por qué Huella', href: '/#por-que-huella' },
+  { name: 'Proyectos', href: '/proyectos' },
+  { name: 'Contacto', href: '/#contacto' },
+];
+
 export default function Navbar({ variant }: NavbarProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,21 +30,31 @@ export default function Navbar({ variant }: NavbarProps) {
   const logoClassScrolled = isHero && isTransparent ? 'text-white/92' : 'text-[#2f2a23]';
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      setIsLogoCompact(window.scrollY > 20);
-    };
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    let rafId = 0;
 
-  const menuItems = [
-    { name: 'Servicios', href: '/#servicios' },
-    { name: 'Por qué Huella', href: '/#por-que-huella' },
-    { name: 'Proyectos', href: '/proyectos' },
-    { name: 'Contacto', href: '/#contacto' },
-  ];
+    const handleScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        const nextIsScrolled = window.scrollY > 50;
+        const nextIsLogoCompact = window.scrollY > 20;
+
+        setIsScrolled((current) => (current === nextIsScrolled ? current : nextIsScrolled));
+        setIsLogoCompact((current) =>
+          current === nextIsLogoCompact ? current : nextIsLogoCompact
+        );
+        rafId = 0;
+      });
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
 
   return (
     <nav
@@ -81,7 +98,7 @@ export default function Navbar({ variant }: NavbarProps) {
           </div>
 
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
             className="u-focus u-ease rounded-md p-1 lg:hidden"
             aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={isMobileMenuOpen}
